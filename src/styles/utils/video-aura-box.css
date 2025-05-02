@@ -1,0 +1,22 @@
+.video-aura-box {
+    position: relative;
+    transition: .5s;
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 100px; 
+        padding: 2px; 
+        background: linear-gradient(90deg, #E348FF 0%, #B514F7 30%, #625BFB 70%, #00CCFF 100%); 
+        mask: 
+            linear-gradient(#000 0 0) content-box, 
+            linear-gradient(#000 0 0);
+        mask-composite: exclude; 
+    }
+    &:hover {
+        background: linear-gradient(90deg, #E348FF 0%, #B514F7 30%, #625BFB 70%, #00CCFF 100%);
+        -webkit-background-clip:text; 
+        -webkit-text-fill-color: transparent;
+        background-clip:text; 
+    }
+}

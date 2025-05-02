@@ -1,0 +1,46 @@
+/* /src/styles/app.css veya components/marquee.css gibi bir dosyaya */
+
+@layer utilities {
+    @keyframes marquee {
+      from { transform: translateX(0%); }
+      to { transform: translateX(-50%); } /* İçeriğin yarısı kadar sola kaydır */
+    }
+  
+    .animate-marquee {
+      animation: marquee 30s linear infinite; /* Süreyi (30s) ayarla */
+    }
+  
+    /* İsteğe bağlı: Fare üzerine gelince durdurma */
+    .marquee-container:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+  }
+  
+  /* Temel Marquee Stilleri (Tailwind sınıfları zaten çoğunu yapıyor ama yedek olarak) */
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .marquee-content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content; /* İçeriğe göre genişlemesini sağlar */
+    will-change: transform; /* Performans ipucu */
+  }
+  
+  .logo-item {
+    flex-shrink: 0; /* Küçülmeyi engelle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Yükseklik ve padding Pug içinde ayarlandı */
+  }
+  
+  .logo-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Görselin oranını koru */
+  }
+  

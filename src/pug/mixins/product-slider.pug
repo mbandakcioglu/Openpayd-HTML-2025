@@ -1,0 +1,15 @@
+mixin productSlider(p)
+    #products-slider.swiper(class="xl:w-[60vw]")
+        .swiper-wrapper
+            each p in productSliderContent
+                .swiper-slide(class="xl:w-2/5!")
+                    .gradient-border-2(class="p-[50px] h-full text-white") 
+                        img(class="mb-[18px] size-[64px]", src=`/src/images/${p.img}`, alt= p.title)
+                        div(class="mb-[18px] text-2xl")= p.title
+                        div(class="text-lg")= p.desc
+                        if p.button
+                            +buttonNonBorder({
+                                url:"#", 
+                                text:"SANDBOX", 
+                                classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px]"
+                            })

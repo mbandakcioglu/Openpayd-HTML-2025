@@ -1,0 +1,93 @@
+header#site-header {
+    /* max-width: 1025px; */
+     /* width: 100% !important; */
+
+
+    &:after {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: background-color 0.3s ease; /* Renk geçişini yumuşatmak için (isteğe bağlı) */
+        width: 100%;
+        z-index: -1;
+    }
+
+    nav#main-nav {
+        .top-menu-opener {
+            a.top-menu-element {
+                .mega-menu-arrow {
+                    border-bottom: 16px solid var(--color-main-white);
+                    border-left: 16px solid transparent;
+                    border-right: 16px solid transparent;
+                    border-style: solid;
+                    border-top: 0;
+                    height: 0;
+                    left: 50%;
+                    margin-left: -16px;
+                    top: calc(100% - 16px);
+                    width: 0;
+                }
+                &:after {
+                    border-style: solid;
+                    border-width: 0 2px 2px 0;
+                    /* content: url("/src/assets/images/header/Icon-Down.svg"); */
+                    content: "";
+                    height: 8px;
+                    transform: rotate(45deg);
+                    transition: .5s;
+                    width: 8px;
+                }
+            }
+            
+            &:hover {
+                a.top-menu-element {
+                    color: var(--color-openpayd-purple);
+                    /* font-weight: 700; */
+                    &:after {
+                        border-color: var(--color-openpayd-purple);
+                        transform: rotate(-135deg);
+                    }  
+
+                }
+            }
+        }
+        .mega-menu {
+            filter: drop-shadow(0 -5px 13px rgba(0, 0, 0, 0.5));
+            a {
+                color: var(--color-main-text);
+                span {
+                    color: var(--color-shades-dark-blue-light-active);
+                }
+
+                &:hover {
+                    color: var(--color-openpayd-purple);
+                    span {
+                        color: var(--color-main-black);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+body[data-page-type="header-dark"] {
+    header#site-header {
+        background-color: rgba(0, 18,68, 0.75); /* Varsayılan durumla aynı alpha değerini kullan */
+        #logo {
+            .logo-image {
+                filter: brightness(0) invert(1);
+            }
+        }
+        #main-nav {
+            .top-menu-element {
+                color: var(--color-main-white)
+            }
+        }
+    }
+}
+

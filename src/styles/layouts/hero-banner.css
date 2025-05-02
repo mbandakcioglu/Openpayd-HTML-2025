@@ -1,0 +1,9 @@
+body[data-page-type="header-dark"] {
+    #hero-banner {
+        background-color: var(--color-openpayd-dark-blue);
+        color: var(--color-main-white)
+    }    
+}
+/* #hero-banner {
+    padding-top: 122px;
+} */

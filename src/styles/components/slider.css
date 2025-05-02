@@ -1,0 +1,27 @@
+.testimonials-swiper-pagination {
+	display: flex;
+	gap: 11px;
+	.swiper-pagination-bullet {
+		background-color: transparent;
+		box-shadow: 0 0 0 1px var(--color-openpayd-dark-blue);
+		display: inline-block;
+		height: 16px;
+		width: 16px;
+		&.swiper-pagination-bullet-active {
+			background-color: var(--color-openpayd-dark-blue);
+		}
+	}
+}
+
+#products-slider{
+	.swiper {
+		width: 100%;
+		height: 100%;
+	  }
+	.swiper-slide {
+		flex-shrink: 0;
+		height: auto;
+		/* width: 40%; */
+		width: inherit !important;
+	}
+}

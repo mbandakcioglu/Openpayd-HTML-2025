@@ -1,0 +1,15 @@
+mixin buttonNonBorder(u)
+    a.button.aura-hover.rounded-full.font-semibold.uppercase.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
+        href=u.url, 
+        class="hover:transition-all  " + u.classes, 
+        target=(u.target==="_blank" ? "_blank" : null), 
+        rel=(u.rel ? u.rel : null)
+    )= u.text
+
+mixin ButtonAuraBorder(a)
+    a.button.aura-border.bordered.font-semibold.uppercase.bg-clip-text.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
+        href= a.url, 
+        target=(a.target==="_blank" ? "_blank" : null), 
+        class="hover:transition-all hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] " + a.classes, 
+        rel=(a.rel ? a.rel : null)
+    )= a.text

@@ -1,0 +1,269 @@
+include ../components/buttons.pug
+include ../mixins/images.pug
+
+
+- var megaMenuShadow = "#000000"
+
+mixin megaMenuSubElement(c)
+	li
+		a.flex.items-start(class="gap-[16px]", href= c.url) 
+			img.w-8(src="/src/images/" + c.icon, alt= c.title)
+			div
+				strong.block(class="text-[15px]")= c.title
+				span.block.text-xs= c.text
+
+mixin megaMenuHeader(h)
+	div(class="mb-[24px]")
+		span.font-extrabold.block= h.title
+		span.text-xs(class="text-[#B0B6C5]")= h.text
+
+mixin megaMenuArrow()
+	div.mega-menu-arrow.absolute.hidden.z-2(class="group-hover/menuitem:block") 
+
+mixin megaMenuTopElement(t)
+	if (t.target)
+		a.top-menu-element.relative.flex.items-center.gap-5(href=t.url, class="py-[12px] px-[16px] gap-x-[8px]", data-text=t.text)= t.text
+			+megaMenuArrow
+	else
+		a.top-menu-element.relative.flex.items-center.gap-5(href=t.url, class="py-[12px] px-[16px] gap-x-[8px]", data-text=t.text, target="_target" )= t.text
+			+megaMenuArrow
+
+//- header#site-header.fixed.w-full.top-0.left-0.right-0.z-1
+header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/header")
+	.container.w-full.mx-auto.flex.items-center.justify-end(class="max-w-[1392px] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out")
+
+		//  Logo 
+		#logo.flex.items-center.space-x-2.mr-auto
+			a(href="/") 
+				img.logo-image(class="w-[170px] h-[58px]", src='/src/images/OP-Logo.svg', alt='OpenPayd')
+			
+		nav#main-nav.text-slate-900.hidden(class="text-[18px] xl:block")
+			ul.grid.grid-cols-5.items-center.space-x-6
+				//- Product
+				li.relative.top-menu-opener(class="group/menuitem")
+					
+					+megaMenuTopElement({url: "#", text: "Product"})
+					.mega-menu.absolute.bg-white.z-1.hidden(
+       					class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))" 
+					)
+						ul
+							li 
+								+megaMenuHeader({title: "PAYMENTS", text: "Send and receive globally"})
+								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Pay-In-Review-Aura.svg",
+										title:"Accept Payments", 
+										text:"Learn about your users"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-International-Aura.svg",
+										title:"Send Payments", 
+										text:"Automate global payouts at scale"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Open-Banking-Aura.svg",
+										title:"Open Banking", 
+										text:"Integrate Pay-by-bank for a better payments UX"}) 
+							li.mt-10 
+								+megaMenuHeader({
+									title: "ACCOUNTS", 
+									text: "Bank with virtual IBANs"})
+								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Master-Accounts-Aura.svg",
+										title:"Virtual IBANs", 
+										text:"Issue accounts to your customers"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-BaaS-Aura.svg",
+										title:"Banking-as-a-Service", 
+										text:"Embed banking and payment services"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Corporate-Customers-Aura.svg",
+										title:"Corporate Accounts", 
+										text:"Manage all your business spending"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Sub-Accounts-Aura.svg",
+										title:"Pooled Accounts", 
+										text:"Power your business with better banking"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Lending-Aura.svg",
+										title:"Multi-Currency Accounts", 
+										text:"Go global with accounts in all major currencies"}) 
+
+							li.mt-10
+								+megaMenuHeader({
+									title: "FX & TREASURY", 
+									text: "Orchestrate your business money flows"}) 
+								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-FX-Aura.svg",
+										title:"Foreign Exchange", 
+										text:"Automate real-time FX at scale"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Corporate-Customers-Aura.svg",
+										title:"Corporate Accounts", 
+										text:"Manage all your business spending"}) 
+				//- Solutions
+				li.relative.top-menu-opener(class="group/menuitem")
+					
+					+megaMenuTopElement({url: "#", text: "Solutions"})
+					.mega-menu.absolute.bg-white.z-1.hidden(
+						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))"
+					)
+						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+							+megaMenuSubElement({url:"#", icon:"OP-Icon-Sub-Accounts-Aura.svg",title:"Fintech", text:"Build on our BaaS infrastructure"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-FX-Aura.svg",
+								title:"Forex & Online Brokerage", 
+								text:"Drive growth through seamless payments and banking"})
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-DigitalAssets-Aura.svg",
+								title:"Digital Assets", 
+								text:"Fund accounts and withdraw in fiat currency"})
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-International-Aura.svg",
+								title:"Remittance", 
+								text:"Enhance your international payments and reconciliation"}) 
+				
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-marketplace-Aura.svg",
+								title:"RemittMarketplaces & Platformsance", 
+								text:"Embed payments and banking into your digital marketplace"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Technology-Aura.svg",
+								title:"Insurtech", 
+								text:"Integrate automated payments into your tech stack"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Pay-In-Review-Aura.svg",
+								title:"Payroll", 
+								text:"Access global payouts for every payroll run"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-iGaming-Aura.svg",
+								title:"iGaming", 
+								text:"Unlock digital payments for digital gaming"}) 
+						
+						ul.grid.grid-cols-2.mt-5.pt-5.border-t-1(class="gap-x-[32px] gap-y-[20px]" style="border-color: #f5f5f5;")
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Embedded-Finance-Aura.svg",
+								title:"Embedded Finance", 
+								text:"Integrate financial services into your Platform via API"}) 
+				//- Developers
+				li.relative.top-menu-opener(class="group/menuitem")
+					+megaMenuTopElement({url: "#", text: "Developers"})
+					.mega-menu.absolute.bg-white.z-1.hidden(
+						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))"
+					)
+						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-API-Aura.svg",
+								title:"OpenPayd API", 
+								text:"Take your first step to using our developer-friendly API"}) 
+							+megaMenuSubElement({
+								url:"https://apidocs.openpayd.com/", 
+								icon:"OP-Icon-Compliance-Aura.svg",
+								title:"API Docs", 
+								text:"Read our complete guide to integrating with OpenPayd"}) 
+							+megaMenuSubElement({
+								url:"https://sandbox.openpayd.com/account/login?returnUrl=%2F", 
+								icon:"OP-Icon-Sandbox-Aura.svg",
+								title:"Sandbox", 
+								text:"Explore functionality with our testing environment"}) 
+				//- Resources
+				li.relative.top-menu-opener(class="group/menuitem")
+					+megaMenuTopElement({url: "#", text: "Resources"})
+					.mega-menu.absolute.bg-white.z-1.hidden(
+						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))"
+					)
+						ul
+							li 
+								+megaMenuHeader({title: "NEWS & MEDIA", text: "The latest OpenPayd updates"})
+								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-announcements-Aura.svg",
+										title:"Announcements", 
+										text:"See our latest news"}) 
+							li.mt-10 
+								+megaMenuHeader({title: "OUR THINKING", text: "OpenPayd experts share what the future holds"})
+								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-blog-Aura.svg",
+										title:"Our Blog", 
+										text:"Read from our team members"}) 
+									+megaMenuSubElement({
+										url:"#", 
+										icon:"OP-Icon-Validation-Aura.svg",
+										title:"Legal", 
+										text:"xxxxxxxxxxx"}) 
+
+				//- Company
+				li.relative.top-menu-opener(class="group/menuitem")
+					+megaMenuTopElement({url: "#", text: "Company"})
+					.mega-menu.absolute.bg-white.z-1.hidden(
+						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))"
+					)
+						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Validation-Aura.svg",
+								title:"About Us", 
+								text:"See our mission and values"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Customers-Aura.svg",
+								title:"Meet the Team", 
+								text:"Find out more from our Industry experts"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-events-Aura.svg",
+								title:"Events", 
+								text:"See the latest OpenPayd events"}) 
+							
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-Challenge-Aura.svg",
+								title:"Career", 
+								text:"Join our growing team"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-partner-Aura.svg",
+								title:"Career", 
+								text:"Join our growing team"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"OP-Icon-FAQ-Aura.svg",
+								title:"FAQ", 
+								text:"Find information"}) 
+		//  Actions 
+		.flex.items-center.space-x-3.hidden(class="xl:block")
+			+ButtonAuraBorder({url:"#", text:"LOG IN", classes:"text-black", rel:"nofollow", target:"_blank" })
+			+buttonNonBorder({url:"#", text:"DIVE IN", classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"})
+		
+		//- Mobile menu opener
+		button.inline-flex.items-center.p-2.w-10.h-10.justify-center.text-sm.text-gray-500.rounded-lg(
+			data-collapse-toggle="navbar-default", 
+			type="button", 
+			aria-controls="navbar-default", 
+			aria-expanded="false", 
+			class="md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+		)
+			svg.w-5.h-5(aria-hidden="true", xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 17 14")
+				path(stroke="currentColor", stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M1 1h15M1 7h15M1 13h15")

@@ -1,0 +1,81 @@
+// footer.pug
+-
+	var footerHeadClasses = "block mb-[38px] text-lg text-openpayd-dark-blue"
+	var footerUlClasses = "leading-[38px] space-y-2 text-lg text-openpayd-dark-blue "
+footer(class="bg-shades-violet-light pt-12 pb-8")
+	div(class="container mx-auto px-6 max-w-[1680px]")
+
+		// Products
+		div(class="xl:grid xl:grid-cols-10 flex flex-col gap-4")
+			div(class="col-span-5 order-1")
+				a(href="/" class="inline-block")
+					img(src="/src/images/OP-Logo.svg" alt="OpenPayd Logo" class="h-[40px]")
+			
+			.col-span-5.col-start-6(class="xl:mb-[63px] order-3")
+				div(class="flex xl:justify-end gap-4")
+					+ButtonAuraBorder({url:"#", text:"LOCATIONS", classes:"font-black", rel:"nofollow", target:"_blank" })
+					+buttonNonBorder({
+						url:"#", 
+						text:"DIVE IN", 
+						classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+
+			.col-span-8.row-start-2.order-4.hidden
+				div Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsam, aliquid illo corrupti, doloremque unde quidem ea molestiae sit consectetur accusamus saepe ipsum aut nulla dicta porro ratione eveniet rerum.
+
+			.col-span-2.row-start-2.order-4(class="leading-[38px]")
+				span(class= footerHeadClasses) Products
+				ul(class= footerUlClasses)
+					li: a(href="#") Banking-as-Service
+					li: a(href="#") Accepting Payments
+					li: a(href="#") Global Payouts
+					li: a(href="#") Pooled Accounts
+					li: a(href="#") Virtual IBANs & Linked Accounts
+					li: a(href="#") Corporate Accounts
+					li: a(href="#") Multi-Currency Accounts
+					li: a(href="#") Foreign Exchange
+
+			// Use Case
+			.col-span-2.col-start-3.row-start-2.order-5(class="leading-[38px]")
+				span(class= footerHeadClasses) Use Case
+				ul(class= footerUlClasses)
+					li: a(href="#") Embedded Finance
+					li: a(href="#") Fintech
+					li: a(href="#") Remittance
+					li: a(href="#") Marketplaces & Platforms
+					li: a(href="#") Digital Assets
+					li: a(href="#") Payroll
+					li: a(href="#") Forex & Online Brokerage
+					li: a(href="#") iGaming
+
+			// Company
+			.col-span-2.col-start-5.row-start-2.order-6(class="leading-[38px]")
+				span(class= footerHeadClasses) Company
+				ul(class= footerUlClasses)
+					li: a(href="#") About Us
+					li: a(href="#") Meet The Team
+					li: a(href="#") Events
+					li: a(href="#") Careers
+
+			// Resources
+			.col-span-2.col-start-7.row-start-2.order-7
+				span(class= footerHeadClasses) Resources
+				ul(class= footerUlClasses)
+					li: a(href="#") Announcements
+					li: a(href="#") Our Media Assets
+					li: a(href="#") Our Blog
+					li: a(href="#") Whitepapers & Resources
+					li: a(href="#") Fintech Rewired
+					li: a(href="#") Legal
+			.col-span-2.col-start-9.row-start-2.order-2
+				div(class="flex items-center gap-4 ml-4 xl:justify-end")
+					a(href="https://www.linkedin.com/company/openpayd/", target="_blank", rel="nofollow", aria-label="LinkedIn")
+						img(src="/src/images/icon-linkedin.svg", alt="LinkedIn", class="h-5 w-5")
+					a(href="https://www.youtube.com/channel/UCuNsfZj-Mu6St7grX75oy8w", target="_blank", rel="nofollow", aria-label="YouTube")
+						img(src="/src/images/icon-youtube.svg" alt="YouTube", class="h-5 w-5")
+					a(href="https://www.openpayd.com/wp-content/themes/openpayd/images/icons/x.svg" aria-label="X (Twitter)", target="_blank", rel="nofollow")
+						img(src="/src/images/icon-x.svg", alt="X", class="h-5 w-5")
+					a(href="https://www.instagram.com/lifeatopenpayd/" aria-label="Instagram", target="_blank", rel="nofollow")
+						img(src="/src/images/icon-ig.svg", alt="Instagram", class="h-5 w-5")
+			div(class="col-span-10 mt-[63px] order-8 row-start-3 text-[10px]")
+				| © OpenPayd Ltd 2025. All rights reserved.

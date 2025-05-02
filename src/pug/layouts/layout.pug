@@ -1,0 +1,15 @@
+//- variables
+block variables
+
+doctype html
+html(lang="tr")
+	head
+		include ../includes/head
+
+	body.theme-light(data-page-type= pageType)
+		include  ../includes/header
+		main.main.m-auto
+			block content
+			include ../includes/footer
+		include ../includes/bottom
+

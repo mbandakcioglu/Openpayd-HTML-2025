@@ -1,0 +1,22 @@
+import ctaForm from "./components/ctaForm";
+import homePageTab from "./components/home-page-tab";
+import MagicBox from "./components/magic-box";
+
+import mainMenu from "./components/main-menu";
+import sliders from "./components/sliders";
+import aosAnimations from "./context/aosAnimations";
+import pageScrolled from "./context/pageScroll";
+import preventEmptyHashLinkClicks from "./utils/preventEmptyHashLinks";
+// import test from "./test";
+
+
+
+// test();
+aosAnimations();
+preventEmptyHashLinkClicks(); // <-- Call the function
+pageScrolled();
+mainMenu();
+sliders();
+homePageTab();
+MagicBox();
+ctaForm();

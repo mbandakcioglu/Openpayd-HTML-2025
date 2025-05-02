@@ -1,0 +1,6 @@
+mixin outreAuraBorder(src, altText,  classes)
+    figure.relative(class= classes ? classes : null)
+        div.relative(class="z-1 overflow-hidden w-full rounded-[20px]")
+            img(class="w-full h-auto object-cover", src="/src/images" + src, alt= altText)
+        div.absolute(class="w-full h-full z-0 rounded-[24px] p-[2px] xl:left-[24px] left-[12px] xl:top-[24px] top-[24px] bg-gradient-to-r from-[#C125DD] to-[#0099F7]")
+            div(class="w-full h-full rounded-[22px] bg-white")

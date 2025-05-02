@@ -1,0 +1,48 @@
+
+mixin Testimonials()
+	-
+		var testimonials = [
+			{
+				"logo": "/etoro.png", 
+				"name": "eToro",
+				"quote": "This partnership is an example of embedded finance in action; it’s a significant evolution in how we build innovative financial services. With every customer receiving their own virtual IBAN and access to the real-time European payment rails, SEPA Instant, we can ensure that funds are moving when, how and to whom they’re supposed to.",
+				//- "person": "Kreeson Thathiah - Director of Payments at eToro"
+			},{
+				"logo": "/swissborg.png", 
+				"name": "wissBorg",
+				"quote": "OpenPayd is enabling us to innovate ahead of demand, embedding new financial services products into our offering, and transforming personal finance and wealth management for our customers.",
+				"person": "Cyrus Fazel - Founder at SwissBorg"
+			},
+			{
+				"logo": "/caxton-red.png", 
+				"name": "axton",
+				"quote": "quot;OpenPayd's unique API-driven infrastructure will help our teams continue to shape the future of payments, automating time-consuming processes, delivering improved operational efficiency and an even better service for our customers.&quot",
+				"person": "Rupert Lee-Browne - CEO at Caxton"
+			},
+			{
+				"logo": "/bitfinex.png", 
+				"name": "bitfinex",
+				"quote": "We chose to work with OpenPayd because of its ability to help us access SEPA real-time payment rails and the speed of integration its API enables. This collaboration forms part of our continued efforts to provide a premium customer service experience to our growing user base.",
+				"person": "Paolo Ardoino - CTO at Bitfinex"
+			}
+		]
+	section.testimonials(class="py-[162px]")
+		.container(class="mx-auto max-w-[1680px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-8 xl:col-start-3")
+				//- p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga amet modi deserunt itaque totam, sapiente at quis non reiciendis omnis similique, et facilis labore delectus repellendus incidunt dicta repudiandae accusantium!
+				#testimonials.swiper
+					.swiper-wrapper
+						each item, index in testimonials
+							.swiper-slide(class="text-center")
+								p.testimonial-logo
+									img.inline-block(class="mb-4 h-[57px]", src= "/src/images/testimonials" + item.logo , alt= item.name)
+								p.quote(class="font-normal mb-[28px]") 
+									| “
+									span= item.quote
+									|  ”
+								if item.person 
+										p.name(class="font-medium")= item.person
+
+				.square-bullets.testimonials-swiper-pagination.flex.justify-center(class="mt-8")
+				//- .swipe.d-lg-none
+					img(src=images + "/icons/swipe.svg", alt="Swipe")
