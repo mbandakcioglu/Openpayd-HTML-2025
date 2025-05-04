@@ -3,6 +3,7 @@ header#site-header {
      /* width: 100% !important; */
 
 
+     background-color: #ffffff60;
     &:after {
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);

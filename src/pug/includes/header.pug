@@ -1,8 +1,10 @@
 include ../components/buttons.pug
 include ../mixins/images.pug
+include ../components/hero-banners.pug
 
 
 - var megaMenuShadow = "#000000"
+- var siteWidth = "1392px"
 
 mixin megaMenuSubElement(c)
 	li
@@ -30,7 +32,7 @@ mixin megaMenuTopElement(t)
 
 //- header#site-header.fixed.w-full.top-0.left-0.right-0.z-1
 header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/header")
-	.container.w-full.mx-auto.flex.items-center.justify-end(class="max-w-[1392px] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out")
+	.container.w-full.mx-auto.flex.items-center.justify-end(class="max-w-[" + siteWidth + "] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out")
 
 		//  Logo 
 		#logo.flex.items-center.space-x-2.mr-auto

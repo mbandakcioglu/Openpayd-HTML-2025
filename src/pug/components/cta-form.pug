@@ -11,7 +11,7 @@ mixin customCheckbox(c)
 				id=c.id,
 				name=c.name,
 				value="1",
-				data-rule-required=c.required && "true",
+				data-rule-required= c.required && "true",
 				class=`peer hidden ${c.inputClassName || ''}`
 			)
 			- const isRadio = c.containerClassName && c.containerClassName.includes('radio')

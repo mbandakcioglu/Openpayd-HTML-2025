@@ -1,0 +1,127 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Components"
+	//- SEO
+	-var desc = "Components"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	// Breadcrumb
+	div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Products > #[strong Accept Payments]
+	
+
+	// Products Dark Hero
+	+poductHero({
+		title: "MANAGE EVERY INCOMING PAYMENT",
+		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
+		link1: {
+			url: "/contact-us/",
+			text: "DEMO",
+		},
+		link2: {
+			url: "https://sandbox.openpayd.com/account/login",
+			text: "SANDBOX",
+			target: "_blank"
+		}
+	})
+
+	// Solutions Light Hero
+	+solutionHero({
+		title: "MANAGE EVERY INCOMING PAYMENT",
+		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
+		link1: {
+			url: "/contact-us/",
+			text: "DEMO",
+		},
+		link2: {
+			url: "https://sandbox.openpayd.com/account/login",
+			text: "SANDBOX",
+			target: "_blank"
+		}
+	})
+
+	// Only Text Hero
+	+onlyTextHero("Announcements")
+
+	// Dark Bg Progucr Content
+	include ../mixins/product-slider.pug
+	section.dark-bg-product-content.overflow-hidden(class="w-full bg-[linear-gradient(to_left,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
+		.container.w-full.mx-auto(class="xl:grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
+
+			div(class="xl:col-span-11 xl:col-start-2")
+				h2.text-white.font-black(class="text-[72px]") Every Pay-In, managed your way
+			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px]")
+				
+				-
+
+					var darkBgContent = [
+						{
+							title: "Unlock real-time payment rails",
+							summary: "Make payments faster than ever",
+							text: "Never wait for a payment to reach your account again, with our access to real-time traditional and blockchain payment rails."
+						},
+						{
+							title: "Harness every major currency",
+							summary: "All in one place",
+							text: "Global regulatory coverage and multi-currency accounts enable you to receive all major currencies, stablecoins and major digital assets such as BTC and ETH."
+						},
+						{
+							title: "Reconcile on arrival",
+							summary: "Streamlining your operations",
+							text: "Virtual IBANs enable you to automatically reconcile every incoming payment as it arrives. Chase growth, not funds."
+						},
+					]
+				
+				each dbc in darkBgContent
+					h3.font-bold.text-4xl= dbc.title
+					h4.font-bold.text-2xl.text-openpayd-blue= dbc.summary
+					p.text-lg= dbc.text
+
+			
+			div.col-start-7.col-span-5.text-white(class="mt-[247px]")
+				-
+					var productSliderContent = [
+						{
+							img: "OP-Icon-Pay-In-Review-Aura.svg",
+							title: "Via API",
+							desc: "Our developer-friendly API is built for scale. Keep track of every incoming payment with our dedicated suite of API calls.",
+							button: {
+								text: "DIVE IN",
+								url: "#"
+							}
+						},
+						{
+							img: "OP-Icon-Sub-Accounts-Aura.svg",
+							title: "Through our platform",
+							desc: "See all your incoming payments in one place in the OpenPayd platform. Then track, filter and export all the information you need.",
+							button: {
+								text: "SANDBOX",
+								url: "#",
+							}
+						},
+						{
+							img: "OP-Icon-Pay-In-Review-Aura.svg",
+							title: "Via API",
+							desc: "Our developer-friendly API is built for scale. Keep track of every incoming payment with our dedicated suite of API calls.",
+							button: {
+								text: "DIVE IN",
+								url: "#"
+							}
+						},
+						{
+							img: "OP-Icon-Sub-Accounts-Aura.svg",
+							title: "Through our platform",
+							desc: "See all your incoming payments in one place in the OpenPayd platform. Then track, filter and export all the information you need.",
+							button: {
+								text: "SANDBOX",
+								url: "#",
+							}
+						}
+
+					]
+				+productSlider(productSliderContent)

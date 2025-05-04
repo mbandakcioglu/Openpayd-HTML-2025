@@ -15,12 +15,12 @@ function sliders() {
     },
     testimonials = new Swiper('#testimonials', TESTIMONIALSOPTIONS);
 
-    const homeProductsoptions= {
+    const PRODUCTSLIDEROPTIONS= {
         slidesPerView: "auto",
         spaceBetween: 36,
-
+        // loop: true
     },
-    homeProducts = new Swiper("#products-slider", homeProductsoptions);
+    productSlider = new Swiper("#products-slider", PRODUCTSLIDEROPTIONS);
     
 
 	console.log("sliders active")

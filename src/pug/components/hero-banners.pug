@@ -1,0 +1,47 @@
+//dark hero banner
+mixin poductHero(d)
+	section#sub-hero-banner(class="w-full bg-[linear-gradient(to_right,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
+		.container.w-full.mx-auto.grid.grid-cols-12(class="bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[80px_-320px]  bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] rounded-tr-[125px]")
+			div(class="col-span-10 rounded-tr-lg space-y-[36px] text-white")
+				h1(class="xl:text-[96px] xl:leading-[110px] xl:font-black")= d.title
+				p= d.summary
+				.flex.gap-8
+					+buttonNonBorder({
+						url: d.link1.url, 
+						text: d.link1.text, 
+						classes: "bg-openpayd-pink hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white",
+                        rel: d.link2.rel, 
+                        target: d.link1.target 
+					})
+					+ButtonAuraBorder({
+						url: d.link2.url, 
+						text: d.link2.text, 
+						classes:"text-white", 
+						rel: d.link2.rel, 
+						target: d.link2.target 
+					})
+
+//light hero banner
+mixin solutionHero(d)
+	section#sub-hero-banner(class="w-full bg-[linear-gradient(to_right,rgb(230,250,255)_0%,rgb(230,250,255)_50%,white_50%,white_100%)]")
+		.container.w-full.mx-auto.grid.grid-cols-12(class="bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[80px_-320px] bg-openpayd-light-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] rounded-tr-[125px]")
+			div(class="col-span-10 rounded-tr-lg space-y-[36px] text-black")
+				h1(class="xl:text-[96px] xl:leading-[110px] xl:font-black text-opanpayd-violet")= d.title
+				p= d.summary
+				.flex.gap-8
+					+buttonNonBorder({
+						url: d.link1.url, 
+						text: d.link1.text, 
+						classes: "bg-openpayd-pink hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: d.link2.url, 
+						text: d.link2.text, 
+						classes:"text-black", 
+						rel:"nofollow", 
+						target:"_blank" 
+					})
+mixin onlyTextHero(title)
+	section#sub-hero-banner(class="w-full")
+		.container.w-full.mx-auto.grid.grid-cols-12(class="max-w-[" + siteWidth + "] pb-[72px] pt-[65px] px-[5px] rounded-tr-[125px]")
+			h1(class="xl:text-[96px] xl:leading-[110px] xl:font-black text-opanpayd-dark-blue")= title

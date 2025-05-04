@@ -1,0 +1,94 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Accept Payments"
+	//- SEO
+	-var desc = "Accept Payments"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	include ../mixins/product-slider.pug
+	div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Products > #[strong Accept Payments]
+	
+
+	+poductHero({
+		title: "MANAGE EVERY INCOMING PAYMENT",
+		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
+		link1: {
+			url: "/contact-us/",
+			text: "DEMO",
+		},
+		link2: {
+			url: "https://sandbox.openpayd.com/account/login",
+			text: "SANDBOX",
+			target: "_blank"
+		}
+	})
+
+
+	section.text-image-box(class="pb-[132px] pt-[166px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 space-y-[46px ]")
+				h2(class="font-black leading-[69px] text-[54px]") Receive payments from anywhere
+				p OpenPayd offers a truly global payment solution, with the ability to receive payments across every major currency into a single IBAN. Our rails-agnostic approach combines traditional finance with blockchain technology under one API, ensuring instants, secure transactions all over the world.
+			div(class="xl:col-span-6 xl:col-start-7")
+				figure(class="p-[42px] pt-0") 
+					img(src="/src/images/accepting-payments.png", alt="Receive payments from anywhere")
+
+	section.dark-bg-product-content.overflow-hidden(class="w-full bg-[linear-gradient(to_left,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
+		.container.w-full.mx-auto(class="xl: grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
+			div(class="xl:col-span-11 xl:col-start-2")
+				h2.text-white.font-black(class="text-[72px]") Every Pay-In, managed your way
+			div(class="xl:col-span-4 xl:col-start-2 text-lg text-white space-y-[38px]")
+				h3.font-bold.text-4xl Unlock real-time payment rails
+				h4.font-bold.text-2xl.text-openpayd-blue Make payments faster than ever
+				p.text-lg Never wait for a payment to reach your account again, with our access to real-time traditional and blockchain payment rails.
+				
+				h3.font-bold.text-4xl Harness every major currency
+				h4.font-bold.text-2xl.text-openpayd-blue All in one place
+				p.text-lg Global regulatory coverage and multi-currency accounts enable you to receive all major currencies, stablecoins and major digital assets such as BTC and ETH.
+				
+				h3.font-bold.text-4xl Reconcile on arrival
+				h4.font-bold.text-2xl.text-openpayd-blue Streamlining your operations
+				p.text-lg Virtual IBANs enable you to automatically reconcile every incoming payment as it arrives. Chase growth, not funds.
+			
+			div.col-start-7.col-span-5.text-white(class="mt-[247px]")
+				-
+					var productSliderContent = [
+						{
+							img: "OP-Icon-Pay-In-Review-Aura.svg",
+							title: "Via API",
+							desc: "Our developer-friendly API is built for scale. Keep track of every incoming payment with our dedicated suite of API calls.",
+							button: {
+								text: "DIVE IN",
+								url: "#"
+							}
+						},
+						{
+							img: "OP-Icon-Sub-Accounts-Aura.svg",
+							title: "Through our platform",
+							desc: "See all your incoming payments in one place in the OpenPayd platform. Then track, filter and export all the information you need.",
+							button: {
+								text: "SANDBOX",
+								url: "#",
+							}
+						}
+
+					]
+				+productSlider(productSliderContent)
+
+
+	section(class="")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="col-span-6 col-start-1")
+				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
+			div(class="col-span-5 col-start-8")
+				h2(class="font-black text-[54px] leading-[69px]") 6 data points: all it takes to initiate international payouts
+				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
+				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
+					br
+					| That’s it, now watch that payment go.

@@ -14,7 +14,7 @@ block content
 	include ../mixins/product-slider.pug
 	
 	section#hero-banner(class="pt-[197px]") 
-		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[1392px] text-[18px] pt-[32px] px-[5px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] text-[18px] pt-[32px] px-[5px]")
 			div(class="xl:w-8/12")
 				p.text-2xl.font-medium(class="mb-[36px]") Financial Services Infrastructure
 				
@@ -66,11 +66,11 @@ block content
 						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
 		
 	section.w-full.bg-white(data-aos="fade-up")
-		.container.mx-auto(class="max-w-[1392px] grid grid-cols-6 grid-rows-1 gap-4")
+		.container.mx-auto(class="max-w-[" + siteWidth + "] grid grid-cols-6 grid-rows-1 gap-4")
 			div(class="col-span-5 xl:text-[42px] mt-[124px]", data-aos="fade-up") #[strong Powering the growth of the digital economy.] Rail-agnostic infrastructure seamlessly combines traditional finance and digital assets under one API. Build and scale in the digital age.
 
 	section.w-full.py-16.bg-white(data-aos="fade-up")
-		.container.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12")
+		.container.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
 			mixin TabImages(img, title)
 				+outreAuraBorder(img, title, "mb-[48px]")
 				//- figure.shadow-lg.relative(class="mb-[48px]")
@@ -115,7 +115,7 @@ block content
 			.layer.absolute(class="inset-[5%] rounded-full bg-gradient-to-tr from-[#9A50E5] to-[#00CCFF] opacity-50 blur-[60px]")
 			.layer.absolute(class="inset-[30%] rounded-full bg-[#00CCFF] opacity-40 blur-[30px]")
 		
-		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12", ) 
+		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12", ) 
 			
 			.video-aura-box.gradient-border-1.overflow-hidden(class="xl:px-[26px] xl:py-[28px] aspect-[1556/578] rounded-[10px] xl:rounded-[30px] before:rounded-[10px] xl:before:rounded-[30px] before:p-[4px] col-span-12 xl:mb-[108px] mb-[54px]", data-aos="fade-up", data-aos-duration="1500")
 				//- img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px]", src="/src/images/video-cover-copy.jpg", alt="")
@@ -129,8 +129,8 @@ block content
 				br
 				| At OpenPayd, we’re powering the growth of the digital economy through a universal financial infrastructure.  Using our API-led platform, innovative companies can build new products, streamline their operations and manage their payments on a global scale.
 
-		//- .container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12", ) 
-		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12", ) 
+		//- .container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12", ) 
+		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12", ) 
 				
 			h2(class="text-white xl:text-[86px] text-4xl font-black col-span-12 mt-[108px]", data-aos="fade-up") Products
 			div(class="col-span-4 text-white")
@@ -169,13 +169,13 @@ block content
 
 				+buttonNonBorder({
 					url:"#", 
-					text:"SANDBOX", 
+					text:"DIVE IN", 
 					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px]"
 				})
 		
 
 
-		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12", ) 
+		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12", ) 
 			
 			.col-span-12(class="mt-[108px]")
 				img(class="mx-auto max-w-[100%]", src="/src/images/Frame-2085.png", alt="")
@@ -183,7 +183,7 @@ block content
 
 	
 	section#developers(data-aos="fade-up")
-		.container(class="relative z-1 mx-auto px-6 gap-4 max-w-[1392px] xl:grid xl:grid-cols-12 pt-[108px]")
+		.container(class="relative z-1 mx-auto px-6 gap-4 max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12 pt-[108px]")
 			div(class="col-span-4")
 				h2.text-openpayd-dark-blue(class="xl:text-[86px] text-4xl font-black col-span-12 mb-[48px] xl:leading-[120px]", data-aos="fade-up") Built for Developers
 				p(data-aos="fade-up") Our intuitive, fully-documented REST API is designed, built, and maintained by developers, for developers. Go live in a matter of days with our simple integration and access to industry-leading support. Want to explore first? Get instant access to our sandbox environment.
@@ -251,7 +251,7 @@ block content
 
 
 	section(class="xl:py-[162px] py-[84px]") 
-		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.gap-4(class="max-w-[1392px] xl:grid xl:grid-cols-12")
+		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
 			div(class="col-span-5", data-aos="fade-up")
 				h2.text-openpayd-dark-blue(class="xl:text-[86px] text-4xl font-black col-span-12 mb-[48px] xl:leading-[120px]", data-aos="fade-up") By leading experts in tech
 				p(data-aos="fade-up") At OpenPayd, we are a diverse team of over 150 experts from all over the world. But every OpenPayder has joined for the same reason: to build a better payments experience for our clients and their customers.
@@ -274,7 +274,7 @@ block content
 			div.label.text-center(class="xl:text-[24px]")!= label
 	
 	section.features(class="bg-linear-135 from-openpayd-purple from-0% via-openpayd-blue via-50% to-openpayd-purple to-100%", data-aos="fade-up")
-		.container(class="mx-auto px-6 gap-12 max-w-[1392px] xl:grid xl:grid-cols-12 py-[99px]")
+		.container(class="mx-auto px-6 gap-12 max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12 py-[99px]")
 			.features-wrapper(class="col-span-10 col-start-2 xl:grid xl:grid-cols-4")
 
 				+features("300+","Clients")
@@ -289,7 +289,7 @@ block content
 	//- \Testimonial
 
 	section#cta(class="bg-openpayd-dark-blue pb-[112px]")
-		.container(class="rounded-b-[100px] mx-auto px-6 gap-12 max-w-[1392px] xl:grid xl:grid-cols-12 py-[99px] bg-linear-135 from-openpayd-purple from-0% via-openpayd-blue via-50% to-openpayd-purple to-100%")
+		.container(class="rounded-b-[100px] mx-auto px-6 gap-12 max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12 py-[99px] bg-linear-135 from-openpayd-purple from-0% via-openpayd-blue via-50% to-openpayd-purple to-100%")
 			div(class="col-span-3 col-start-2")
 				h2(class="font-black text-4xl text-black xl:leading-[63px]") Move and manage money globally
 				p(class="mt-[46px] text-2xl") Contact our team today to talk through your company's needs.
