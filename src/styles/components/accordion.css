@@ -1,0 +1,36 @@
+/* index numarasını mor yapalım */
+.accordion .accItem.is-open{ 
+    .index {
+        @apply text-openpayd-purple;
+    }
+    .plus {
+        background-color: var(--color-openpayd-purple);
+        color: var(--color-white);
+        transform: rotate(45deg);
+        transition: .5s;
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+  
+  /* soru metnine gradient text */
+  .accordion .accItem.is-open .q {
+    background: linear-gradient(
+      90deg,
+      #E348FF 0%,
+      #B514F7 30%,
+      #625BFB 70%,
+      #00CCFF 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* plus kutusunun kendine has stili (biraz animasyon da ekledim) */
+  .accordion .accItem .plus {
+    @apply transition-all duration-200;
+  }
+  .accordion .accItem.is-open .plus {
+    @apply scale-110;
+  }

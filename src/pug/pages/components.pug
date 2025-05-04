@@ -16,6 +16,7 @@ block content
 	
 
 	// Products Dark Hero
+	//- include header.pug içinde
 	+poductHero({
 		title: "MANAGE EVERY INCOMING PAYMENT",
 		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
@@ -31,6 +32,7 @@ block content
 	})
 
 	// Solutions Light Hero
+	//- include header.pug içinde
 	+solutionHero({
 		title: "MANAGE EVERY INCOMING PAYMENT",
 		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
@@ -46,6 +48,7 @@ block content
 	})
 
 	// Only Text Hero
+	//- include header.pug içinde
 	+onlyTextHero("Announcements")
 
 	// Dark Bg Progucr Content
@@ -125,3 +128,78 @@ block content
 
 					]
 				+productSlider(productSliderContent)
+
+	// Left Image Content
+	section(class="")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-6 xl:col-start-1")
+				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
+			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
+				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
+				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
+					br
+					| That’s it, now watch that payment go.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes:"text-black"
+					})
+	//Right Image Content
+	section(class="")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] text-lg")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
+				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
+				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
+					br
+					| That’s it, now watch that payment go.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes:"text-black"
+					})
+			div(class="xl:col-span-6 xl:col-start-7")
+				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
+
+	//FAQ
+	include ../components/faq.pug
+	-
+		var faq = [
+			{ 
+				no: '01', 
+				q: 'Alright, but what exactly do you do?', 
+				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.' 
+			},
+			{ 
+				no: '02', 
+				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?', 
+				a: 'Yes! We can collaborate based on your needs.' 
+			},
+			{ 
+				no: '03', 
+				q: 'Are your rates competitive?', 
+				a: 'We offer rates that reflect the quality and efficiency of our services.'
+			},
+			{ 
+				no: '04', 
+				q: 'Why do you have a monthly project cap?', 
+				a: 'To ensure every project receives the attention it deserves.' 
+			}
+		]
+
+	+Faq(faq)
+
+

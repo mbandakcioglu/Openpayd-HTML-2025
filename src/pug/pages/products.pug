@@ -10,6 +10,8 @@ block variables
 
 block content
 	include ../mixins/product-slider.pug
+	include ../components/faq.pug
+
 	div(class="mt-[197px] mb-[42px]")
 		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
 			.breadcrumb Products > #[strong Accept Payments]
@@ -82,13 +84,50 @@ block content
 				+productSlider(productSliderContent)
 
 
-	section(class="")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="col-span-6 col-start-1")
+	section.w-full(class="")
+		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-6 xl:col-start-1")
 				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
-			div(class="col-span-5 col-start-8")
-				h2(class="font-black text-[54px] leading-[69px]") 6 data points: all it takes to initiate international payouts
+			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
 				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
 				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
 					br
 					| That’s it, now watch that payment go.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes:"text-black"
+					})
+	
+	-
+		var faq = [
+			{ 
+				no: '01', 
+				q: 'Alright, but what exactly do you do?', 
+				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.' 
+			},
+			{ 
+				no: '02', 
+				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?', 
+				a: 'Yes! We can collaborate based on your needs.' 
+			},
+			{ 
+				no: '03', 
+				q: 'Are your rates competitive?', 
+				a: 'We offer rates that reflect the quality and efficiency of our services.'
+			},
+			{ 
+				no: '04', 
+				q: 'Why do you have a monthly project cap?', 
+				a: 'To ensure every project receives the attention it deserves.' 
+			}
+		]
+
+	+Faq(faq)

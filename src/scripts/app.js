@@ -1,3 +1,4 @@
+import Accordion from "./components/accordion";
 import ctaForm from "./components/ctaForm";
 import homePageTab from "./components/home-page-tab";
 import MagicBox from "./components/magic-box";
@@ -20,3 +21,4 @@ sliders();
 homePageTab();
 MagicBox();
 ctaForm();
+Accordion();
