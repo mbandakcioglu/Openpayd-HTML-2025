@@ -11,12 +11,12 @@ mixin Accordion(data)
 	.accordion(data-first-open="yes")
 		each item, index in data
 			- const idx = index + 1
-			.accItem(class="not-last:border-b border-gray-200 after:content-[''] after:block py-[52px]" + (item.open ? ' is-open' : ''))
-				span.index(class="block float-left font-black h-full text-openpayd-shades-dark-blue-light text-[42px] text-center w-[166px]")= idx < 10 ? `0${idx}` : idx
-				.accHead(class="flex justify-between items-center cursor-pointer ml-[166px] mb-[50px] text-base font-semibold text-openpayd-text" data-index=idx)
-					span.q(class="mr-auto text-2xl w-fit")= item.q
-					span.plus(class="flex justify-center items-center w-[50px] h-[50px] rounded-full text-openpayd-purple transition-transform duration-200 text-xl")
+			.accItem(class="not-last:border-b border-gray-200 after:content-[''] after:block xl:px-0 px-[15px] py-[52px]" + (item.open ? ' is-open' : ''))
+				span.index(class="block float-left font-black h-full text-openpayd-shades-dark-blue-light text-[21px] xl:text-[42px] text-center xl:w-[166px] w-[83px]")= idx < 10 ? `0${idx}` : idx
+				.accHead(class="flex justify-between items-center cursor-pointer ml-[83px] xl:ml-[166px] mb-[50px] text-base font-semibold text-openpayd-text gap-5" data-index=idx)
+					span.q(class="mr-auto xl:text-2xl w-fit")= item.q
+					span.plus(class="flex justify-center items-center xl:size-[50px] size-[25px] rounded-full text-openpayd-purple transition-transform duration-200 text-xl")
 						img(src="/src/images/acc-plus.svg", alt="")
-				.accPane(class="max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out ml-[166px]")
+				.accPane(class="max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out ml-[83px] xl:ml-[166px]")
 					.inner-content(class="text-sm text-openpayd-text leading-relaxed")
 						p!= item.a

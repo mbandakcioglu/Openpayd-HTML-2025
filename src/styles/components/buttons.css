@@ -24,7 +24,18 @@
         }
     }
     &.aura-hover {
-        transition: .5s;
+        background-clip:text;           
+        & * {
+            transition: .5s;
+        }
+        &:hover {
+            span {
+
+                background: linear-gradient(90deg, #E348FF 0%, #B514F7 30%, #625BFB 70%, #00CCFF 100%);
+                -webkit-background-clip:text; 
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
     
 
@@ -43,7 +54,6 @@
 
 body[data-page-type="header-dark"] {
     #site-header {
-
         .button {
             &.aura-border {
                 color: var(--color-main-white); 

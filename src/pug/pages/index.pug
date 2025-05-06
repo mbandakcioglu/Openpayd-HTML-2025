@@ -69,7 +69,8 @@ block content
 		.container.mx-auto(class="max-w-[" + siteWidth + "] grid grid-cols-6 grid-rows-1 gap-4")
 			div(class="col-span-5 xl:text-[42px] mt-[124px]", data-aos="fade-up") #[strong Powering the growth of the digital economy.] Rail-agnostic infrastructure seamlessly combines traditional finance and digital assets under one API. Build and scale in the digital age.
 
-	section.w-full.py-16.bg-white(data-aos="fade-up")
+
+	section.w-full.bg-white(class="py-16", data-aos="fade-up")
 		.container.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
 			mixin TabImages(img, title)
 				+outreAuraBorder(img, title, "mb-[48px]")
@@ -296,4 +297,4 @@ block content
 			div(class="col-span-6 xl:grid-cols-6 col-start-6")
 				include ../components/cta-form.pug
 	
-	include ../includes/only-gateways.pug
+	

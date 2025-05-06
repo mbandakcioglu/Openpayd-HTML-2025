@@ -1,0 +1,63 @@
+section(class="bg-openpayd-gray")
+	.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
+		div(class="xl:col-span-10 xl:col-start-2 text-center space-y-[48px]")
+			h2(class="font-black xl:text-[54px] xl:leading-[69px]") A full banking and payments ecosystem through a single API
+			p.font-2xl OpenPayd’s simple, developer-first API delivers Banking-as-a-Service with a modular architecture.
+				br
+				| Build a banking and payments service that grows and changes as you do. 
+		.gateways(class="col-span-12 grid grid-cols-3 grid-rows-2 gap-4 mt-[112px] gap-[44px]")
+			
+			-
+				var prodGateways = [
+					{
+						img: "/OP-Icon-Pay-In-Review-Aura.svg",
+						title: "Accepting Payments",
+						sum: "Receive payments in every major curreny",
+						url: "#"
+					},
+					{
+						img: "/OP-Icon-International-Aura.svg",
+						title: "Global Payouts",
+						sum: "Connect to local and global payment rails",
+						url: "#"
+					},
+					{
+						img: "/OP-Icon-Corporate-Customers-Aura.svg",
+						title: "Corporate Accounts",
+						sum: "Manage all your business spending",
+						url: "#"
+					},
+					{
+						img: "/OP-Icon-Sub-Accounts-Aura.svg",
+						title: "Pooled Accounts",
+						sum: "Segregate accounts to power your business",
+						url: "#"
+					},
+					{
+						img: "/OP-Icon-Pay-In-Review-Aura.svg",
+						title: "Virtual Ibans",
+						sum: "Virtual account for every underlying customer",
+						url: "#"
+					},
+					{
+						img: "/OP-Icon-FX-Aura.svg",
+						title: "Multi-Currency Accounts",
+						sum: "12 Major currencies within a single account",
+						url: "#"
+					}
+				]
+			each item in prodGateways
+				div(class="gradient-border-2 py-[38px] pe-[24px]")
+					div(class="grid grid-col pl-[112px] space-y-[24px]") 
+						img(class="absolute float-left -ml-[88px] size-[64px]", src="/src/images" + item.img, alt= item.title)
+						strong(class="block text-2xl")= item.title
+						span(class="block")= item.sum
+						a.more(class="button aura-hover mt-auto content-center flex font-bold gap-2.5 text-openpayd-blue", href= item.url) 
+							span SEE MORE
+							img(class="inline-block", src="/src/images/link-arow.svg", alt="SEE MORE")
+
+
+
+
+
+

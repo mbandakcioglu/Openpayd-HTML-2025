@@ -42,25 +42,59 @@ block content
 					img(src="/src/images/accepting-payments.png", alt="Receive payments from anywhere")
 
 	section.dark-bg-product-content.overflow-hidden(class="w-full bg-[linear-gradient(to_left,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
-		.container.w-full.mx-auto(class="xl: grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
-			div(class="xl:col-span-11 xl:col-start-2")
-				h2.text-white.font-black(class="text-[72px]") Every Pay-In, managed your way
-			div(class="xl:col-span-4 xl:col-start-2 text-lg text-white space-y-[38px]")
-				h3.font-bold.text-4xl Unlock real-time payment rails
-				h4.font-bold.text-2xl.text-openpayd-blue Make payments faster than ever
-				p.text-lg Never wait for a payment to reach your account again, with our access to real-time traditional and blockchain payment rails.
+		.container.w-full.mx-auto(class="xl:grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
+
+			div(class="xl:col-span-11 xl:col-start-2 p-[15px] xl:p-0")
+				h2.text-white.font-black(class="xl:text-[72px]") Every Pay-In, managed your way
+			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px] p-[15px] xl:p-0")
 				
-				h3.font-bold.text-4xl Harness every major currency
-				h4.font-bold.text-2xl.text-openpayd-blue All in one place
-				p.text-lg Global regulatory coverage and multi-currency accounts enable you to receive all major currencies, stablecoins and major digital assets such as BTC and ETH.
+				-
+
+					var darkBgContent = [
+						{
+							title: "Unlock real-time payment rails",
+							summary: "Make payments faster than ever",
+							text: "Never wait for a payment to reach your account again, with our access to real-time traditional and blockchain payment rails."
+						},
+						{
+							title: "Harness every major currency",
+							summary: "All in one place",
+							text: "Global regulatory coverage and multi-currency accounts enable you to receive all major currencies, stablecoins and major digital assets such as BTC and ETH."
+						},
+						{
+							title: "Reconcile on arrival",
+							summary: "Streamlining your operations",
+							text: "Virtual IBANs enable you to automatically reconcile every incoming payment as it arrives. Chase growth, not funds."
+						},
+					]
 				
-				h3.font-bold.text-4xl Reconcile on arrival
-				h4.font-bold.text-2xl.text-openpayd-blue Streamlining your operations
-				p.text-lg Virtual IBANs enable you to automatically reconcile every incoming payment as it arrives. Chase growth, not funds.
+				each dbc in darkBgContent
+					h3.font-bold.text-4xl= dbc.title
+					h4.font-bold.text-2xl.text-openpayd-blue= dbc.summary
+					p.text-lg= dbc.text
+
 			
-			div.col-start-7.col-span-5.text-white(class="mt-[247px]")
+			div.col-start-7.col-span-5.text-white(class="xl:mt-[247px] ml-[15px] xl:ml-0")
 				-
 					var productSliderContent = [
+						{
+							img: "OP-Icon-Pay-In-Review-Aura.svg",
+							title: "Via API",
+							desc: "Our developer-friendly API is built for scale. Keep track of every incoming payment with our dedicated suite of API calls.",
+							button: {
+								text: "DIVE IN",
+								url: "#"
+							}
+						},
+						{
+							img: "OP-Icon-Sub-Accounts-Aura.svg",
+							title: "Through our platform",
+							desc: "See all your incoming payments in one place in the OpenPayd platform. Then track, filter and export all the information you need.",
+							button: {
+								text: "SANDBOX",
+								url: "#",
+							}
+						},
 						{
 							img: "OP-Icon-Pay-In-Review-Aura.svg",
 							title: "Via API",
@@ -84,6 +118,40 @@ block content
 				+productSlider(productSliderContent)
 
 
+	
+
+	section.trio-box.w-full
+		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12 space-y-[64px]")
+
+			h2(class="font-black xl:text-[54px] xl:leading-[69px] xl:col-span-10 xl:col-start-2 text-center") Your new account infrastructure
+
+			p.summary(class="xl:col-span-10 xl:col-start-2 text-center xl:text-2xl") Build a little or build a lot. Our payments and banking infrastructure is ready for whatever you need:
+			-
+				var trioContent = [
+					{
+						img: "/OP-Icon-Master-Accounts-Aura.svg",
+						title: "Master Account",
+						text: "Open a Master account (also known as a pooled account), in Euro or GBP."
+					},
+					{
+						img: "/OP-Icon-Sub-Accounts-Aura.svg",
+						title: "Sub Accounts",
+						text: "Start issuing sub-accounts (also called linked accounts) and virtual IBANs for your underlying users or customers."
+					},
+					{
+						img: "/OP-Icon-FX-Aura.svg",
+						title: "Multi-Currency",
+						text: "Combine with our multi-currency account infrastructure and pay-out functionality to super-charge your global presence."
+					},
+				]
+			div(class="xl:col-span-10 xl:col-start-2 xl:grid xl: xl:grid-cols-9 xl:gap-5")
+				each item in trioContent
+					div(class="col-span-3 text-center space-y-[24px]") 
+						img(class="inline-block size-[72px]", src="/src/images" + item.img, alt= item.title)
+						h3(class="text-2xl")= item.title
+						p= item.text
+
+
 	section.w-full(class="")
 		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
 			div(class="xl:col-span-6 xl:col-start-1")
@@ -98,14 +166,45 @@ block content
 					+buttonNonBorder({
 						url: "#", 
 						text: "DISCOVER vIBANs", 
-						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 					+ButtonAuraBorder({
 						url: "#", 
 						text: "SANDBOX", 
 						classes:"text-black"
 					})
-	
+
+
+	//Right Image Content
+	section(class="")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] space-y-[24px] text-lg mb-[50px]")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") Open virtual accounts with 13 lines of code
+				p Simple, but effective. That’s our philosophy behind every API call.
+					br
+					| Generate an account for a linked client with just two required parameters 
+
+				p (“Currency” and a “friendlyName” for the account) and three optional ones. That’s all it takes to issue vIBANs like a pro.
+
+				p Ready to explore using our API in your environment? Get started with our Sandbox today.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes:"text-black"
+					})
+			div(class="xl:col-span-6 xl:col-start-7")
+				img.w-full(src="/src/images/code-boxx.png", alt="6 data points: all it takes to initiate international payouts")
+
+
+	include ../components/products-gateway.pug
+
+
 	-
 		var faq = [
 			{ 

@@ -51,14 +51,14 @@ block content
 	//- include header.pug içinde
 	+onlyTextHero("Announcements")
 
-	// Dark Bg Progucr Content
+	// Dark Bg product Content
 	include ../mixins/product-slider.pug
 	section.dark-bg-product-content.overflow-hidden(class="w-full bg-[linear-gradient(to_left,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
 		.container.w-full.mx-auto(class="xl:grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
 
-			div(class="xl:col-span-11 xl:col-start-2")
-				h2.text-white.font-black(class="text-[72px]") Every Pay-In, managed your way
-			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px]")
+			div(class="xl:col-span-11 xl:col-start-2 p-[15px] xl:p-0")
+				h2.text-white.font-black(class="xl:text-[72px]") Every Pay-In, managed your way
+			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px] p-[15px] xl:p-0")
 				
 				-
 
@@ -86,7 +86,7 @@ block content
 					p.text-lg= dbc.text
 
 			
-			div.col-start-7.col-span-5.text-white(class="mt-[247px]")
+			div.col-start-7.col-span-5.text-white(class="xl:mt-[247px] ml-[15px] xl:ml-0")
 				-
 					var productSliderContent = [
 						{
@@ -131,10 +131,10 @@ block content
 
 	// Left Image Content
 	section(class="")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-6 xl:col-start-1")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-6 xl:col-start-1 mb-[50px]")
 				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
-			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg")
+			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] space-y-[24px] text-lg")
 				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
 				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
 				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
@@ -144,7 +144,7 @@ block content
 					+buttonNonBorder({
 						url: "#", 
 						text: "DISCOVER vIBANs", 
-						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 					+ButtonAuraBorder({
 						url: "#", 
@@ -153,8 +153,8 @@ block content
 					})
 	//Right Image Content
 	section(class="")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] text-lg")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] space-y-[24px] text-lg mb-[50px]")
 				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
 				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
 				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
@@ -164,7 +164,7 @@ block content
 					+buttonNonBorder({
 						url: "#", 
 						text: "DISCOVER vIBANs", 
-						classes: "bg-openpayd-blue hover:bg-linear- [90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 					+ButtonAuraBorder({
 						url: "#", 

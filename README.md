@@ -34,25 +34,3 @@ npm run build
     link(rel="stylesheet" href="/src/styles/app.sass")
     script(type='module' src="/src/scripts/app.js")
   ```
-### svg and images
-
-Your pug file:
-```
-#svg
-header.header
-    .container
-        .header__container
-            .header__top
-                |copyright
-            .header__bottom
-                .header__logo
-                    include ../../../assets/img/header/vite.svg  <----svg 
-
-
-#image
-section.top
-    .container
-        h1.section-title Vituum + Pug Template
-        .top__content
-            img(src="/src/assets/img/top/Vituum.png")
-```
