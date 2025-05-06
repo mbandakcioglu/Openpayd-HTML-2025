@@ -24,6 +24,11 @@
         }
     }
     &.aura-hover {
+
+        transition: .5s;
+
+    }
+    &.aura-hover-text {
         background-clip:text;           
         & * {
             transition: .5s;
@@ -35,7 +40,7 @@
                 -webkit-background-clip:text; 
                 -webkit-text-fill-color: transparent;
             }
-        }
+        }     
     }
     
 

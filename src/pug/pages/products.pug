@@ -32,7 +32,7 @@ block content
 	})
 
 
-	section.text-image-box(class="pb-[132px] pt-[166px]")
+	section.right-image-text-box(class="pb-[132px] pt-[166px]")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
 			div(class="xl:col-span-5 space-y-[46px ]")
 				h2(class="font-black leading-[69px] text-[54px]") Receive payments from anywhere
@@ -152,11 +152,11 @@ block content
 						p= item.text
 
 
-	section.w-full(class="")
+	section.left-image-text-box.w-full(class="")
 		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-6 xl:col-start-1")
+			div(class="xl:col-span-6 xl:col-start-1 content-center")
 				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
-			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg")
+			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg content-center")
 				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
 				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
 				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
@@ -176,7 +176,7 @@ block content
 
 
 	//Right Image Content
-	section(class="")
+	section.right-image-text-box(class="")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
 			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] space-y-[24px] text-lg mb-[50px]")
 				h2(class="font-black xl:text-[54px] xl:leading-[69px]") Open virtual accounts with 13 lines of code

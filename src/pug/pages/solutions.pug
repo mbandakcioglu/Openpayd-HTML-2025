@@ -1,0 +1,153 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Accept Payments"
+	//- SEO
+	-var desc = "Accept Payments"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	include ../mixins/product-slider.pug
+	include ../components/faq.pug
+
+	div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Products > #[strong Accept Payments]
+	
+
+	+solutionHero({
+		title: "MANAGE EVERY INCOMING PAYMENT",
+		summary: "Receive payments without the pain, using OpenPayd’s universal infrastructure.",
+		link1: {
+			url: "/contact-us/",
+			text: "DEMO",
+		},
+		link2: {
+			url: "https://sandbox.openpayd.com/account/login",
+			text: "SANDBOX",
+			target: "_blank"
+		}
+	})
+
+
+	//- section.text-image-box(class="pb-[132px] pt-[166px]")
+	section.right-image-text-box(class="pt-[166px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 space-y-[46px ]")
+				h2(class="font-black leading-[69px] text-[54px]") Go further. Go faster.
+				p OpenPayd gives you multi-currency accounts, virtual IBANs, foreign exchange and stablecoin functionality, integrated directly into your tech. 
+			div(class="xl:col-span-6 xl:col-start-7")
+				figure(class="p-[42px] pt-0") 
+					img(src="/src/images/Frame-2102.png", alt="Receive payments from anywhere")
+
+
+	section.multi-text-image-box.w-full(class="py-[151px] space-y-[152px]")
+		.container.mx-auto(class="max-w-[" + siteWidth + "]  xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-6 xl:col-start-1 content-center")
+				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
+			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg content-center")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
+				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
+				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
+					br
+					| That’s it, now watch that payment go.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes:"text-black"
+					})
+
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] xl:grid xl:grid-cols-12")
+			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] space-y-[24px] text-lg mb-[50px] content-center")
+				h2(class="font-black xl:text-[54px] xl:leading-[69px]") Open virtual accounts with 13 lines of code
+				p Simple, but effective. That’s our philosophy behind every API call.
+					br
+					| Generate an account for a linked client with just two required parameters 
+
+				p (“Currency” and a “friendlyName” for the account) and three optional ones. That’s all it takes to issue vIBANs like a pro.
+
+				p Ready to explore using our API in your environment? Get started with our Sandbox today.
+				.flex.gap-8
+					+buttonNonBorder({
+						url: "#", 
+						text: "SANDBOX", 
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+					})
+					+ButtonAuraBorder({
+						url: "#", 
+						text: "DISCOVER vIBANs", 
+						classes:"text-black"
+					})
+			div(class="xl:col-span-6 xl:col-start-7 content-center")
+				img.w-full(src="/src/images/code-boxx.png", alt="6 data points: all it takes to initiate international payouts")
+
+
+	section.trio-box.w-full
+		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12 space-y-[64px]")
+
+			h2(class="font-black xl:text-[54px] xl:leading-[69px] xl:col-span-10 xl:col-start-2 text-center") Why OpenPayd?
+
+			//- p.summary(class="xl:col-span-10 xl:col-start-2 text-center xl:text-2xl") Build a little or build a lot. Our payments and banking infrastructure is ready for whatever you need:
+			-
+				var trioContent = [
+					{
+						img: "/OP-Icon-Embedded-Finance-Aura.svg",
+						title: "Unmatched product offering",
+						text: "We offer a full suite of financial services that you can add as you need them. Get everything you need, nothing you don’t."
+					},
+					{
+						img: "/OP-Icon-Technology-Aura.svg",
+						title: "Simple integration",
+						text: "Our developer-friendly API lets you get up and running with the financial services you need, with minimal tech input."
+					},
+					{
+						img: "/OP-Icon-Compliance-Aura.svg",
+						title: "Full regulatory coverage",
+						text: "With OpenPayd, you have all your licensing and compliance requirements covered. We handle everything."
+					},
+				]
+			div(class="xl:col-span-10 xl:col-start-2 xl:grid xl: xl:grid-cols-9 xl:gap-5")
+				each item in trioContent
+					div(class="col-span-3 text-center space-y-[24px]") 
+						img(class="inline-block size-[72px]", src="/src/images" + item.img, alt= item.title)
+						h3(class="text-2xl")= item.title
+						p= item.text
+
+
+
+	include ../components/products-gateway.pug
+
+
+	-
+		var faq = [
+			{ 
+				no: '01', 
+				q: 'Alright, but what exactly do you do?', 
+				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.' 
+			},
+			{ 
+				no: '02', 
+				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?', 
+				a: 'Yes! We can collaborate based on your needs.' 
+			},
+			{ 
+				no: '03', 
+				q: 'Are your rates competitive?', 
+				a: 'We offer rates that reflect the quality and efficiency of our services.'
+			},
+			{ 
+				no: '04', 
+				q: 'Why do you have a monthly project cap?', 
+				a: 'To ensure every project receives the attention it deserves.' 
+			}
+		]
+
+	+Faq(faq)
