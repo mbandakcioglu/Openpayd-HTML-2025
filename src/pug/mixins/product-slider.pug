@@ -3,7 +3,7 @@ mixin productSlider(p)
 	#products-slider.swiper(class="xl:w-[60vw] pe-5")
 		.swiper-wrapper
 			each p in productSliderContent
-				.swiper-slide(class="xl:w-2/6! w-2/3!")
+				.swiper-slide(class="")
 					.gradient-border-2(class="p-[50px] h-full text-white") 
 						img(class="mb-[18px] size-[64px]", src=`/src/images/${p.img}`, alt= p.title)
 						div(class="mb-[18px] text-2xl")= p.title

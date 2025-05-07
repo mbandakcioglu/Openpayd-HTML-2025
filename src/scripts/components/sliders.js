@@ -26,7 +26,24 @@ function sliders() {
     
     
     const TEAMOPTIONS = {
-        spaceBetween: 36,
+		modules: [Scrollbar, Mousewheel],
+		slidesPerView: 1,
+		spaceBetween: 94,
+		loop: false,
+		mousewheel: {
+			releaseOnEdges: true,
+		},
+		scrollbar: {
+			el: ".team-swiper-scrollbar",
+			hide: false,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 51,
+			},
+
+		},
     },
     team = new Swiper("#team-slider", TEAMOPTIONS);
 
