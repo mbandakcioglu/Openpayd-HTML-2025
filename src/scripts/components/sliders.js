@@ -3,6 +3,12 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade, Thumbs, Scrollbar, Mousewheel, Autoplay } from 'swiper/modules';
 
 
+
+function teamSlider() {
+    var swiper = new Swiper("#team-slider", {});
+}
+
+
 function sliders() {
     const TESTIMONIALSOPTIONS = {
         modules: [Navigation, Pagination],
@@ -22,7 +28,7 @@ function sliders() {
     },
     productSlider = new Swiper("#products-slider", PRODUCTSLIDEROPTIONS);
     
-
+    teamSlider();
 	console.log("sliders active")
 };
 

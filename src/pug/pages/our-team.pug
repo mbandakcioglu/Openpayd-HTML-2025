@@ -1,0 +1,61 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Out Team"
+	//- SEO
+	-var desc = "Out Team"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	include ../mixins/team-slider.pug
+
+	div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Company > #[strong About Us]
+
+	+onlyTextHero("About us")
+
+	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 xl:pb-[108px] pb-[54px] px-[50px] xl:px-0 shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] xl:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
+			.video-aura-box.gradient-border-1.overflow-hidden(class="px-5 xl:px-[26px] py-5 xl:py-[28px] aspect-[15.5/9] rounded-[10px] xl:rounded-[30px] before:rounded-[10px] xl:before:rounded-[30px] before:p-[4px] col-span-12", data-aos="fade-up", data-aos-duration="1500")
+				//- img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px]", src="/src/images/video-cover-copy.jpg", alt="")
+				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full")
+					iframe( 
+						class="w-full",
+						src="https://player.vimeo.com/video/915607781?h=637096ac7f&amp;title=0&amp;byline=0&amp;portrait=0",
+						style="position:absolute;top:0;left:0;width:100%;height:100%;",
+						frameborder="0",
+						allow="autoplay; fullscreen; picture-in-picture", 
+						allowfullscreen="", 
+						loading="lazy", 
+						data-lf-form-tracking-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-yt-playback-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-vimeo-playback-inspected-kn9eq4rpaxj8rlvp="true",
+						)
+
+	section(class="py-[156px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
+			
+			h2(class="font-bold text-[36px]") The future of finance is embedded.
+
+			p Digital businesses deserve better banking and payments. Too many are still trying to build modern user experiences on top of decades-old infrastructure. We knew there must be a better way.
+				br
+				|At OpenPayd, we are building embedded finance and Banking-as-a-Service infrastructure that powers business growth. With our financial services infrastructure, innovative companies are building new products, streamlining their operations and managing their payments on a global scale.
+			.flex.gap-8
+				+buttonNonBorder({
+					url: "#", 
+					text: "CAREERS", 
+					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+				})
+				+ButtonAuraBorder({
+					url: "#", 
+					text: "ABOUT US", 
+					classes:"text-black", 
+				})
+
+	section(class="bg-openpayd-dark-blue py-[156px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]")
+			h2(class="font-black leading-[69px] text-[54px] text-white") Our leadership
+			+teamSlider("ğ")

@@ -151,6 +151,7 @@ block content
 						text: "SANDBOX", 
 						classes:"text-black"
 					})
+	
 	//Right Image Content
 	section.right-image-text-box(class="")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
@@ -251,3 +252,24 @@ block content
 
 	// 6'lı gateway
 	include ../components/products-gateway.pug
+
+	// team text area
+	section(class="py-[156px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
+			
+			h2(class="font-bold text-[36px]") The future of finance is embedded.
+
+			p Digital businesses deserve better banking and payments. Too many are still trying to build modern user experiences on top of decades-old infrastructure. We knew there must be a better way.
+				br
+				|At OpenPayd, we are building embedded finance and Banking-as-a-Service infrastructure that powers business growth. With our financial services infrastructure, innovative companies are building new products, streamlining their operations and managing their payments on a global scale.
+			.flex.gap-8
+				+buttonNonBorder({
+					url: "#", 
+					text: "CAREERS", 
+					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+				})
+				+ButtonAuraBorder({
+					url: "#", 
+					text: "ABOUT US", 
+					classes:"text-black", 
+				})
