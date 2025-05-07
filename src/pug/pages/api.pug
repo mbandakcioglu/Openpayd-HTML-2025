@@ -1,0 +1,133 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = "header-dark"
+	-var pageTitle = "API"
+	//- SEO
+	-var desc = "API"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	section(class="bg-openpayd-dark-blue pt-[150px] pb-[50px] px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px]")
+			div(class="text-xs text-white leading-none") Developers > #[strong OpenPayd API]
+			div(class="flex flex-row gap-x-4 py-8")
+				div(class="w-full md:w-4/6 text-white content-center space-y-8 md:space-y-0")
+					h1(class="text-[40px] md:text-[82px] leading-[1.1] font-black md:mb-9") ONE API, UNLIMITED POSSIBILITIES
+					p() Embed the financial service you need, with a single, developer-friendly API.
+					div(class="block md:flex space-y-4 md:space-y-0 gap-x-7 md:mt-12" data-aos="fade-up")
+						+buttonNonBorder({
+							url:"https://apidocs.openpayd.com/", 
+							text:"SEE OUR API DOCS",
+							target:"_blank",
+							classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						})
+						+ButtonAuraBorder({
+								url:"https://sandbox.openpayd.com/account/login", 
+								text:"ACCESS OUR SANDBOX", 
+								classes:"text-white", 
+								rel:"nofollow", 
+								target:"_blank" 
+						})
+				div(class="w-2/6 hidden md:block")
+					img(class="", src="/src/images/api-hero-image.png", alt="OpenPayd API")
+
+
+	section(class="pt-18 md:pt-36 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			h2(class="text-[36px] md:text-[74px] font-black leading-[1.2] w-full md:w-4/5" data-aos="fade-up") Out of the box payments and banking infrastructure
+			div(class="block md:grid grid-cols-2 gap-y-12 py-8 md:py-16")
+				div(class="space-y-11")
+					p(class="text-balance" data-aos="fade-up") Every embedded finance project hinges on one question: How good is the API? It’s the point that makes (or breaks) every implementation. At OpenPayd, we built our API for developers, with low integration times and accessible documentation. Everything you need to implement a banking solution, fast.
+
+					div(class="space-y-11")
+						div(class="space-y-4")
+							img(class="size-[64px]", src="/src/images/OP-Icon-Sandbox-Aura.svg", alt="Sandbox", data-aos="fade-up")
+							h3.text-2xl.font-bold(data-aos="fade-up") Sandbox
+							p(class="text-balance" data-aos="fade-up")  Our sandbox is a testing environment where you can see how to use our API to create accounts, manage transactions, make payments and more.
+							p(class="mt-8" data-aos="fade-up")
+								+buttonNonBorder({
+								url:"#", 
+								text:"SANDBOX", 
+								classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+								})
+						div(class="space-y-4")
+							img(class="size-[64px]", src="/src/images/OP-Icon-Compliance-Aura.svg", alt="Sandbox", data-aos="fade-up")
+							h3.text-2xl.font-bold(data-aos="fade-up") Documentation
+							p(class="text-balance" data-aos="fade-up") We don’t believe in surprises. All our integration documentation, guides and API reference information are available in one place.
+							p(class="mt-8" data-aos="fade-up")
+								+buttonNonBorder({
+									url:"#", 
+									text:"DOCUMENTATION", 
+									classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+								})
+				div(class="pt-12 md:pt-0")
+					div(class="bg-openpayd-dark-blue rounded-[20px] p-6 overflow-auto shadow-lg max-w-full text-white font-mono text-xs md:text-sm leading-relaxed", data-aos="fade-up")
+						.snippet-wrapper
+							//- NOT: Kod görünümüden indentler için çift space kullan
+							pre.snippet(class="text-wrap").
+								cURL
+								curl --location --request <span class="text-openpayd-blue">POST 'https://sandbox.openpayd.com/api/oauth/token?grant_type=client_credentials \</span>
+								<span class="text-openpayd-blue">--header</span> 'Authorization: Basic base64(username:password)' \
+								<span class="text-openpayd-blue">--header</span> 'Content-Type: application/x-www-form-urlencoded'
+								{
+								"access_token": <span class="text-openpayd-blue">"eyJhbGciOiJSUzI1NiIsInR5c..."</span>,
+								"token_type": <span class="text-openpayd-blue">"bearer"</span>,
+								"expires_in": <span class="text-openpayd-blue">899</span>,
+								"scope": <span class="text-openpayd-blue">"test"</span>,
+								"accountHolderId": <span class="text-openpayd-blue">"570de05f-2517-4b5e-aa2c-b8abacf13d00"</span>,
+								"clientId": <span class="text-openpayd-blue">"015c8655-c5ad-4c05-9146-d232792acc36"</span>,
+								"referralId": <span class="text-openpayd-blue">"e42e06db-f40c-48d0-8d69-4dd194027541"</span>,
+								"accountHolders": {
+								<span class="text-openpayd-blue">"570de05f-2517-4b5e-aa2c-b9abacf13d00"</span>: {
+									"accountHolderDisplayName": <span class="text-openpayd-blue">"Test Business"</span>,
+									"id": <span class="text-openpayd-blue">"570de05f-2517-4b5e-aa2c-b9abacf13d00"</span>,
+									"accountHolderType": <span class="text-openpayd-blue">"BUSINESS"</span>,
+									"accountHolderStatus": <span class="text-openpayd-blue">"ACTIVE"</span>,
+									"referralId": <span class="text-openpayd-blue">"e42e06db-f40c-48d0-8d69-4dd19b027541"</span>
+								}
+								},
+								"accountHolderStatus": <span class="text-openpayd-blue">"ACTIVE"</span>,
+								"clientTenantId": <span class="text-openpayd-blue">"b300b9ee-41c2-4ce3-86b6-4678e7fb6fee"</span>,
+								"authorities": [
+								<span class="text-openpayd-blue">"SIMULATE_WEBHOOK"</span>,
+								<span class="text-openpayd-blue">"GET_BALANCE"</span>,
+								<span class="text-openpayd-blue">"CREATE_BANK_PAYOUT"</span>,
+								<span class="text-openpayd-blue">"CREATE_WEBHOOK"</span>,
+								<span class="text-openpayd-blue">"CREATE_TRANSACTION"</span>,
+								<span class="text-openpayd-blue">"CREATE_REFUND"</span>,
+								<span class="text-openpayd-blue">"GET_WEBHOOK"</span>,
+								<span class="text-openpayd-blue">..."</span>
+								],
+								"jti": <span class="text-openpayd-blue">"2891e435-8920-4466-865f-573e4a929cee"</span>,
+								"accountHolderType": <span class="text-openpayd-blue">"BUSINESS"</span>
+								}
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") By leading experts in tech
+					p(class="text-balance" data-aos="fade-up") Our intuitive, fully-documented REST API is designed, built, and maintained by developers, for developers. Go live in a matter of days with our simple integration and access to industry-leading support. Want to explore first? Get instant access to our sandbox environment.
+					p(data-aos="fade-up")
+						+ButtonAuraBorder({url:"#", text:"TRY OUR DEMO", classes:"font-black", rel:"nofollow" })
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/api-thumbnail-1.jpg", "By leading experts in tech", "")
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/By-leading-experts-in-tech.jpg", "Everything you need, in one place", "")
+				div(class="space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Everything you need, in one place
+					p(class="text-balance" data-aos="fade-up") <strong>One Single API</strong> <br><br>The entire OpenPayd banking and payments platform delivered through a single API, minimising your integration work.
+					p(data-aos="fade-up")
+						+ButtonAuraBorder({url:"#", text:"INTEGRATION GUIDES", classes:"font-black", rel:"nofollow" })
+				
+
+
+	include ../components/products-gateway.pug
