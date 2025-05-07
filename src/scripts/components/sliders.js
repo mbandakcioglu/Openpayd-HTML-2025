@@ -4,10 +4,6 @@ import { Navigation, Pagination, EffectFade, Thumbs, Scrollbar, Mousewheel, Auto
 
 
 
-function teamSlider() {
-    var swiper = new Swiper("#team-slider", {});
-}
-
 
 function sliders() {
     const TESTIMONIALSOPTIONS = {
@@ -28,7 +24,12 @@ function sliders() {
     },
     productSlider = new Swiper("#products-slider", PRODUCTSLIDEROPTIONS);
     
-    teamSlider();
+    
+    const TEAMOPTIONS = {
+        spaceBetween: 36,
+    },
+    team = new Swiper("#team-slider", TEAMOPTIONS);
+
 	console.log("sliders active")
 };
 
