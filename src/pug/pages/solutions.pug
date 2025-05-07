@@ -12,10 +12,10 @@ block content
 	include ../mixins/product-slider.pug
 	include ../components/faq.pug
 
-	div(class="mt-[197px] mb-[42px]")
-		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
-			.breadcrumb Products > #[strong Accept Payments]
-	
+	+breadcrumb(["Solution", "Remittance"])
+	//- div(class="mt-[197px] mb-[42px]")
+	//- 	.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+	//- 		.breadcrumb Products > #[strong Accept Payments]
 
 	+solutionHero({
 		title: "MANAGE EVERY INCOMING PAYMENT",

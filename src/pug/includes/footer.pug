@@ -3,7 +3,13 @@
 	var footerHeadClasses = "block mb-[38px] text-lg text-openpayd-dark-blue"
 	var footerUlClasses = "leading-[38px] space-y-2 text-lg text-openpayd-dark-blue "
 
-include ../components/only-gateways.pug
+
+//- include ../components/only-gateways.pug
+//- ../components/only-gateways.pug bileşeninin yüklenip yüklenmeyeceğini kontrol et.
+//- Eğer ShowOnlyGateways tanımlı DEĞİLSE (varsayılan) VEYA ShowOnlyGateways true ise, bileşeni yükle.
+//- Eğer ShowOnlyGateways açıkça false olarak ayarlanmışsa, bileşeni YÜKLEME.
+if (typeof ShowOnlyGateways === 'undefined' || ShowOnlyGateways === true)
+	include ../components/only-gateways.pug
 
 footer(class="bg-shades-violet-light pt-12 pb-8")
 	div(class="container mx-auto px-6 max-w-[" + siteWidth + "]")

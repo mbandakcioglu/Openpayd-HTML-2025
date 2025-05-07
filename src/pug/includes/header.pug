@@ -1,6 +1,7 @@
 include ../mixins/images.pug
 include ../components/hero-banners.pug
 include ../components/buttons.pug
+include ../components/breadcrumb.pug
 
 
 - var megaMenuShadow = "#000000"
@@ -173,7 +174,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 					)
 						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/api", 
 								icon:"OP-Icon-API-Aura.svg",
 								title:"OpenPayd API", 
 								text:"Take your first step to using our developer-friendly API"}) 
@@ -224,12 +225,12 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 					)
 						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
 							+megaMenuSubElement({
-								url:"#", 
+								url:"about-us", 
 								icon:"OP-Icon-Validation-Aura.svg",
 								title:"About Us", 
 								text:"See our mission and values"}) 
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/our-team", 
 								icon:"OP-Icon-Customers-Aura.svg",
 								title:"Meet the Team", 
 								text:"Find out more from our Industry experts"}) 
@@ -240,20 +241,25 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 								text:"See the latest OpenPayd events"}) 
 							
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/career", 
 								icon:"OP-Icon-Challenge-Aura.svg",
 								title:"Career", 
 								text:"Join our growing team"}) 
 							+megaMenuSubElement({
 								url:"#", 
 								icon:"OP-Icon-partner-Aura.svg",
-								title:"Career", 
+								title:"Partner with Us", 
 								text:"Join our growing team"}) 
 							+megaMenuSubElement({
 								url:"#", 
 								icon:"OP-Icon-FAQ-Aura.svg",
 								title:"FAQ", 
 								text:"Find information"}) 
+							+megaMenuSubElement({
+								url:"#", 
+								icon:"Op-Icon-Contact-Aura.svg",
+								title:"Contact Us", 
+								text:""}) 
 		//  Actions 
 		.flex.items-center.space-x-3.hidden(class="xl:block")
 			+ButtonAuraBorder({url:"#", text:"LOG IN", classes:"text-black", rel:"nofollow", target:"_blank" })

@@ -33,10 +33,10 @@ function sliders() {
 		mousewheel: {
 			releaseOnEdges: true,
 		},
-		scrollbar: {
-			el: ".team-swiper-scrollbar",
-			hide: false,
-		},
+		// scrollbar: {
+		// 	el: ".team-swiper-scrollbar",
+		// 	hide: false,
+		// },
 		breakpoints: {
 			992: {
 				slidesPerView: 3,
@@ -46,6 +46,29 @@ function sliders() {
 		},
     },
     team = new Swiper("#team-slider", TEAMOPTIONS);
+
+
+    const LOCATIONSOPTIONS = {
+		// modules: [Scrollbar, Mousewheel],
+		slidesPerView: 1,
+		spaceBetween: 94,
+		loop: false,
+		// mousewheel: {
+		// 	releaseOnEdges: true,
+		// },
+		// scrollbar: {
+		// 	el: ".team-swiper-scrollbar",
+		// 	hide: false,
+		// },
+		breakpoints: {
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 51,
+			},
+
+		},
+    },
+    locations = new Swiper("#locations-slider", LOCATIONSOPTIONS);
 
 	console.log("sliders active")
 };

@@ -10,9 +10,15 @@ block variables
 
 block content
 	// Breadcrumb
-	div(class="mt-[197px] mb-[42px]")
+	//- div(class="mt-[197px] mb-[42px]")
 		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
 			.breadcrumb Products > #[strong Accept Payments]
+	
+	
+	
+
+	//- include header.pug içinde
+	+breadcrumb(["Company", "Career"])
 	
 
 	// Products Dark Hero

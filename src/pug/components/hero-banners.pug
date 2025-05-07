@@ -10,8 +10,8 @@ mixin poductHero(d)
 						url: d.link1.url, 
 						text: d.link1.text, 
 						classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white",
-                        rel: d.link2.rel, 
-                        target: d.link1.target 
+						rel: d.link2.rel, 
+						target: d.link1.target 
 					})
 					+ButtonAuraBorder({
 						url: d.link2.url, 
@@ -44,4 +44,6 @@ mixin solutionHero(d)
 mixin onlyTextHero(title)
 	section#sub-hero-banner(class="w-full")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] pb-[72px] pt-[65px] px-[5px] rounded-tr-[125px]")
-			h1(class="xl:text-[96px] xl:leading-[110px] xl:font-black text-opanpayd-dark-blue")= title
+			h1(class="text-[40px] md:text-[82px] leading-[1.1] font-black md:mb-9")= title
+			//- h1(class="xl:text-[96px] xl:leading-[110px] xl:font-black text-opanpayd-dark-blue")= title
+

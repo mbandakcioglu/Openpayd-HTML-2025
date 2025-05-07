@@ -1,0 +1,152 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Career"
+	//- SEO
+	-var desc = "Career"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+	-var ShowOnlyGateways = false
+
+
+block content
+	include ../mixins/team-slider.pug
+
+	+breadcrumb(["Company", "Career"])
+
+	//- div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Company > #[strong Career]
+
+	+onlyTextHero("Join OpenPayds")
+
+	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 xl:pb-[108px] pb-[54px] px-[50px] xl:px-0 shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] xl:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
+			.video-aura-box.gradient-border-1.overflow-hidden(class="px-5 xl:px-[26px] py-5 xl:py-[28px] aspect-[15.5/9] rounded-[10px] xl:rounded-[30px] before:rounded-[10px] xl:before:rounded-[30px] before:p-[4px] col-span-12", data-aos="fade-up", data-aos-duration="1500")
+				//- img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px]", src="/src/images/video-cover-copy.jpg", alt="")
+				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full")
+					iframe( 
+						class="w-full",
+						src="https://player.vimeo.com/video/915607781?h=637096ac7f&amp;title=0&amp;byline=0&amp;portrait=0",
+						style="position:absolute;top:0;left:0;width:100%;height:100%;",
+						frameborder="0",
+						allow="autoplay; fullscreen; picture-in-picture", 
+						allowfullscreen="", 
+						loading="lazy", 
+						data-lf-form-tracking-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-yt-playback-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-vimeo-playback-inspected-kn9eq4rpaxj8rlvp="true",
+						)
+
+	//- section(class="py-[156px]")
+	section(class="py-16 px-6 md:px-0")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
+
+			h2(class="font-bold text-[36px]") The future of finance is embedded.
+
+			p(class="text-lg xl:text-4xl") Digital businesses deserve better banking and payments. Too many are still trying to build modern user experiences on top of decades-old infrastructure. We knew there must be a better way.
+				br
+				br
+				|At OpenPayd, we are building embedded finance and Banking-as-a-Service infrastructure that powers business growth. With our financial services infrastructure, innovative companies are building new products, streamlining their operations and managing their payments on a global scale.
+			.flex.gap-8
+				+buttonNonBorder({
+					url: "#", 
+					text: "CAREERS", 
+					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+				})
+				+ButtonAuraBorder({
+					url: "#", 
+					text: "ABOUT US", 
+					classes:"text-black", 
+				})
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Make a difference
+					p(class="text-balance" data-aos="fade-up") If you’re looking to build something brand new, from the ground up, now’s the time to join us!
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/Make-a-difference.png", "Make a difference", "")
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/Plot-your-own-course.png", "Plot your own course", "")
+				div(class="content-center space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Plot your own course
+					p(class="text-balance" data-aos="fade-up") We’ll give you the tools, training and support you need to grow professionally.
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Grow your skills
+					p(class="text-balance" data-aos="fade-up") With experience comes the opportunity to develop highly-specialised career skills and knowledge.
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/Grow-your-skills.png", "Grow your skills", "")
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
+			h2(class="text-center text-[36px] mb-8 xl:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Employee benefits
+
+			-
+				var benefits = [
+					{
+						img: "/benefit-Health-insurance.svg",
+						title: "Health insurance",
+						text: "If you’re looking to build something brand new, from the ground up, now’s the time to join us!"
+					},
+					{
+						img: "/benefit-Wellbeing-Perks.svg",
+						title: "Wellbeing Perks",
+						text: "We’ll give you the tools, training and support you need to grow professionally."
+					},
+					{
+						img: "/benefit-Social-volunteering-day.png",
+						title: "Annual bonus scheme",
+						text: "With experience comes the opportunity to develop highly-specialised career skills and knowledge."
+					},
+					{
+						img: "/benefit-Personal-training-budget.svg",
+						title: "Personal training budget",
+						text: "If you’re looking to build something brand new, from the ground up, now’s the time to join us!"
+					},
+					{
+						img: "/benefit-Wellbeing-Perks-laptop.svg",
+						title: "60 days remote working",
+						text: "We’ll give you the tools, training and support you need to grow professionally."
+					},
+					{
+						img: "/benefit-Social-volunteering-day.svg",
+						title: "Social volunteering day",
+						text: "With experience comes the opportunity to develop highly-specialised career skills and knowledge."
+					},
+					{
+						img: "/benefit-Union.svg",
+						title: "Extra Birthday leave",
+						text: "If you’re looking to build something brand new, from the ground up, now’s the time to join us!"
+					},
+					{
+						img: "/benefit-Union-2.svg",
+						title: "Early Friday finish",
+						text: "We’ll give you the tools, training and support you need to grow professionally."
+					},
+					{
+						img: "/benefit-Long-Service-Benefits.svg",
+						title: "Long Service Benefits",
+						text: "With experience comes the opportunity to develop highly-specialised career skills and knowledge."
+					},
+				]
+			div(class="xl:grid xl:grid-cols-3 text-center xl:space-x-[190px] space-y-[64px]")
+				each benefit in benefits
+					div 
+						figure(class="inline-block")
+							img(src="/src/images" + benefit.img, alt= benefit.title)
+						h4(class="font-bold text-2xl")= benefit.title
+						p= benefit.text 
+

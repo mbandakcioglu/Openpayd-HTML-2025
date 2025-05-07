@@ -1,0 +1,36 @@
+//- mixin breadcrumb([])
+//- 	div(class="mt-[197px] mb-[42px]")
+//- 		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+//- 			.breadcrumb Products > #[strong Accept Payments]
+
+
+//- /Users/muratbandakcioglu/@Works/Openpayd/HTML 2025/src/pug/components/breadcrumb.pug
+mixin breadcrumb(items)
+	//- items: Breadcrumb seviyelerini temsil eden bir string dizisi.
+	//- Örnek Kullanım: +breadcrumb(["Ana Sayfa", "Ürünler", "Ödemeleri Kabul Et"])
+	//- siteWidth değişkeninin Pug global kapsamında tanımlı olması beklenir.
+
+	//- Stil sınıfları güncellendi: Renkler artık .breadcrumb sarmalayıcısından miras alınacak.
+	- var linkClasses = " text-openpayd-dark-blue hover:underline" // Renk miras alınacak, sadece fareyle üzerine gelince altı çizili olacak.
+	- var separatorSymbol = ">"
+	- var separatorClasses = "mx-2 text-openpayd-dark-blue" // Renk miras alınacak, sadece kenar boşlukları var.
+	- var currentItemClasses = "font-semibold text-openpayd-dark-blue" // Renk miras alınacak, sadece kalın olacak.
+
+	div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb(class="text-sm text-gray-600 dark:text-gray-300")
+				if items && items.length > 0
+					each item, index in items
+
+						if index > 0
+							span(class=separatorClasses, aria-hidden="true")= separatorSymbol
+
+
+						if index < items.length - 1
+							a(href="#", class=linkClasses)= item
+
+						else
+							strong(class=currentItemClasses, aria-current="page")= item
+				else
+
+					p(class="text-sm text-gray-500") //- Breadcrumb için öğe bulunamadı.

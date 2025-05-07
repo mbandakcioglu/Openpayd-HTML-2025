@@ -1,0 +1,131 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "About Us"
+	//- SEO
+	-var desc = "About Us"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	include ../mixins/locations-slider.pug
+
+	+breadcrumb(["Company", "Career"])
+
+
+	+onlyTextHero("Join OpenPayds")
+
+	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 xl:pb-[108px] pb-[54px] px-[50px] xl:px-0 shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] xl:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
+			.video-aura-box.gradient-border-1.overflow-hidden(class="px-5 xl:px-[26px] py-5 xl:py-[28px] aspect-[15.5/9] rounded-[10px] xl:rounded-[30px] before:rounded-[10px] xl:before:rounded-[30px] before:p-[4px] col-span-12", data-aos="fade-up", data-aos-duration="1500")
+				//- img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px]", src="/src/images/video-cover-copy.jpg", alt="")
+				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full")
+					iframe( 
+						class="w-full",
+						src="https://player.vimeo.com/video/915607781?h=637096ac7f&amp;title=0&amp;byline=0&amp;portrait=0",
+						style="position:absolute;top:0;left:0;width:100%;height:100%;",
+						frameborder="0",
+						allow="autoplay; fullscreen; picture-in-picture", 
+						allowfullscreen="", 
+						loading="lazy", 
+						data-lf-form-tracking-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-yt-playback-inspected-kn9eq4rpaxj8rlvp="true", 
+						data-lf-vimeo-playback-inspected-kn9eq4rpaxj8rlvp="true",
+						)
+
+	section.logo-marquee-w-text-w-slider(class="xl:pt-[162px] pt-[81px]")
+		.marquee-container.overflow-hidden.relative.w-full(data-aos="fade-up")
+			//- Fare üzerine gelince durması için isteğe bağlı: group hover:paused
+			.marquee-content.flex.flex-nowrap.w-max(class="animate-marquee group-hover:paused")
+				//- İlk Logo Seti
+				-
+					var logos = [
+						{ src: "/src/images/etoro.svg", alt: "etoro" },
+						{ src: "/src/images/libertex.svg", alt: "libertex" },
+						{ src: "/src/images/okx.svg", alt: "okx" },
+						{ src: "/src/images/eightcap.svg", alt: "eightcap" },
+						{ src: "/src/images/caxton.svg", alt: "caxton" },
+						{ src: "/src/images/bitfinex.svg", alt: "bitfinex" }
+					]
+				each logo in logos
+					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]") 
+						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
+
+				//- İkinci Logo Seti (Kesintisiz döngü için KOPYA)
+				each logo in logos
+					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]")
+						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
+
+	section(class="py-[124px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px] grid grid-cols-6", data-aos="gade-up")
+			div(class="col-span-5")
+
+				p(class="") 
+					span(class="text-[36px]") The universal financial infrastructure powering the digital economy. 
+					| At OpenPayd, our vision is a world in which money can be moved across the globe instantly and securely, regardless of the currency and location. With our rails-agnostic infrastructure and global licensing network, that future is not far away. By combining traditional finance with digital assets under one API, we’re processing over $100 billion for enterprise level businesses every year.
+					br
+					br
+					| OpenPayd provides accounts, FX, international and domestic payments, card acquiring, Open Banking services and more. Our universal infrastructure empowers businesses to build new products, streamline their operations and scale effectively, with a dedicated partner assisting them on every step of their journey.
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") We are experts
+					p(class="text-balance" data-aos="fade-up") Our team is composed of banking and payment experts with extensive experience across regulated financial services, products and technology development.
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/We-are-experts.png", "We are experts", "")
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/We-are-transparent.png", "We are transparent", "")
+				div(class="content-center space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") We are transparent
+					p(class="text-balance" data-aos="fade-up") Our solutions are flexible and transparent. We have pay-as- you-grow fee structures in place and favourable contract terms to get you up and running. We work with you in partnership to help you realise your growth ambitions.
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") We are passionate
+					p(class="text-balance" data-aos="fade-up") Our mission is to help businesses overcome the challenges relating to banking and payment services. To achieve this, we provide simple, scalable and customisable solutions.
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/We-are-passionate.png", "We are passionate", "")
+
+	section(class="bg-openpayd-dark-blue overflow-hidden py-[156px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px]")
+			h2(class="font-black leading-[69px] text-[54px] text-white") Our locations
+			+locationSlider()
+
+	section(class="bg-openpayd-light-blue overflow-hidden py-[156px] text-center") Blog coming soon
+
+	include ../components/faq.pug
+	-
+		var faq = [
+			{ 
+				no: '01', 
+				q: 'Alright, but what exactly do you do?', 
+				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.' 
+			},
+			{ 
+				no: '02', 
+				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?', 
+				a: 'Yes! We can collaborate based on your needs.' 
+			},
+			{ 
+				no: '03', 
+				q: 'Are your rates competitive?', 
+				a: 'We offer rates that reflect the quality and efficiency of our services.'
+			},
+			{ 
+				no: '04', 
+				q: 'Why do you have a monthly project cap?', 
+				a: 'To ensure every project receives the attention it deserves.' 
+			}
+		]
+
+	+Faq(faq)
