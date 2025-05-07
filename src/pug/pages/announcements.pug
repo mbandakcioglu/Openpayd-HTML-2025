@@ -1,0 +1,65 @@
+extends  ../layouts/layout
+
+block variables
+    -var pageType = ""
+    -var pageTitle = "Announcements"
+    //- SEO
+    -var desc = "Announcements"
+    -var keywords = "Home,Page"
+    -var pageRole = "home"
+
+block content
+    section(class="pt-[150px] text-openpayd-dark-blue")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="text-xs leading-none") Resources > #[strong Announcements]
+            h1(class="pt-16 font-black text-[36px] md:text-[74px] leading-[1.1]") Announcements
+            div(class="flex items-center justify-between gap-[100px] pt-16")
+                img(class="block flex-1 max-h-[40px] object-contain", src="/src/images/logo-forbes.png", alt="Forbes")
+                img(class="block flex-1 max-h-[40px] object-contain", src="/src/images/logo-sifted.png", alt="Sifted")
+                img(class="block flex-1 max-h-[40px] object-contain", src="/src/images/logo-the-fintech-times.png", alt="The Fintech Times")
+                img(class="block flex-1 max-h-[40px] object-contain", src="/src/images/logo-cnbc.png", alt="CNBC")
+                img(class="block flex-1 max-h-[40px] object-contain", src="/src/images/logo-raconteur.png", alt="Raconteur")
+
+        div(class="container text-openpayd-dark-blue mx-auto max-w-[1392px] pt-16 px-6 md:px-0")
+            div(class="block md:grid grid-cols-2 gap-x-10")
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+            div(class="block md:grid grid-cols-3 gap-20 pt-0 md:pt-16 pb-32")
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+
+            div(class="pb-32")
+                nav.flex.items-center.justify-center.space-x-4
+                    a.flex.items-center.justify-center.w-12.h-12.rounded-full.bg-openpayd-blue.text-white.text-xs.font-bold(href="#") 1
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 2
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 3
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 4
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 5
+                    span.flex.items-center.justify-center.w-12.h-12.text-openpayd-dark-blue.font-bold.text-xs ...
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 9
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue bg-[#F5F5F5] hover:bg-openpayd-blue hover:text-white transition duration-100", href="#")
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0.199219 3.00156L6.19919 9.00155L0.199219 15.0016L1.39922 17.4016L9.79919 9.00155L1.39922 0.601562L0.199219 3.00156Z" fill="currentColor"/></svg>
+
+
+    section(class="bg-linear-(--pink-blue-gradient) text-openpayd-dark-blue py-24")
+        div(class="container mx-auto max-w-[1200px] px-6 md:px-0")
+            div(class="block md:grid grid-cols-2 gap-10")
+                div(class="space-y-6 mb-10 md:mb-0")
+                    p(class="font-black text-[40px] leading-[1.2] text-balance") Move and manage money globally
+                    p(class="font-medium text-2xl text-balance") Contact our team today to talk through your company's needs.
+                div(class="content-center space-y-6")
+                    p(class="font-bold text-4xl") Ready to collaborate?
+                    p
+                        +buttonNonBorder({
+                        url:"#", 
+                        text:"DIVE IN", 
+                        classes: "bg-openpayd-pink hover:text-white"
+                        })
+
