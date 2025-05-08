@@ -1,0 +1,61 @@
+extends  ../layouts/layout
+
+block variables
+    -var pageType = ""
+    -var pageTitle = "Blog"
+    //- SEO
+    -var desc = "Blog"
+    -var keywords = "Home,Page"
+    -var pageRole = "home"
+
+block content
+    section(class="pt-[150px] text-openpayd-dark-blue")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="text-xs leading-none") Resources > #[strong Blog]
+            h1(class="pt-16 font-black text-[36px] md:text-[74px] leading-[1.1]") Blog
+        
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            ul(class="space-x-9 mt-16")
+                li(class="inline-block")
+                    a(class="underline text-[#E348FF]", href="#") All
+                li(class="inline-block")
+                    a(class="hover:underline hover:text-[#E348FF]" href="#") BaaS Explained
+                li(class="inline-block")
+                    a(class="hover:underline hover:text-[#E348FF]" href="#") Inside OpenPayd
+                li(class="inline-block")
+                    a(class="hover:underline hover:text-[#E348FF]" href="#") Our thinking
+                li(class="inline-block")
+                    a(class="hover:underline hover:text-[#E348FF]" href="#") Product
+                li(class="inline-block")
+                    a(class="hover:underline hover:text-[#E348FF]" href="#") Whitepaper
+
+        div(class="container text-openpayd-dark-blue mx-auto max-w-[1392px] pt-8 px-6 md:px-0")
+            div(class="block md:grid grid-cols-2 gap-x-10")
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+            div(class="block md:grid grid-cols-3 gap-20 pt-0 md:pt-16 pb-12 md:pb-32")
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+                include ../components/blog-card.pug
+
+            div(class="pb-20 md:pb-32")
+                nav.flex.items-center.justify-center.space-x-4
+                    a.flex.items-center.justify-center.w-12.h-12.rounded-full.bg-openpayd-blue.text-white.text-xs.font-bold(href="#") 1
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 2
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 3
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 4
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 5
+                    span.flex.items-center.justify-center.w-12.h-12.text-openpayd-dark-blue.font-bold.text-xs ...
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue hover:bg-[#F5F5F5] text-xs font-bold transition duration-100", href="#") 9
+                    a(class="flex items-center justify-center w-12 h-12 rounded-full text-openpayd-dark-blue bg-[#F5F5F5] hover:bg-openpayd-blue hover:text-white transition duration-100", href="#")
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0.199219 3.00156L6.19919 9.00155L0.199219 15.0016L1.39922 17.4016L9.79919 9.00155L1.39922 0.601562L0.199219 3.00156Z" fill="currentColor"/></svg>
+
+
+    include ../includes/footer-cta-section.pug
+
