@@ -1,0 +1,139 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = ""
+	-var pageTitle = "Partnership"
+	//- SEO
+	-var desc = "Partnership"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+	-var ShowOnlyGateways = true
+
+
+block content
+	include ../mixins/team-slider.pug
+
+	+breadcrumb(["Company", "Career"])
+
+	//- div(class="mt-[197px] mb-[42px]")
+		.container.w-full.mx-auto.grid.grid-row-12(class="max-w-[" + siteWidth + "] pt-[32px] px-[5px]")
+			.breadcrumb Company > #[strong Career]
+
+	+onlyTextHero("Partner with us ")
+
+	section 
+		img(src="/src/images/partnership-cover-image.png", alt="Partner with us")
+
+	//- section(class="py-[156px]")
+	section(class="py-16 px-6 md:px-0")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
+
+
+			p(class="text-lg xl:text-4xl") We are powering the payments of some of the world’s biggest digital businesses. Marketplaces, trading platforms, fintech companies and digital asset businesses rely on our payments infrastructure every single day. 
+				br
+				br
+				| And we’re always open to new partnerships to help us deliver our services to those companies that need it most.
+			.flex.gap-8
+				+buttonNonBorder({
+					url: "#", 
+					text: "BECOME A PARTNER", 
+					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+				})
+
+	section.logo-marquee-w-text-w-slider(class="xl:pt-[162px] pt-[81px]")
+		.marquee-container.overflow-hidden.relative.w-full(data-aos="fade-up")
+			//- Fare üzerine gelince durması için isteğe bağlı: group hover:paused
+			.marquee-content.flex.flex-nowrap.w-max(class="animate-marquee group-hover:paused")
+				//- İlk Logo Seti
+				-
+					var logos = [
+						{ src: "/src/images/etoro.svg", alt: "etoro" },
+						{ src: "/src/images/libertex.svg", alt: "libertex" },
+						{ src: "/src/images/okx.svg", alt: "okx" },
+						{ src: "/src/images/eightcap.svg", alt: "eightcap" },
+						{ src: "/src/images/caxton.svg", alt: "caxton" },
+						{ src: "/src/images/bitfinex.svg", alt: "bitfinex" }
+					]
+				each logo in logos
+					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]") 
+						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
+
+				//- İkinci Logo Seti (Kesintisiz döngü için KOPYA)
+				each logo in logos
+					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]")
+						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
+
+
+
+
+
+	section#developers(data-aos="fade-up")
+		.container(class="relative z-1 mx-auto px-6 gap-4 max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12 pt-[108px]")
+			div(class="col-span-5 space-y-14")
+
+
+				h2.text-openpayd-dark-blue(class="xl:text-[58px] text-4xl font-black col-span-12 mb-[48px] xl:leading-[90px]", data-aos="fade-up") Help us transform how the world pays
+				div(class="space-y-4")
+					h3.text-2xl.font-bold(data-aos="fade-up") OpenPayd for Introducers
+					p(class="text-balance" data-aos="fade-up") We’re already working with a wide range of businesses who want to help their clients upgrade their payments infrastructure. Once we have a referral agreement in place, you’ll be ready to start referring your clients.
+					p(class="mt-8" data-aos="fade-up")
+						+buttonNonBorder({
+						url:"#", 
+						text:"DIVE IN", 
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						})
+				div(class="space-y-4")
+					h3.text-2xl.font-bold(data-aos="fade-up") OpenPayd for Banking Providers
+					p(class="text-balance" data-aos="fade-up") Would your banking services be a good fit on our embedded finance platform? We’re always looking to speak with new banking partners who can provide the underlying services our solution is built on.
+					p(class="mt-8" data-aos="fade-up")
+						+buttonNonBorder({
+							url:"#", 
+							text:"DIVE IN", 
+							classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						})
+			div.flex.align.items-end(class="col-end-13 col-span-6 mt-[50px] xl:mt-0")
+				div(class="rounded-[20px] overflow-auto shadow-lg max-w-full text-white font-mono text-sm leading-relaxed", data-aos="fade-up")
+					img(src="/src/images/Screenshot-2024-09-04.png", alt="")
+
+
+
+
+
+
+
+	section(class="py-16 px-6 md:px-0 mt-32")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
+					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") By leading experts in tech
+					p(class="text-balance" data-aos="fade-up") Our intuitive, fully-documented REST API is designed, built, and maintained by developers, for developers. Go live in a matter of days with our simple integration and access to industry-leading support. Want to explore first? Get instant access to our sandbox environment.
+					.flex(class="gap-8")
+						+ButtonAuraBorder({
+							url: "#", 
+							text: "API", 
+							classes:"text-black", 
+						})
+						+ButtonAuraBorder({
+							url: "#", 
+							text: "SANDBOX", 
+							classes:"text-black"
+						})
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
+					+outreAuraBorder("/Openpayd-19March2025-Raccoon-039 1.png", "By leading experts in tech", "")
+
+	include ../components/products-gateway.pug
+
+	section(class="bg-linear-(--pink-blue-gradient) text-openpayd-dark-blue py-24")
+		div(class="container mx-auto max-w-[1200px] px-6 md:px-0")
+			div(class="block md:grid grid-cols-2 gap-10")
+				div(class="space-y-6 mb-10 md:mb-0")
+					p(class="font-black text-[40px] leading-[1.2] text-balance") Move and manage money globally
+					p(class="font-medium text-2xl text-balance") Contact our team today to talk through your company's needs.
+				div(class="content-center space-y-6")
+					p(class="font-bold text-4xl") Ready to collaborate?
+					p
+						+buttonNonBorder({
+						url:"#", 
+						text:"DIVE IN", 
+						classes: "bg-openpayd-pink hover:text-white"
+						})

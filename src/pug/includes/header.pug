@@ -192,26 +192,26 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 				li.relative.top-menu-opener(class="group/menuitem")
 					+megaMenuTopElement({url: "#", text: "Resources"})
 					.mega-menu.absolute.bg-white.z-1.hidden(
-						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))"
+						class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[320px] rounded-[20px] -left-[80px] top-(calc(100% +16px)))"
 					)
 						ul
 							li 
 								+megaMenuHeader({title: "NEWS & MEDIA", text: "The latest OpenPayd updates"})
-								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+								ul(class="gap-x-[32px] gap-y-[20px]")
 									+megaMenuSubElement({
-										url:"#", 
+										url:"/announcements", 
 										icon:"OP-Icon-announcements-Aura.svg",
 										title:"Announcements", 
 										text:"See our latest news"}) 
 							li.mt-10 
 								+megaMenuHeader({title: "OUR THINKING", text: "OpenPayd experts share what the future holds"})
-								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+								ul(class="gap-x-[32px] gap-y-[20px]")
 									+megaMenuSubElement({
 										url:"#", 
 										icon:"OP-Icon-blog-Aura.svg",
 										title:"Our Blog", 
 										text:"Read from our team members"}) 
-									+megaMenuSubElement({
+									//- +megaMenuSubElement({
 										url:"#", 
 										icon:"OP-Icon-Validation-Aura.svg",
 										title:"Legal", 
@@ -225,7 +225,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 					)
 						ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
 							+megaMenuSubElement({
-								url:"about-us", 
+								url:"/about-us", 
 								icon:"OP-Icon-Validation-Aura.svg",
 								title:"About Us", 
 								text:"See our mission and values"}) 
@@ -246,17 +246,17 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 								title:"Career", 
 								text:"Join our growing team"}) 
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/partnership", 
 								icon:"OP-Icon-partner-Aura.svg",
 								title:"Partner with Us", 
 								text:"Join our growing team"}) 
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/faq", 
 								icon:"OP-Icon-FAQ-Aura.svg",
 								title:"FAQ", 
 								text:"Find information"}) 
 							+megaMenuSubElement({
-								url:"#", 
+								url:"/contact-us", 
 								icon:"Op-Icon-Contact-Aura.svg",
 								title:"Contact Us", 
 								text:""}) 

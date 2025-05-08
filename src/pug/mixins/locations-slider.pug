@@ -35,10 +35,10 @@
 	]
 
 mixin locationSlider()
-	#locations-slider.swiper(class="overflow-visible!")
+	#locations-slider.swiper(class="overflow-visible! ms-16! md:ms-0")
 		.swiper-wrapper
 			each p in teamMembers
-				.swiper-slide(class="w-1/3! space-y-[32px] text-white")
+				.swiper-slide(class="space-y-[32px] text-white")
 					+outreAuraBorder(p.img, p.country, "mb-[56px]" , imgClass = "bg-openpayd-dark-blue")
 					.country(class="font-bold text-4xl")= p.country
 
@@ -46,5 +46,5 @@ mixin locationSlider()
 					a.more(class="button aura-hover-text mt-auto content-center flex font-bold gap-2.5 text-openpayd-blue text-base!", href= p.url) 
 						span SEE ON A MAP
 						img(class="inline-block", src="/src/images/link-arow.svg", alt="See on a map")
-			.swiper-slide
+			
 

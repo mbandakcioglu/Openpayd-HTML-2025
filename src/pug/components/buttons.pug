@@ -1,15 +1,21 @@
 mixin buttonNonBorder(u)
-    a.button.aura-hover.rounded-full.font-semibold.uppercase.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
-        href=u.url,
-        class="hover:transition-all  " + u.classes, 
-        target=(u.target==="_blank" ? "_blank" : null), 
-        rel= u.rel && u.rel
-    )= u.text
+	a.button.aura-hover.rounded-full.font-semibold.uppercase.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
+		href=u.url,
+		class="hover:transition-all  " + u.classes, 
+		target=(u.target==="_blank" ? "_blank" : null), 
+		rel= u.rel && u.rel
+	)= u.text
 
 mixin ButtonAuraBorder(a)
-    a.button.aura-border.bordered.font-semibold.uppercase.bg-clip-text.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
-        href= a.url, 
-        target=(a.target==="_blank" ? "_blank" : null), 
-        class="hover:transition-all hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] " + a.classes, 
-        rel= a.rel && a.rel
-    )= a.text
+	a.button.aura-border.bordered.font-semibold.uppercase.bg-clip-text.transition-all.duration-700.py-4.px-9.text-base.text-center.inline-block(
+		href= a.url, 
+		target=(a.target==="_blank" ? "_blank" : null), 
+		class="hover:transition-all hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] " + a.classes, 
+		rel= a.rel && a.rel
+	)= a.text
+
+
+mixin blueColorButton(url, text)
+	a.more(class="button aura-hover-text mt-auto content-center flex font-bold gap-2.5 text-openpayd-blue text-base!", href= url) 
+		span=text
+		img(class="inline-block", src="/src/images/link-arow.svg", alt= text)
