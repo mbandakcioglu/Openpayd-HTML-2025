@@ -64,3 +64,18 @@
         center left;
     background-repeat: no-repeat;
 }
+
+
+.inline-gradient-border{
+    position: relative;
+    &:after {
+        display: block;
+        content: " ";
+        width: 100%;
+        height: 2px;
+        background:linear-gradient(90deg, #E348FF 0%, #B514F7 30%, #625BFB 70%, #00CCFF 100%);
+        position: absolute;
+        left:0;
+        bottom: 0;
+    }
+}

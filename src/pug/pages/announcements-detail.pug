@@ -1,0 +1,87 @@
+extends  ../layouts/layout
+
+block variables
+    -var pageType = ""
+    -var pageTitle = "Announcements"
+    //- SEO
+    -var desc = "Announcements"
+    -var keywords = "Home,Page"
+    -var pageRole = "home"
+
+block content
+    section(class="pt-[150px] text-openpayd-dark-blue")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="text-xs leading-none") Resources > #[strong Announcements > ‘Payments Nirvana’: How to reach the ultimate payments state]
+            h1(class="pt-16 font-black text-[36px] md:text-[74px] leading-[1.1]") Announcements
+
+
+    section(class="pt-[150px] text-openpayd-dark-blue")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="flex gap-x-36")
+                div(class="w-[380px]")
+                    div
+                        p(class="font-medium text-2xl mb-5") Posted on Nov 1, 2022
+                        p(class="flex items-center gap-x-4 mb-16")
+                            img(class="block w-[42px]", src="/src/images/avatar.png", alt="Andy Pope, Content Creator")
+                            span(class="text-[#154460] text-sm") Andy Pope, Content Creator
+                        ul(class="space-x-4 mb-16")
+                            li(class="inline-block")
+                                a(class="text-xs font-medium border border-[#B0B6C5] py-3 px-4 rounded-full", href="#") Fintechs
+                            li(class="inline-block")
+                                a(class="text-xs font-medium border border-[#B0B6C5] py-3 px-4 rounded-full", href="#") Team
+                            li(class="inline-block")
+                                a(class="text-xs font-medium border border-[#B0B6C5] py-3 px-4 rounded-full", href="#") Whitepapaer
+                            li(class="inline-block")
+                                a(class="text-xs font-medium border border-[#B0B6C5] py-3 px-4 rounded-full", href="#") Events
+
+                        div(class="mb-16")
+                            p(class="text-sm mb-3") Share article
+                            ul(class="space-x-8")
+                                li(class="inline-block")
+                                    a(href="#")
+                                        img(class="block h-[18px]", src="/src/images/share-link.svg", alt="Link")
+                                li(class="inline-block")
+                                    a(href="#")
+                                        img(class="block h-[20px]", src="/src/images/share-linkedin.svg", alt="LinkedIn")
+                                li(class="inline-block")
+                                    a(href="#")
+                                        img(class="block h-[18px]", src="/src/images/share-x.svg", alt="X")
+                                li(class="inline-block")
+                                    a(href="#")
+                                        img(class="block h-[18px]", src="/src/images/share-facebook.svg", alt="Facebook")
+                        
+                        div
+                            p(class="font-medium text-2xl mb-6 pb-6 inline-gradient-border") Article navigation
+                            ul(class="font-light pl-4")
+                                li(class="list-disc mb-6")
+                                    a(class="", href="#") Finding crypto-friendly payment and banking partners remains to be a challenge.
+                                li(class="list-disc mb-6")
+                                    a(class="", href="#") Offering multiple fiat payment options is becoming a requirement.
+                                li(class="list-disc mb-6")
+                                    a(class="", href="#") What our clients like most – the tech doesn’t let you down?
+
+                div(class="flex-1")
+                    div(class="space-y-16 mb-16")
+                        h1(class="font-black text-5xl leading-[1.3]") ‘Payments Nirvana’: How to reach the ultimate payments state
+                        img(class="block md:rounded-[40px]", src="/src/images/announcement-thumbnail.png", alt="‘Payments Nirvana’: How to reach the ultimate payments state")
+                        p(class="pb-16 font-medium text-3xl leading-[1.3] inline-gradient-border") Cross-border contentment is within our grasp - a world of painless, real-time payments for any business, anywhere.
+                    div(class="space-y-4 [&_a]:text-[#625BFB] [&_a]:underline")
+                        p Nirvana – understood in Buddhism as the final goal. A transcendent state of existence without pain or suffering.
+                        p But what about ‘<a href="#">Payments Nirvana</a>’? It’s something we talk about a lot at OpenPayd; a state where every payment is frictionless and instant. No matter the sender, no matter the recipient, no matter the currency.
+                        p In this ‘<a href="#">state</a>’, money would be transferred from one person to another in real-time. No huge fees, no 3-5 day wait time, just a seamless, painless experience. We’re already feeling zen.
+                        p So the big question, how do we get there? Don’t worry, you won’t have to shave your head or join in with any chanting. In fact, you don’t really need to do anything at all. At OpenPayd, payments Nirvana is something we very much believe is possible and something that’s worth pursuing with all we’ve got.
+                        p Make no mistake, this will be a long journey, but the destination is inevitable, and one which we get a little closer to every day. Over 55 countries currently offer real-time payments. But what about everywhere else? And what if you’re transacting in different currencies – what’s causing the holdup?
+                        p To begin with, each country has its own specific infrastructure and capabilities, along with its own regulatory requirements. Creating real-time payment rails takes time, and when it comes to peoples’ money, there are of course no shortcuts. Even then, accessing those rails in different currencies can still be clunky, especially if there is an FX conversion involved.
+                        p The solution? We see it as two-pronged. Firstly, you need a global network of banking partnerships. This is what allows you to connect to different real-time payment rails in different currencies.
+                        p Then there’s the technical requirements. Enabling high-speed currency transfers 24/7 requires highly robust financial infrastructure. Luckily, this is our area of expertise, and isn’t leaving our roadmap anytime soon.
+                        p Don’t get me wrong, the result won’t be one giant, global payment rail. We’re talking about Nirvana here; people should be able to send and receive money in multiple ways. Cards, bank transfers, blockchain – payments Nirvana will be ‘rails-agnostic’, not ‘one rail to rule them all’.
+                        p All of this can help promote businesses and individuals across the globe as a reliable, fast payment network gives everyone access to their funds faster. There are plenty of examples of it today. When OpenPayd partnered with Bitfinex we were able to give their customers access to our network of rails and licences, meaning that their European customers could purchase crypto via bank transfer and convert their crypto back into fiat, and withdraw it, in real-time. This radically cut the cost and time involved for Bitfinex customers to top up their accounts.
+            
+            div(class="mt-40 pb-20 md:pb-32")
+                h5(class="font-bold text-3xl mb-9") You may also like
+                div(class="grid grid-cols-3 gap-x-20")
+                    include ../components/blog-card.pug
+                    include ../components/blog-card.pug
+                    include ../components/blog-card.pug
+
+    include ../includes/footer-cta-section.pug
