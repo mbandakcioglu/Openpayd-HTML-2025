@@ -1,5 +1,5 @@
 extends  ../layouts/layout
-
+include ../mixins/infobox.pug
 block variables
     -var pageType = ""
     -var pageTitle = "Legal"
@@ -7,19 +7,28 @@ block variables
     -var desc = "Legal"
     -var keywords = "Home,Page"
     -var pageRole = "home"
+    -var ShowOnlyGateways = false
 
 block content
     section(class="pt-[150px] text-openpayd-dark-blue")
         div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
             div(class="text-xs leading-none") Company > #[strong Legal]
             h1(class="pt-16 font-black text-[36px] md:text-[74px] leading-[1.1]") Legal
-    
+
     section()
-        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
-            div(class="grid grid-cols-3 gap-20 py-16")
-                div
-                    a(class="block gradient-box p-11", href="#")
-                        span Privacy Notice
-                        img(class="", src="/src/images/icon-privacy-notice.png", alt="")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0 text-openpayd-dark-blue")
+            div(class="grid grid-cols-3 gap-20 pt-16 pb-32")
+                +infobox("Privacy Notice", "icon-privacy-notice.png")
+                +infobox("Cookie Policy", "icon-cookie-policy.png")
+                +infobox("Website Terms", "icon-website-terms.png")
+                +infobox("Talent Acquisition Privacy Notice", "icon-employees.png")
+                +infobox("Group Overview", "icon-corporate.png")
+                +infobox("Terms of use EEA customers - prior 31 july 2024", "icon-domestic.png")
+                +infobox("Terms of use non-EEA customers - prior 31 july 2024", "icon-domestic-alt.png")
+                +infobox("Complaints Policy", "icon-validation.png")
+                +infobox("Modern Slavery Statement", "icon-legal-9.png")
+                +infobox("Scam Prevention Information", "icon-info-message.png")
+                +infobox("Terms of Use", "icon-international.png")
+                +infobox("Changes to Terms of Use", "icon-layout.png")
 
-
+    include ../includes/footer-cta-section.pug

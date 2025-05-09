@@ -1,0 +1,10 @@
+mixin infobox(title,icon)
+        div
+            a(class="block gradient-box p-6 h-full group", href="legal-detail")
+                span(class="flex items-center gap-x-5")
+                    img(class="w-[64px]", src="/src/images/"+icon, alt="")
+                    span(class="font-bold text-xl")= title
+                span(class="text-openpayd-blue flex items-center pl-[88px] pt-12")
+                    span(class="uppercase font-bold text-base") See More
+                    span(class="ml-2.5 transition-all duration-100 ease-in group-hover:ml-5")
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.83203C0.585786 4.83203 0.25 5.16782 0.25 5.58203C0.25 5.99624 0.585786 6.33203 1 6.33203L1 4.83203ZM11.5303 6.11236C11.8232 5.81947 11.8232 5.34459 11.5303 5.0517L6.75736 0.27873C6.46447 -0.0141635 5.98959 -0.0141635 5.6967 0.27873C5.40381 0.571623 5.40381 1.0465 5.6967 1.33939L9.93934 5.58203L5.6967 9.82467C5.40381 10.1176 5.40381 10.5924 5.6967 10.8853C5.98959 11.1782 6.46447 11.1782 6.75736 10.8853L11.5303 6.11236ZM1 6.33203L11 6.33203L11 4.83203L1 4.83203L1 6.33203Z"/></svg>
