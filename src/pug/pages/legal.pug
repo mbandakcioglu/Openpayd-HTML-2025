@@ -1,0 +1,25 @@
+extends  ../layouts/layout
+
+block variables
+    -var pageType = ""
+    -var pageTitle = "Legal"
+    //- SEO
+    -var desc = "Legal"
+    -var keywords = "Home,Page"
+    -var pageRole = "home"
+
+block content
+    section(class="pt-[150px] text-openpayd-dark-blue")
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="text-xs leading-none") Company > #[strong Legal]
+            h1(class="pt-16 font-black text-[36px] md:text-[74px] leading-[1.1]") Legal
+    
+    section()
+        div(class="container mx-auto max-w-[1392px] px-6 md:px-0")
+            div(class="grid grid-cols-3 gap-20 py-16")
+                div
+                    a(class="block gradient-box p-11", href="#")
+                        span Privacy Notice
+                        img(class="", src="/src/images/icon-privacy-notice.png", alt="")
+
+
