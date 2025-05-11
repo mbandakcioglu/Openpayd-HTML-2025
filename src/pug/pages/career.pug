@@ -25,18 +25,18 @@ block content
 		img(src="/src/images/career-cover-image.png", alt="")
 
 	//- section(class="py-[156px]")
-	section(class="py-16 px-6 md:px-0")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
+	section(class="py-16")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px] px-6 md:px-0") 
 
 
 
-			p(class="text-lg xl:text-4xl") 
+			p(class="text-lg md:text-4xl ") 
 				strong How we are changing the world? 
 				| At OpenPayd, we are building embedded finance and Banking-as-a-Service infrastructure that powers business growth.
 				br
 				| With our financial services infrastructure, innovative companies are building new products, streamline their operations and manage their payments on a global scale.
 
-			.flex.gap-8
+			.flex.gap-8(class="flex-col md:flex-row")
 				+buttonNonBorder({
 					url: "#", 
 					text: "OPEN ROLES", 
@@ -79,7 +79,7 @@ block content
 
 	section(class="py-16 px-6 md:px-0")
 		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
-			h2(class="text-center text-[36px] mb-8 xl:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Employee benefits
+			h2(class="text-center text-[36px] mb-8 md:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") Employee benefits
 
 			-
 				var benefits = [
@@ -129,7 +129,7 @@ block content
 						text: "With experience comes the opportunity to develop highly-specialised career skills and knowledge."
 					},
 				]
-			div(class="xl:grid xl:grid-cols-3 text-center xl:space-x-[190px] space-y-[64px]")
+			div(class="md:grid md:grid-cols-3 text-center md:space-x-[190px] space-y-[64px]")
 				each benefit in benefits
 					div 
 						figure(class="inline-block")
@@ -139,8 +139,8 @@ block content
 
 	section(class="bg-openpayd-light-pink py-16 px-6 md:px-0")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px]") 
-			h2(class="text-center text-[36px] mb-8 xl:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up")  Latest Open Roles
-		.container.w-full.mx-auto(class="xl:grid xl:grid-cols-3 xl:grid-rows-1 max-w-[" + siteWidth + "] space-y-[54px] gap-[78px]") 
+			h2(class="text-center text-[36px] mb-8 md:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up")  Latest Open Roles
+		.container.w-full.mx-auto(class="md:grid md:grid-cols-3 md:grid-rows-1 max-w-[" + siteWidth + "] space-y-[54px] gap-[78px]") 
 
 			div.gradient-border-2(class="p-6 space-y-3") 
 				h5(class="text-2xl leading-9 font-bold") AML Compliance Executive (Transaction Monitoring)
@@ -163,6 +163,6 @@ block content
 				+blueColorButton("#", "SEE MORE")
 
 	section(class="bg-openpayd-dark-blue overflow-hidden py-[156px]")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px]")
-			h2(class="font-black leading-[69px] text-[54px] text-white px-6 md:px-6") Our locations
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] px-6 md:px-0")
+			h2(class="font-black leading-[69px] text-[54px] text-white") Our locations
 			+locationSlider()

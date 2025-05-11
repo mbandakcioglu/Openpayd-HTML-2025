@@ -35,10 +35,11 @@
 	]
 
 mixin locationSlider()
-	#locations-slider.swiper(class="overflow-visible! ms-16! md:ms-0")
+	#locations-slider.swiper(class="overflow-visible! w-3/4! md:w-auto")
 		.swiper-wrapper
 			each p in teamMembers
 				.swiper-slide(class="space-y-[32px] text-white")
+				
 					+outreAuraBorder(p.img, p.country, "mb-[56px]" , imgClass = "bg-openpayd-dark-blue")
 					.country(class="font-bold text-4xl")= p.country
 

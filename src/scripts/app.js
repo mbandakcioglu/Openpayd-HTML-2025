@@ -1,5 +1,6 @@
 import Accordion from "./components/accordion";
-import ctaForm from "./components/ctaForm";
+
+import { CtaForm} from './components/forms-vanilla'
 import homePageTab from "./components/home-page-tab";
 import MagicBox from "./components/magic-box";
 import MobileNavigation from "./components/mobile-navigation";

@@ -1,9 +1,9 @@
 mixin productSlider(p)
 
-	#products-slider.swiper(class="md:w-[60vw] w-3/4 md:pe-5 ml-0! md:overflow-hidden! overflow-visible!")
-		.swiper-wrapper(class="")
+	#products-slider.swiper(class="md:w-[60vw] w-full pe-5")
+		.swiper-wrapper
 			each p in productSliderContent
-				.swiper-slide(class="md:w-1/3!")
+				.swiper-slide(class="md:w-1/3! w-1/4")
 					.gradient-border-2(class="md:p-[50px] p-[41px] h-full text-white")
 						img(class="mb-[18px] size-[64px]", src=`/src/images/${p.img}`, alt= p.title)
 						div(class="mb-[18px] text-2xl font-bold")= p.title
@@ -17,5 +17,4 @@ mixin productSlider(p)
 								rel:""
 							})
 			if p.length > 2
-				.swiper-slide(class="md:w-1/3!")
-	
+				.swiper-slide(class="xl:w-2/6! w-2/3!")

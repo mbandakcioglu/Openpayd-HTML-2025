@@ -4,7 +4,7 @@
 
 @import "tailwindcss";
 @import "./../../node_modules/aos/dist/aos.css";
-@import "./../../node_modules/swiper/swiper-bundle.min.css";
+/* @import "./../../node_modules/swiper/swiper-bundle.min.css"; */
 @import "./../../node_modules/swiper/swiper.min.css";
 @import "./global.css";
 @import "./components/buttons.css";
@@ -15,4 +15,4 @@
 @import "./components/marquee.css";
 @import "./components/accordion.css";
 @import "./components/mobile-navigation.css";
-
+@import "./components/form.css"

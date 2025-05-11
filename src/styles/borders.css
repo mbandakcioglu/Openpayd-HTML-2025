@@ -83,15 +83,16 @@
 .gradient-box{
     position: relative;
     &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 30px; 
-        padding: 2px; 
         background:linear-gradient(90deg, #E348FF 0%, #B514F7 30%, #625BFB 70%, #00CCFF 100%); 
+        border-radius: 30px; 
+        content: "";
+        inset: 0;
         mask: 
           linear-gradient(#000 0 0) content-box, 
           linear-gradient(#000 0 0);
         mask-composite: exclude; 
+        padding: 2px; 
+        position: absolute;
+        z-index: -1;
     }
 }

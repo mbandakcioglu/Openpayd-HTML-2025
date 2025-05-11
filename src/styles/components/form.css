@@ -1,0 +1,14 @@
+form {
+	& button, & input, & select, & optgroup, & textarea, & ::file-selector-button {
+		font-size: 16px;
+	}
+	.error {
+		align-self: flex-start;
+		background-color: var(--color-white);
+		border-radius: 50px;
+		display: inline-block;
+		font-size: 14px;
+		padding: 0 10px 0;
+		width: auto;
+	}
+}

@@ -34,49 +34,49 @@ block content
 	})
 
 
-	section.right-image-text-box(class="pb-[132px] pt-[166px]")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-5 space-y-[46px ]")
-				h2(class="font-black leading-[69px] text-[54px]") Receive payments from anywhere
-				p OpenPayd offers a truly global payment solution, with the ability to receive payments across every major currency into a single IBAN. Our rails-agnostic approach combines traditional finance with blockchain technology under one API, ensuring instants, secure transactions all over the world.
-			div(class="xl:col-span-6 xl:col-start-7")
-				figure(class="p-[42px] pt-0") 
+	section.right-image-text-box(class="pb-16 md:pb-[132px] md:pt-[166px] pt-[52px]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12 px-6 md:px-0")
+			div(class="md:col-span-5 space-y-9 md:space-y-[46px]", data-aos="fade-up")
+				h2(class="font-black leading-12 md:leading-[69px] text-4xl md:text-[54px]") Receive payments from anywhere
+				p(class="leading-7") OpenPayd offers a truly global payment solution, with the ability to receive payments across every major currency into a single IBAN. Our rails-agnostic approach combines traditional finance with blockchain technology under one API, ensuring instants, secure transactions all over the world.
+			div(class="md:col-span-6 md:col-start-7 md:mt-0 mt-9", data-aos="fade-up")
+				figure(class="md:p-[42px] pt-0") 
 					img(src="/src/images/accepting-payments.png", alt="Receive payments from anywhere")
 
 	section.dark-bg-product-content.overflow-hidden(class="w-full bg-[linear-gradient(to_left,rgb(0,18,68)_0%,rgb(0,18,68)_50%,white_50%,white_100%)]")
-		.container.w-full.mx-auto(class="xl:grid xl:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[116px] px-[5px] xl:rounded-tl-[125px]")
+		.container.w-full.mx-auto(class="md:grid md:grid-cols-12 bg-openpayd-dark-blue max-w-[" + siteWidth + "] pb-[93px] pt-[39px] md:pt-[116px] px-[5px] md:rounded-tl-[125px] px-6 md:px-0")
 
-			div(class="xl:col-span-11 xl:col-start-2 p-[15px] xl:p-0")
-				h2.text-white.font-black(class="xl:text-[72px]") Every Pay-In, managed your way
-			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px] p-[15px] xl:p-0")
+			div(class="md:col-span-11 md:col-start-2 p-[15px] md:p-0 md:mb-20 mb-8", data-aos="fade-up")
+				h2.text-white.font-black(class="md:text-7xl text-4xl") Every Pay-In, managed your way
+			div(class="col-span-4 col-start-2 text-lg text-white space-y-[38px] p-[15px] md:p-0")
 				
 				-
 
 					var darkBgContent = [
 						{
 							title: "Unlock real-time payment rails",
-							summary: "Make payments faster than ever",
+							summary: "MAKE PAYMENTS FASTER THAN EVER",
 							text: "Never wait for a payment to reach your account again, with our access to real-time traditional and blockchain payment rails."
 						},
 						{
 							title: "Harness every major currency",
-							summary: "All in one place",
+							summary: "ALL IN ONE PLACE",
 							text: "Global regulatory coverage and multi-currency accounts enable you to receive all major currencies, stablecoins and major digital assets such as BTC and ETH."
 						},
 						{
 							title: "Reconcile on arrival",
-							summary: "Streamlining your operations",
+							summary: "STREAMLINING YOUR OPERATIONS",
 							text: "Virtual IBANs enable you to automatically reconcile every incoming payment as it arrives. Chase growth, not funds."
 						},
 					]
 				
 				each dbc in darkBgContent
-					h3.font-bold.text-4xl= dbc.title
-					h4.font-bold.text-2xl.text-openpayd-blue= dbc.summary
-					p.text-lg= dbc.text
+					h3.font-bold.text-4xl(data-aos="fade-up")= dbc.title
+					h4.font-bold.text-2xl.text-openpayd-blue(data-aos="fade-up")= dbc.summary
+					p.text-lg(data-aos="fade-up")= dbc.text
 
 			
-			div.col-start-7.col-span-5.text-white(class="xl:mt-[247px] ml-[15px] xl:ml-0")
+			div.col-start-7.col-span-5.text-white(class="md:mt-[247px] mt-12 ml-[15px] md:ml-0", data-aos="fade-up")
 				-
 					var productSliderContent = [
 						{
@@ -123,11 +123,11 @@ block content
 	
 
 	section.trio-box.w-full
-		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12 space-y-[64px]")
+		.container.mx-auto(class="max-w-[" + siteWidth + "] md:py-[151px] my-[75px] md:grid md:grid-cols-12 space-y-[64px] px-6 md:px-0")
 
-			h2(class="font-black xl:text-[54px] xl:leading-[69px] xl:col-span-10 xl:col-start-2 text-center") Your new account infrastructure
+			h2(class="font-black md:text-[54px] text-[32px] md:leading-[69px] leading-12 md:col-span-10 md:col-start-2 text-center mb-6") Your new account infrastructure
 
-			p.summary(class="xl:col-span-10 xl:col-start-2 text-center xl:text-2xl") Build a little or build a lot. Our payments and banking infrastructure is ready for whatever you need:
+			p.summary(class="md:col-span-10 md:col-start-2 text-center md:text-2xl text-lg") Build a little or build a lot. Our payments and banking infrastructure is ready for whatever you need:
 			-
 				var trioContent = [
 					{
@@ -146,25 +146,25 @@ block content
 						text: "Combine with our multi-currency account infrastructure and pay-out functionality to super-charge your global presence."
 					},
 				]
-			div(class="xl:col-span-10 xl:col-start-2 xl:grid xl: xl:grid-cols-9 xl:gap-5")
-				each item in trioContent
-					div(class="col-span-3 text-center space-y-[24px]") 
+			div(class="md:col-span-10 md:col-start-2 md:grid md: md:grid-cols-9 md:gap-5 space-y-9")
+				each item, index in trioContent
+					div(class="col-span-3 text-center space-y-[24px]", data-aos="fade-up", data-aos-delay= index * 300) 
 						img(class="inline-block size-[72px]", src="/src/images" + item.img, alt= item.title)
-						h3(class="text-2xl")= item.title
+						h3(class="text-2xl font-bold")= item.title
 						p= item.text
 
 
 	section.left-image-text-box.w-full(class="")
-		.container.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-6 xl:col-start-1 content-center")
+		.container.mx-auto(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12 space-y-[48px] px-6 md:px-0")
+			div(class="md:col-span-6 md:col-start-1 content-center", data-aos="fade-up")
 				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
-			div(class="xl:col-span-5 xl:col-start-8 xl:space-y-[48px] text-lg content-center")
-				h2(class="font-black xl:text-[54px] xl:leading-[69px]") 6 data points: all it takes to initiate international payouts
+			div(class="md:col-span-5 md:col-start-8 space-y-[48px] text-lg content-center", data-aos="fade-up", data-aos-delay="300")
+				h2(class="font-black md:text-[54px] text-4xl md:leading-[69px]") 6 data points: all it takes to initiate international payouts
 				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
 				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
 					br
 					| That’s it, now watch that payment go.
-				.flex.gap-8
+				.flex.gap-8(class="flex-col")
 					+buttonNonBorder({
 						url: "#", 
 						text: "DISCOVER vIBANs", 
@@ -179,9 +179,9 @@ block content
 
 	//Right Image Content
 	section.right-image-text-box(class="")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
-			div(class="xl:col-span-5 xl:col-start-1 xl:space-y-[48px] space-y-[24px] text-lg mb-[50px]")
-				h2(class="font-black xl:text-[54px] xl:leading-[69px]") Open virtual accounts with 13 lines of code
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] md:grid md:grid-cols-12 px-6 md:px-0")
+			div(class="md:col-span-5 md:col-start-1 md:space-y-[48px] space-y-[24px] text-lg mb-[50px]", data-aos="fade-up")
+				h2(class="font-black md:text-[54px] text-3xl! md:leading-[69px]") Open virtual accounts with 13 lines of code
 				p Simple, but effective. That’s our philosophy behind every API call.
 					br
 					| Generate an account for a linked client with just two required parameters 
@@ -189,7 +189,7 @@ block content
 				p (“Currency” and a “friendlyName” for the account) and three optional ones. That’s all it takes to issue vIBANs like a pro.
 
 				p Ready to explore using our API in your environment? Get started with our Sandbox today.
-				.flex.gap-8
+				.flex.gap-8(class="flex-col")
 					+buttonNonBorder({
 						url: "#", 
 						text: "SANDBOX", 
@@ -200,7 +200,7 @@ block content
 						text: "DISCOVER vIBANs", 
 						classes:"text-black"
 					})
-			div(class="xl:col-span-6 xl:col-start-7")
+			div(class="md:col-span-6 md:col-start-7", data-aos="fade-up", data-aos-delay="300")
 				img.w-full(src="/src/images/code-boxx.png", alt="6 data points: all it takes to initiate international payouts")
 
 

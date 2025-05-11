@@ -16,25 +16,25 @@ block content
 
 	+onlyTextHero("Join OpenPayds")
 
-	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 xl:pb-[108px] pb-[54px] px-[50px] xl:px-0 shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] xl:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12")
-			.video-aura-box.gradient-border-1.overflow-hidden(class="px-5 xl:px-[26px] py-5 xl:py-[28px] aspect-[15.5/9] rounded-[10px] xl:rounded-[30px] before:rounded-[10px] xl:before:rounded-[30px] before:p-[4px] col-span-12", data-aos="fade-up", data-aos-duration="1500")
-				//- img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px]", src="/src/images/video-cover-copy.jpg", alt="")
-				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full")
-					iframe( 
+	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 md:pb-[108px] pb-[54px] shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] md:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12  px-6 md:px-0")
+			.video-aura-box.gradient-box.overflow-hidden(class="px-4 md:px-[26px] py-3 md:py-[28px] aspect-[15.5/9] rounded-[20px] md:rounded-[30px] before:rounded-[10px] md:before:rounded-[30px] before:p-[4px] col-span-12", data-aos="fade-up", data-aos-duration="1500")
+				img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px] block md:hidden", src="/src/images/about-us-cover.png", alt="")
+				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full hidden md:block")
+					iframe(
 						class="w-full",
 						src="https://player.vimeo.com/video/915607781?h=637096ac7f&amp;title=0&amp;byline=0&amp;portrait=0",
 						style="position:absolute;top:0;left:0;width:100%;height:100%;",
 						frameborder="0",
-						allow="autoplay; fullscreen; picture-in-picture", 
-						allowfullscreen="", 
-						loading="lazy", 
-						data-lf-form-tracking-inspected-kn9eq4rpaxj8rlvp="true", 
-						data-lf-yt-playback-inspected-kn9eq4rpaxj8rlvp="true", 
+						allow="autoplay; fullscreen; picture-in-picture",
+						allowfullscreen="",
+						loading="lazy",
+						data-lf-form-tracking-inspected-kn9eq4rpaxj8rlvp="true",
+						data-lf-yt-playback-inspected-kn9eq4rpaxj8rlvp="true",
 						data-lf-vimeo-playback-inspected-kn9eq4rpaxj8rlvp="true",
-						)
+					)
 
-	section.logo-marquee-w-text-w-slider(class="xl:pt-[162px] pt-[81px]")
+	section.logo-marquee-w-text-w-slider(class="md:pt-[162px] pt-[81px]")
 		.marquee-container.overflow-hidden.relative.w-full(data-aos="fade-up")
 			//- Fare üzerine gelince durması için isteğe bağlı: group hover:paused
 			.marquee-content.flex.flex-nowrap.w-max(class="animate-marquee group-hover:paused")
@@ -49,7 +49,7 @@ block content
 						{ src: "/src/images/bitfinex.svg", alt: "bitfinex" }
 					]
 				each logo in logos
-					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]") 
+					.logo-item.flex-shrink-0.flex.items-center.justify-center(class="px-8 h-[50px]")
 						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
 
 				//- İkinci Logo Seti (Kesintisiz döngü için KOPYA)
@@ -58,11 +58,11 @@ block content
 						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
 
 	section(class="py-[124px]")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px] grid grid-cols-6", data-aos="gade-up")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px] md:grid grid-cols-6 px-6 md:px-0", data-aos="gade-up")
 			div(class="col-span-5")
 
-				p(class="") 
-					span(class="text-[36px]") The universal financial infrastructure powering the digital economy. 
+				p(class="text-lg md:text-[34px]")
+					span(class="font-bold text-lg md:text-4xl") The universal financial infrastructure powering the digital economy.
 					| At OpenPayd, our vision is a world in which money can be moved across the globe instantly and securely, regardless of the currency and location. With our rails-agnostic infrastructure and global licensing network, that future is not far away. By combining traditional finance with digital assets under one API, we’re processing over $100 billion for enterprise level businesses every year.
 					br
 					br
@@ -96,8 +96,8 @@ block content
 				div(class="order-1 md:order-none pb-14 md:pb-0 content-center" data-aos="fade-up")
 					+outreAuraBorder("/We-are-passionate.png", "We are passionate", "")
 
-	section(class="bg-openpayd-dark-blue overflow-hidden py-[156px]")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px]")
+	section(class="bg-openpayd-dark-blue overflow-hidden py-12 md:py-[156px]")
+		.container(class="max-w-[" + siteWidth + "] space-y-[54px] px-6 md:px-0 w-4/5 md:w-full md:mx-auto")
 			h2(class="font-black leading-[69px] text-[54px] text-white px-6 md:px-6") Our locations
 			+locationSlider()
 
@@ -106,25 +106,25 @@ block content
 	include ../components/faq.pug
 	-
 		var faq = [
-			{ 
-				no: '01', 
-				q: 'Alright, but what exactly do you do?', 
-				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.' 
+			{
+				no: '01',
+				q: 'Alright, but what exactly do you do?',
+				a: 'As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.'
 			},
-			{ 
-				no: '02', 
-				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?', 
-				a: 'Yes! We can collaborate based on your needs.' 
+			{
+				no: '02',
+				q: 'I don’t need a brand strategist but I need help executing an upcoming campaign. Can we still work together?',
+				a: 'Yes! We can collaborate based on your needs.'
 			},
-			{ 
-				no: '03', 
-				q: 'Are your rates competitive?', 
+			{
+				no: '03',
+				q: 'Are your rates competitive?',
 				a: 'We offer rates that reflect the quality and efficiency of our services.'
 			},
-			{ 
-				no: '04', 
-				q: 'Why do you have a monthly project cap?', 
-				a: 'To ensure every project receives the attention it deserves.' 
+			{
+				no: '04',
+				q: 'Why do you have a monthly project cap?',
+				a: 'To ensure every project receives the attention it deserves.'
 			}
 		]
 

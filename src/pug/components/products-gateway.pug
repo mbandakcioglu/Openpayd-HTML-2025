@@ -1,11 +1,11 @@
 section(class="bg-openpayd-gray")
-	.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] xl:px-0 px-[15px] py-[151px] xl:grid xl:grid-cols-12")
-		div(class="xl:col-span-10 xl:col-start-2 text-center space-y-[48px]")
-			h2(class="font-black xl:text-[54px] xl:leading-[69px]") A full banking and payments ecosystem through a single API
+	.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] py-[151px] md:grid md:grid-cols-12 px-6 md:px-0")
+		div(class="md:col-span-10 md:col-start-2 md:text-center space-y-[48px] text-lg")
+			h2(class="font-black md:text-[54px] text-3xl md:leading-[69px]") A full banking and payments ecosystem through a single API
 			p.font-2xl OpenPayd’s simple, developer-first API delivers Banking-as-a-Service with a modular architecture.
 				br
 				| Build a banking and payments service that grows and changes as you do. 
-		.gateways(class="col-span-12 grid grid-cols-3 grid-rows-2 gap-11 mt-[112px]")
+		.gateways(class="md:col-span-12 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-11 mt-[112px] space-y-6 md:space-y-0")
 			
 			-
 				var prodGateways = [
@@ -46,11 +46,11 @@ section(class="bg-openpayd-gray")
 						url: "#"
 					}
 				]
-			each item in prodGateways
-				div(class="gradient-border-2 py-[38px] pe-[24px]")
-					div(class="grid grid-col pl-[112px] space-y-[24px]") 
-						img(class="absolute float-left -ml-[88px] size-[64px]", src="/src/images" + item.img, alt= item.title)
-						strong(class="block text-2xl")= item.title
+			each item, index in prodGateways
+				div(class="gradient-border-2 md:py-[38px] md:pe-[24px]", data-aos="fade-up", data-aos-delay= index * 100)
+					div(class="grid grid-col md:pl-[112px] p-6 space-y-[24px]") 
+						img(class="md:absolute float-left md:-ml-[88px] size-[64px]", src="/src/images" + item.img, alt= item.title)
+						strong(class="block text-2xl font-bold")= item.title
 						span(class="block")= item.sum
 						a.more(class="button aura-hover-text mt-auto content-center flex font-bold gap-2.5 text-openpayd-blue", href= item.url) 
 							span SEE MORE

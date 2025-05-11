@@ -29,7 +29,7 @@ block content
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]") 
 
 
-			p(class="text-lg xl:text-4xl") We are powering the payments of some of the world’s biggest digital businesses. Marketplaces, trading platforms, fintech companies and digital asset businesses rely on our payments infrastructure every single day. 
+			p(class="text-lg md:text-4xl") We are powering the payments of some of the world’s biggest digital businesses. Marketplaces, trading platforms, fintech companies and digital asset businesses rely on our payments infrastructure every single day. 
 				br
 				br
 				| And we’re always open to new partnerships to help us deliver our services to those companies that need it most.
@@ -40,7 +40,7 @@ block content
 					classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 				})
 
-	section.logo-marquee-w-text-w-slider(class="xl:pt-[162px] pt-[81px]")
+	section.logo-marquee-w-text-w-slider(class="md:pt-[162px] pt-[81px]")
 		.marquee-container.overflow-hidden.relative.w-full(data-aos="fade-up")
 			//- Fare üzerine gelince durması için isteğe bağlı: group hover:paused
 			.marquee-content.flex.flex-nowrap.w-max(class="animate-marquee group-hover:paused")
@@ -68,11 +68,11 @@ block content
 
 
 	section#developers(data-aos="fade-up")
-		.container(class="relative z-1 mx-auto px-6 gap-4 max-w-[" + siteWidth + "] xl:grid xl:grid-cols-12 pt-[108px]")
+		.container(class="relative z-1 mx-auto px-6 gap-4 max-w-[" + siteWidth + "] md:grid md:grid-cols-12 pt-[108px]")
 			div(class="col-span-5 space-y-14")
 
 
-				h2.text-openpayd-dark-blue(class="xl:text-[58px] text-4xl font-black col-span-12 mb-[48px] xl:leading-[90px]", data-aos="fade-up") Help us transform how the world pays
+				h2.text-openpayd-dark-blue(class="md:text-[58px] text-4xl font-black col-span-12 mb-[48px] md:leading-[90px]", data-aos="fade-up") Help us transform how the world pays
 				div(class="space-y-4")
 					h3.text-2xl.font-bold(data-aos="fade-up") OpenPayd for Introducers
 					p(class="text-balance" data-aos="fade-up") We’re already working with a wide range of businesses who want to help their clients upgrade their payments infrastructure. Once we have a referral agreement in place, you’ll be ready to start referring your clients.
@@ -91,7 +91,7 @@ block content
 							text:"DIVE IN", 
 							classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 						})
-			div.flex.align.items-end(class="col-end-13 col-span-6 mt-[50px] xl:mt-0")
+			div.flex.align.items-end(class="col-end-13 col-span-6 mt-[50px] md:mt-0")
 				div(class="rounded-[20px] overflow-auto shadow-lg max-w-full text-white font-mono text-sm leading-relaxed", data-aos="fade-up")
 					img(src="/src/images/Screenshot-2024-09-04.png", alt="")
 
@@ -107,7 +107,7 @@ block content
 				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
 					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") By leading experts in tech
 					p(class="text-balance" data-aos="fade-up") Our intuitive, fully-documented REST API is designed, built, and maintained by developers, for developers. Go live in a matter of days with our simple integration and access to industry-leading support. Want to explore first? Get instant access to our sandbox environment.
-					.flex(class="gap-8")
+					.flex(class="gap-8 flex-col md:flex-row")
 						+ButtonAuraBorder({
 							url: "#", 
 							text: "API", 

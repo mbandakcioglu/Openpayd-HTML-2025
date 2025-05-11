@@ -4,14 +4,14 @@ mixin customCheckbox(c)
 			input(id=c.id, type=c.type, name=c.name, value="1", data-rule-required=c.required && "true", class=c.inputClassName && c.inputClassName)
 			span
 			span.text!= c.labelText
-	div(class=`${c.containerClassName || ''}`)
-		label(for=c.id class="flex items-center gap-2 text-xs font-normal cursor-pointer")
+	div(class=`${c.containerClassName || ''} space-y-4`)
+		label(for=c.id class="flex items-start gap-2 text-sm font-normal cursor-pointer")
 			input(
 				type="checkbox",
 				id=c.id,
 				name=c.name,
 				value="1",
-				data-rule-required= c.required && "true",
+				data-required= c.required && "true",
 				class=`peer hidden ${c.inputClassName || ''}`
 			)
 			- const isRadio = c.containerClassName && c.containerClassName.includes('radio')
@@ -21,7 +21,8 @@ mixin customCheckbox(c)
 					"h-5",
 					"min-w-[20px]",
 					"border",
-					"border-openpayd-dark-blue",
+					"border-blue",
+					"bg-blue",
 					"flex",
 					"justify-center",
 					"items-center",
@@ -33,63 +34,91 @@ mixin customCheckbox(c)
 			)
 			span.text(class="leading-5") !{c.labelText}
 
-
-
-
+//- element classes
 -
-	var formElementAttr = "h-[38px] leading-[38px] rounded-[100px] bg-transparent border-[1px] border-openpayd-dark-blue px-[15px] outline-shades-violet-light"
--
-	var selectElementAttr = "appearance-none"
+	var formElementClasses = "h-[38px] leading-[38px] rounded-[25px] bg-pink border-[1px] border-blue px-[15px] outline-shades-violet-light"
+	var selectElementClasses = "appearance-none"
 
 mixin ctaInput(f)
 	label.form-label(for= f.id, class="font-bold mb-[8px] text-sm")= f.label
-	input.form-control(class= formElementAttr, name= f.id, id= f.id, type= f.type ? f.type : "text", minlength= f.minlength && f.minlength )
+	input.form-control(
+		class= formElementClasses, 
+		name= f.id, id= f.id, 
+		type= f.type ? f.type : "text", 
+		minlength= f.minlength && f.minlength, 
+		data-required= f.required && "true", )
+	span.error.hidden(id= f.id + "-error-msg", class="text-red-500")
 
 .form
 	//- form#cta-form(action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8")
-	form#cta-form(class="grid xl:grid-cols-3 gap-[20px]")
+	form#cta-form(class="md:grid md:grid-cols-3 gap-[20px] space-y-4")
 
 
-		<input type=hidden name='captcha_settings' value='{"keyname":"openpayd","fallback":"true","orgId":"00D58000000aEt5","ts":""}'>
+		//- <input type=hidden name='captcha_settings' value='{"keyname":"openpayd","fallback":"true","orgId":"00D58000000aEt5","ts":""}'>
 		<input type=hidden name="oid" value="00D58000000aEt5">
 
 		input(type="hidden", name="retURL", value="https://www.openpayd.com/thank-you")
 
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="first_name") FIRST NAME *
 			//- input#first_name.form-control(name="first_name", type="text", minlength="2")
-			+ctaInput({id: "first_name", label: "First Name *", minlength: "2"})
+			+ctaInput({
+				id: "first_name", 
+				label: "First Name *", 
+				minlength: "2",
+				required: true
+			})
 
 		
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="last_name") LAST NAME *
 			//- input#last_name.form-control(name="last_name", type="text")
-			+ctaInput({id: "last_name", label: "Last Name *"})
+			+ctaInput({
+				id: "last_name", 
+				label: "Last Name *",
+				required: true
+			})
 
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="company") COMPANY *
 			//- input#company.form-control(name="company", type="text")
-			+ctaInput({id: "company", label: "Company *"})
+			+ctaInput({
+				id: "company", 
+				label: "Company *",
+				required: true
+			})
 		
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="phone") Phone Number *
-			//- div.d-flex
+			//- div.flex
 			//- 	select#phoneCountryCode.form-select(name="phoneCountryCode") 
 			//- 		option(value="", selected) Please select
 			//- 	input#phone.form-control(name="phone", type="text")
 			//- .phoneCountryCode-error-message
 			//- .phone-error-message
 
-			+ctaInput({id: "phone", label: "Phone Number *"})
+			+ctaInput({
+				id: "phone", 
+				label: "Phone Number *",
+				required: true
+			})
 
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="title") JOB TITLE *
 			//- input#title.form-control(name="title", type="text")
-			+ctaInput({id: "title", label: "Job Title *"})
+			+ctaInput({
+				id: "title", 
+				label: "Job Title *",
+				required: true
+			})
 			
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			label.form-label(for="00N4I00000Et8nv", class="font-bold mb-[8px] text-sm") Country *
-			select#00N4I00000Et8nv.form-select(name="00N4I00000Et8nv", class= formElementAttr + " " + selectElementAttr)
+			select#00N4I00000Et8nv.form-select(
+				name="00N4I00000Et8nv", 
+				class= formElementClasses + " " + selectElementClasses,
+				data-required="true"
+			)
 				option(value='' selected='')
 				option(value='Afghanistan') Afghanistan
 				option(value='Aland Islands') Aland Islands
@@ -343,20 +372,32 @@ mixin ctaInput(f)
 				option(value='Yemen') Yemen
 				option(value='Zambia') Zambia
 				option(value='Zimbabwe') Zimbabwe
-
-		.form-group(class="flex flex-col justify-end col-span-2")
+			span.error.hidden(class="text-red-500")
+		.form-group(class="flex flex-col justify-start col-span-2 space-y-2")
 			//- label.form-label(for="email") BUSINESS EMAIL ADDRESS *
 			//- input#email.form-control(name="email", type="text")
-			+ctaInput({id: "email", label: "Busıness Email Address *"})
+			+ctaInput({
+				id: "email", 
+				label: "Busıness Email Address *",
+				required: true
+			})
 
-		.form-group(class="flex flex-col justify-end")
+		.form-group(class="flex flex-col justify-start space-y-2")
 			//- label.form-label(for="url") WEBSITE *
 			//- input#url.form-control(name="url", type="text")
-			+ctaInput({id: "url", label: "Website *"})
+			+ctaInput({
+				id: "url", 
+				label: "Website *",
+				required: true
+			})
 
-		.form-group(class="flex flex-col justify-end") 
+		.form-group(class="flex flex-col justify-start space-y-2") 
 			label.form-label(for="00N4I00000FBxHN", class="font-bold mb-[8px] text-sm") What Is Your Monthly Transaction Volume? *
-			select#00N4I00000FBxHN.form-select(name="00N4I00000FBxHN", class= formElementAttr + " " + selectElementAttr)
+			select#00N4I00000FBxHN.form-select(
+				name="00N4I00000FBxHN", 
+				class= formElementClasses + " " + selectElementClasses,
+				data-required="true"
+			)
 				option(value="", selected)
 				option(value="&pound;0-&pound;500,000") &pound;0-&pound;500,000
 				option(value="&pound;500,001-&pound;1,000,000") &pound;500,001-&pound;1,000,000
@@ -364,34 +405,46 @@ mixin ctaInput(f)
 				option(value="&pound;5,000,001-&pound;10,000,000") &pound;5,000,001-&pound;10,000,000
 				option(value="&pound;10,000,001-&pound;20,000,000") &pound;10,000,001-&pound;20,000,000
 				option(value="&pound;20,000,001+") &pound;20,000,001+
+			span.error.hidden(class="text-red-500")
 		
-		.form-group(class="flex flex-col justify-end") 
-			+ctaInput({id: "company_size", label: "Company Size *"})
+		.form-group(class="flex flex-col justify-start space-y-2") 
+			+ctaInput({
+				id: "company_size", 
+				label: "Company Size *",
+				required: true
+			})
 		
-		.form-group(class="col-span-3")
+		.form-group(class="col-span-3 space-y-2")
 			.form-label(class="font-bold mb-[8px] text-sm") WHAT SOLUTIONS ARE YOU LOOKING FOR *
-			div(class="xl:flex xl:flex-wrap xl:gap-[16px]")
-				+customCheckbox({"labelText": "Accept Payments", "id": "00NP1000009Dtsj", "name": "00NP1000009Dtsj", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Send Payments", "id": "00NP1000009DrMI", "name": "00NP1000009DrMI", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Open Banking", "id": "00NP1000009Dtvx", "name": "00NP1000009Dtvx", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Card Payments", "id": "00NP1000009Dvcp ", "name": "00NP1000009Dvcp", "type": "checkbox", "inputClassName": "solution-checkbox"})
-					//- .d-flex(style="gap: 18px;")
-				+customCheckbox({"labelText": "Virtual IBANs", "id": "00N4I00000EtHlt ", "name": "00N4I00000EtHlt", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Banking-as-a-Service ", "id": "00NP1000009Dz5J", "name": "00NP1000009Dz5J", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Corporate Accounts", "id": "00NP1000009Dmpe ", "name": "00NP1000009Dmpe", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Pooled Accounts", "id": "00NP1000009E04b ", "name": "00NP1000009E04b", "type": "checkbox", "inputClassName": "solution-checkbox"})
-					//- .d-flex(style="gap: 18px;")
-				+customCheckbox({"labelText": "Multi-currency Accounts", "id": "00NP1000009DuVU", "name": "00NP1000009DuVU", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				+customCheckbox({"labelText": "Foreign Exhange", "id": "00NP1000009E0iw", "name": "00NP1000009E0iw", "type": "checkbox", "inputClassName": "solution-checkbox"})
-				.col-12.d-flex.wsaylf-error-message.error.f-14 
+			div(class="md:flex md:flex-wrap md:gap-[16px]")
+				+customCheckbox({"labelText": "Accept Payments", "id": "00NP1000009Dtsj", "name": "00NP1000009Dtsj", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Send Payments", "id": "00NP1000009DrMI", "name": "00NP1000009DrMI", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Open Banking", "id": "00NP1000009Dtvx", "name": "00NP1000009Dtvx", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Card Payments", "id": "00NP1000009Dvcp ", "name": "00NP1000009Dvcp", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+					//- .flex(style="gap: 18px;")
+				+customCheckbox({"labelText": "Virtual IBANs", "id": "00N4I00000EtHlt ", "name": "00N4I00000EtHlt", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Banking-as-a-Service ", "id": "00NP1000009Dz5J", "name": "00NP1000009Dz5J", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Corporate Accounts", "id": "00NP1000009Dmpe ", "name": "00NP1000009Dmpe", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Pooled Accounts", "id": "00NP1000009E04b ", "name": "00NP1000009E04b", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+					//- .flex(style="gap: 18px;")
+				+customCheckbox({"labelText": "Multi-currency Accounts", "id": "00NP1000009DuVU", "name": "00NP1000009DuVU", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				+customCheckbox({"labelText": "Foreign Exhange", "id": "00NP1000009E0iw", "name": "00NP1000009E0iw", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+
+			span.wsaylf-error-message.error.hidden(class="text-red-500")
 
 
-		.form-group(class="col-span-3 flex flex-col justify-end")
+		.form-group(class="col-span-3 flex flex-col justify-start space-y-2")
 			label.form-label(for="message", class="font-bold mb-[8px] text-sm") How Can We Help?
-			textarea#message.form-control(name="00N4I00000Est5j", rows="3", maxlength="250", class= formElementAttr + " h-[67px] leading-normal py-[15px] px-[25px]")
-			.d-flex.justify-content-between
-				.d-flex.message-error-message.error.f-14 
-				#counter.text-end
+			textarea#message.form-control(
+				name="00N4I00000Est5j", 
+				rows="3", 
+				maxlength="250", 
+				class= formElementClasses + " h-[67px] min-h-[67px] leading-normal py-[15px] px-[25px]"
+				data-required="true"
+			)
+			.flex.justify-between
+				.flex.message-error-message.error.f-14(class="text-red-500") 
+				#counter.text-end(class="text-sm mt-2.5")
 					span#current_count 0
 					span#maximum_count / 300
 		.form-group(class="col-span-3")
@@ -402,12 +455,14 @@ mixin ctaInput(f)
 					"name": "00N4I00000FBsUg", 
 					"type": "checkbox", 
 					"required": true,
-					"containerClassName":"w-full radio"
+					"containerClassName":"w-full"
 				})
+			span#promo-error-msg.error.hidden(class="text-red-500")
+			//- "containerClassName":"w-full radio"
 
-			.d-flex.promo-error-message.error.f-14 
 		
 		.form-group(class="col-span-3")
 			.g-recaptcha(data-sitekey="6LcGrY4bAAAAAGneyvG04LbBCrZoPBOGiKHiAcDe")
 			.form-buttons
-				button.submit(type="submit") SUBMIT
+				button.submit(type="submit", class="button aura-hover rounded-full font-semibold uppercase transition-all duration-700 py-4 px-9 text-base text-center inline-block hover:transition-all  bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white") DIVE IN
+
