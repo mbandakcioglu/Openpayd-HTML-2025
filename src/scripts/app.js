@@ -21,6 +21,6 @@ mainMenu();
 sliders();
 homePageTab();
 MagicBox();
-ctaForm();
+CtaForm();
 Accordion();
 new MobileNavigation();
