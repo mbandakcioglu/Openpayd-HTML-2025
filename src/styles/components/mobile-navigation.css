@@ -1,0 +1,21 @@
+#mobile-navigation{background:rgba(0, 0, 0, .5)}
+#hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+#hamburger.open span:nth-child(2) {
+    transform: rotate(-45deg) translate(3px, -3px);
+}
+
+#mobile-navigation{overflow: hidden;transition: all 0.5s ease-in;height: 0;opacity: 0;}
+#mobile-navigation nav > ul > li > ul{max-height: 0;overflow: hidden;transition: max-height 0.5s ease-out;}
+
+#mobile-navigation nav > ul > li > a > span.arrow{transition: transform 0.3s ease}
+#mobile-navigation nav > ul > li.expanded > a{transition: all 0.5s ease}
+#mobile-navigation nav > ul > li.expanded > a{color:#B514F7}
+#mobile-navigation nav > ul > li.expanded > a > span.title{font-weight:700}
+#mobile-navigation nav > ul > li.expanded > a > span.arrow{transform: rotate(-180deg)}
+
+#mobile-navigation.enable{overflow-y: auto;}
+
+#mobile-navigation nav > ul > li > ul > div > p{margin-top:16px}
+#mobile-navigation nav > ul > li > ul > div > p:first-child{margin-top:0}

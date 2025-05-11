@@ -33,14 +33,22 @@ mixin megaMenuTopElement(t)
 
 //- header#site-header.fixed.w-full.top-0.left-0.right-0.z-1
 header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/header")
-	.container.w-full.mx-auto.flex.items-center.justify-end(class="max-w-[" + siteWidth + "] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out")
+	div(class="container mx-auto px-6 py-[18px] block md:hidden")
+		div(class="flex items-center justify-between")
+			a(class="inline-block", href="/") 
+				img.logo-image(class="h-[38px]", src='/src/images/openpayd-symbol.svg', alt='OpenPayd')
+			button(id="hamburger", class="flex flex-col justify-center items-center space-y-[6px] w-8 h-8 group")
+				span(class="w-[16px] h-[2px] bg-white rounded-full transition-all duration-300 origin-center")
+				span(class="w-[16px] h-[2px] bg-white rounded-full transition-all duration-300 origin-center")
+
+	.container.w-full.mx-auto.flex.items-center.justify-end.hidden(class="max-w-[" + siteWidth + "] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out md:flex")
 
 		//  Logo 
 		#logo.flex.items-center.space-x-2.mr-auto
 			a(href="/") 
 				img.logo-image(class="w-[170px] h-[58px]", src='/src/images/OP-Logo.svg', alt='OpenPayd')
 			
-		nav#main-nav.text-slate-900.hidden(class="text-[18px] xl:block")
+		nav#main-nav.text-slate-900(class="text-[18px]")
 			ul.grid.grid-cols-5.items-center.space-x-6
 				//- Product
 				li.relative.top-menu-opener(class="group/menuitem")
@@ -261,17 +269,162 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 								title:"Contact Us", 
 								text:""}) 
 		//  Actions 
-		.flex.items-center.space-x-3.hidden(class="xl:block")
+		.flex.items-center.space-x-3
 			+ButtonAuraBorder({url:"#", text:"LOG IN", classes:"text-black", rel:"nofollow", target:"_blank" })
 			+buttonNonBorder({url:"#", text:"DIVE IN", classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"})
-		
-		//- Mobile menu opener
-		button.inline-flex.items-center.p-2.w-10.h-10.justify-center.text-sm.text-gray-500.rounded-lg(
-			data-collapse-toggle="navbar-default", 
-			type="button", 
-			aria-controls="navbar-default", 
-			aria-expanded="false", 
-			class="md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-		)
-			svg.w-5.h-5(aria-hidden="true", xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 17 14")
-				path(stroke="currentColor", stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M1 1h15M1 7h15M1 13h15")
+
+div(id="mobile-navigation", class="w-full h-screen pt-[74px] fixed z-[1] top-0 left-0 text-openpayd-dark-blue block md:hidden")
+	div(class="mx-auto px-6 pt-[46px] pb-6")
+		div(class="bg-white rounded-xl py-[15px]")
+			nav()
+				ul
+					li(class="menu-item-has-children")
+						a(class="flex justify-between items-center px-6 py-[15px]")
+							span(class="font-medium text-lg leading-none title") Products
+							span(class="arrow")
+								<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8334 1.5L7.00008 7.33333L1.16675 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						ul(class="bg-[#f5f5f5]")
+							div(class="py-4 px-6")
+								p
+									span(class="block font-extrabold text-[15px] tracking-tighter leading-none mb-1") PAYMENTS
+									span(class="block text-[#B0B6C5] text-xs font-medium leading-none") Send and receive globally
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Pay-In-Review-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Accept Payments
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-International-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Send Payments
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Open-Banking-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Open Banking
+								p
+									span(class="block font-extrabold text-[15px] tracking-tighter leading-none mb-1") ACCOUNTS
+									span(class="block text-[#B0B6C5] text-xs font-medium leading-none") Bank with virtual IBANs
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Master-Accounts-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Virtual IBANs
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-BaaS-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Banking-as-a-Service
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Corporate-Customers-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Corporate Accounts
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Sub-Accounts-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Pooled Accounts
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Lending-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Multi-Currency Accounts
+								p
+									span(class="block font-extrabold text-[15px] tracking-tighter leading-none mb-1") FX & TREASURY
+									span(class="block text-[#B0B6C5] text-xs font-medium leading-none") Orchestrate your business money flows
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-FX-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Foreign Exchange
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Corporate-Customers-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Corporate Accounts
+
+					li(class="menu-item-has-children")
+						a(class="flex justify-between items-center px-6 py-[15px]")
+							span(class="font-medium text-lg leading-none title") Solutions
+							span(class="arrow")
+								<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8334 1.5L7.00008 7.33333L1.16675 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						ul(class="bg-[#f5f5f5]")
+							div(class="py-4 px-6")
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Sub-Accounts-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Fintech
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-FX-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Forex & Online Brokerage
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-DigitalAssets-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Digital Assets
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-International-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Remittance
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-marketplace-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Marketplaces & Platformsance
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Technology-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Insurtech
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Pay-In-Review-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Payroll
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-iGaming-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") iGaming
+								li
+									a(href="solutions", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Embedded-Finance-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Embedded Finance
+					
+					li(class="menu-item-has-children")
+						a(class="flex justify-between items-center px-6 py-[15px]")
+							span(class="font-medium text-lg leading-none title") Developers
+							span(class="arrow")
+								<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8334 1.5L7.00008 7.33333L1.16675 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						ul(class="bg-[#f5f5f5]")
+							div(class="py-4 px-6")
+								li
+									a(href="api", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-API-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") OpenPayd API
+								li
+									a(href="https://apidocs.openpayd.com", target="_blank", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Compliance-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") API Docs
+								li
+									a(href="https://sandbox.openpayd.com/account/login?returnUrl=%2F", target="_blank", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Sandbox-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Sandbox
+					li(class="menu-item-has-children")
+						a(class="flex justify-between items-center px-6 py-[15px]")
+							span(class="font-medium text-lg leading-none title") Resources
+							span(class="arrow")
+								<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8334 1.5L7.00008 7.33333L1.16675 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						ul(class="bg-[#f5f5f5]")
+							div(class="py-4 px-6")
+								p
+									span(class="block font-extrabold text-[15px] tracking-tighter leading-none mb-1") NEWS & MEDIA
+									span(class="block text-[#B0B6C5] text-xs font-medium leading-none") The latest OpenPayd updates
+								li
+									a(href="announcements", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-announcements-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Announcements
+								p
+									span(class="block font-extrabold text-[15px] tracking-tighter leading-none mb-1") OUR THINKING
+									span(class="block text-[#B0B6C5] text-xs font-medium leading-none") OpenPayd experts share what the future holds
+								li
+									a(href="blog", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-blog-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Our Blog
+					li(class="menu-item-has-children")
+						a(class="flex justify-between items-center px-6 py-[15px]")
+							span(class="font-medium text-lg leading-none title") Company
+							span(class="arrow")
+								<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8334 1.5L7.00008 7.33333L1.16675 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+			div(class="pt-6 pb-2 px-6 space-y-3")
+				a(class="button aura-border bordered font-semibold bg-clip-text py-4 px-9 text-base text-center uppercase text-black block", href="#") Log In
+				a(class="button aura-hover rounded-full font-semibold uppercase py-4 px-9 text-base text-center block bg-openpayd-pink") DIVE IN

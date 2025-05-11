@@ -2,7 +2,7 @@ import Accordion from "./components/accordion";
 import ctaForm from "./components/ctaForm";
 import homePageTab from "./components/home-page-tab";
 import MagicBox from "./components/magic-box";
-
+import MobileNavigation from "./components/mobile-navigation";
 import mainMenu from "./components/main-menu";
 import sliders from "./components/sliders";
 import aosAnimations from "./context/aosAnimations";
@@ -22,3 +22,4 @@ homePageTab();
 MagicBox();
 ctaForm();
 Accordion();
+new MobileNavigation();
