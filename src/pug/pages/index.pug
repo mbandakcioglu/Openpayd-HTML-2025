@@ -71,7 +71,7 @@ block content
 			div(class="md:col-span-5 md:text-[42px] md:mt-[124px] text-lg", data-aos="fade-up") #[strong Powering the growth of the digital economy.] Rail-agnostic infrastructure seamlessly combines traditional finance and digital assets under one API. Build and scale in the digital age.
 
 
-	section.w-full.bg-white(class="py-16 hidden md:block", data-aos="fade-up")
+	section.w-full.bg-white(class="py-16 md:pt-24 hidden md:block", data-aos="fade-up")
 		.container.mx-auto.px-6.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12")
 			mixin TabImages(img, title)
 				+outreAuraBorder(img, title, "mb-[48px]")
@@ -308,13 +308,13 @@ block content
 	//- background: linear-gradient(98.83deg, #E348FF -20.16%, #00CCFF 32.19%, #53D0FD 66.64%, #B514F7 117.67%);
 
 	mixin features(value, label)
-		.features-item(data-aos="fade-up")
-			div.value.text-center(class="font-black md:text-[54px] md:mb-[69px]")!= value
-			div.label.text-center(class="md:text-[24px]")!= label
+		.features-item(class="space-y-4 md:space-y-1", data-aos="fade-up")
+			div.value.text-center(class="font-black md:text-[54px] text-lg md:mb-[69px]")!= value
+			div.label.text-center(class="md:text-[24px] text-xs")!= label
 	
 	section.features(class="bg-linear-135 from-openpayd-purple from-0% via-openpayd-blue via-50% to-openpayd-purple to-100%", data-aos="fade-up")
-		.container(class="mx-auto px-6 gap-12 max-w-[" + siteWidth + "] md:grid md:grid-cols-12 py-[99px]")
-			.features-wrapper(class="col-span-10 col-start-2 md:grid md:grid-cols-4")
+		.container(class="mx-auto px-6 gap-12 max-w-[" + siteWidth + "] md:grid md:grid-cols-12 md:py-[99px] py-6", data-aos="fade-up")
+			.features-wrapper(class="md:col-span-10 md:col-start-2 grid md:grid-cols-4 grid-cols-2 md:space-y-1 space-y-1")
 
 				+features("300+","Clients")
 				+features("€2bn+","Monthly Transactions")

@@ -378,7 +378,7 @@ mixin ctaInput(f)
 			//- input#email.form-control(name="email", type="text")
 			+ctaInput({
 				id: "email", 
-				label: "Busıness Email Address *",
+				label: "Business Email Address *",
 				required: true
 			})
 
@@ -407,16 +407,9 @@ mixin ctaInput(f)
 				option(value="&pound;20,000,001+") &pound;20,000,001+
 			span.error.hidden(class="text-red-500")
 		
-		.form-group(class="flex flex-col justify-end") 
-			+ctaInput({
-				id: "company_size", 
-				label: "Company Size *",
-				required: true
-			})
-		
 		.form-group(class="col-span-3")
 			.form-label(class="font-bold mb-[8px] text-sm") WHAT SOLUTIONS ARE YOU LOOKING FOR *
-			div(class="md:flex md:flex-wrap md:gap-[16px]")
+			div(class="flex md:flex-wrap flex-col md:flex-row gap-4")
 				+customCheckbox({"labelText": "Accept Payments", "id": "00NP1000009Dtsj", "name": "00NP1000009Dtsj", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Send Payments", "id": "00NP1000009DrMI", "name": "00NP1000009DrMI", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Open Banking", "id": "00NP1000009Dtvx", "name": "00NP1000009Dtvx", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})

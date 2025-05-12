@@ -43,51 +43,62 @@ block content
 					img(src="/src/images/Frame-2102.png", alt="Receive payments from anywhere")
 
 
-	section.multi-text-image-box.w-full(class="md:py-[151px] space-y-[152px]")
-		.container.mx-auto(class="max-w-[" + siteWidth + "]  md:grid md:grid-cols-12 space-y-6 flex flex-col gap-6 px-6 md:px-0")
-			div(class="md:col-span-6 md:col-start-1 content-center")
-				img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
-			div(class="md:col-span-5 md:col-start-8 md:space-y-12 text-lg content-center space-y-6")
-				h2(class="font-black md:text-[54px] text-4xl md:leading-[69px]") 6 data points: all it takes to initiate international payouts
-				p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
-				p Not at all. All it takes is one API call with six required parameters: Account ID, beneficiary ID, payment type and value, reference and date.
-					br
-					| That’s it, now watch that payment go.
-				div(class="flex gap-8 flex-col md:flex-col")
-					+buttonNonBorder({
-						url: "#", 
-						text: "DISCOVER vIBANs", 
-						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
-					})
-					+ButtonAuraBorder({
-						url: "#", 
-						text: "SANDBOX", 
-						classes:"text-black"
-					})
 
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12 flex flex-col-reverse gap-6 space-y-6 px-6 md:px-0")
-			div(class="md:col-span-5 md:col-start-1 md:space-y-12 text-lg mb-[50px]")
-				h2(class="font-black md:text-[54px] text-4xl md:leading-[69px]") Open virtual accounts with 13 lines of code
-				p Simple, but effective. That’s our philosophy behind every API call.
-					br
-					| Generate an account for a linked client with just two required parameters 
 
-				p (“Currency” and a “friendlyName” for the account) and three optional ones. That’s all it takes to issue vIBANs like a pro.
 
-				p Ready to explore using our API in your environment? Get started with our Sandbox today.
-				div(class="flex gap-8 flex-col md:flex-col")
-					+buttonNonBorder({
-						url: "#", 
-						text: "SANDBOX", 
-						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
-					})
-					+ButtonAuraBorder({
-						url: "#", 
-						text: "DISCOVER vIBANs", 
-						classes:"text-black"
-					})
-			div(class="md:col-span-6 md:col-start-7 content-center")
-				img.w-full(src="/src/images/code-boxx.png", alt="6 data points: all it takes to initiate international payouts")
+	//- --------------------------------
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="pb-14 md:pb-0 content-center", data-aos="fade-up")
+					img.w-full(src="/src/images/code-box.png", alt="6 data points: all it takes to initiate international payouts")
+				div(class="space-y-8 md:space-y-16", data-aos="fade-up")
+					h2(class="text-[36px] md:text-[54px] leading-[1.2] font-black") 6 data points: all it takes to initiate international payouts
+					p Simple, but effective. That’s our philosophy behind every API call.
+						br
+						| Generate an account for a linked client with just two required parameters 
+
+					p (“Currency” and a “friendlyName” for the account) and three optional ones. That’s all it takes to issue vIBANs like a pro.
+					.flex.gap-8(class="flex-col md:flex-row")
+						+buttonNonBorder({
+							url: "#", 
+							text: "SANDBOX", 
+							classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						})
+						+ButtonAuraBorder({
+							url: "#", 
+							text: "DISCOVER vIBANs", 
+							classes:"text-black"
+						})
+				
+
+
+	section(class="py-16 px-6 md:px-0")
+		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
+				div(class="order-2 md:order-none space-y-8 md:space-y-16", data-aos="fade-up")
+					h2(class="text-[36px] md:text-[54px] leading-[1.2] font-black") 6 data points: all it takes to initiate international payouts
+					p Does a payment infrastructure that can make payments in dozens of currencies, many of which in real-time, sound too complex?
+					.flex.gap-8(class="flex-col md:flex-row")
+						+buttonNonBorder({
+							url: "#", 
+							text: "SANDBOX", 
+							classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						})
+						+ButtonAuraBorder({
+							url: "#", 
+							text: "DISCOVER vIBANs", 
+							classes:"text-black"
+						})
+				div(class="order-1 md:order-none pb-14 md:pb-0 content-center", data-aos="fade-up")
+					img.w-full(src="/src/images/code-boxx.png", alt="6 data points: all it takes to initiate international payouts")
+
+
+
+
+	//- --------------------------------
+
 
 
 	section.trio-box.w-full

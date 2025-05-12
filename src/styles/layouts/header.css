@@ -1,13 +1,12 @@
 header#site-header {
     /* max-width: 1025px; */
-     /* width: 100% !important; */
+    /* width: 100% !important; */
 
-
-     background-color: #ffffff60;
+    background-color: #ffffff60;
     &:after {
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
-        content: '';
+        content: "";
         height: 100%;
         left: 0;
         position: absolute;
@@ -39,11 +38,11 @@ header#site-header {
                     content: "";
                     height: 8px;
                     transform: rotate(45deg);
-                    transition: .5s;
+                    transition: 0.5s;
                     width: 8px;
                 }
             }
-            
+
             &:hover {
                 a.top-menu-element {
                     color: var(--color-openpayd-purple);
@@ -51,8 +50,7 @@ header#site-header {
                     &:after {
                         border-color: var(--color-openpayd-purple);
                         transform: rotate(-135deg);
-                    }  
-
+                    }
                 }
             }
         }
@@ -70,15 +68,31 @@ header#site-header {
                         color: var(--color-main-black);
                     }
                 }
-                
             }
         }
     }
 }
 
+body[data-page-type="header-dark-mobile"] {
+    @media screen and (max-width: 768px) {
+        header#site-header {
+            background-color: rgba(0, 18, 68, 0.75); /* Varsayılan durumla aynı alpha değerini kullan */
+            #logo {
+                .logo-image {
+                    filter: brightness(0) invert(1);
+                }
+            }
+            #main-nav {
+                .top-menu-element {
+                    color: var(--color-main-white);
+                }
+            }
+        }
+    }
+}
 body[data-page-type="header-dark"] {
     header#site-header {
-        background-color: rgba(0, 18,68, 0.75); /* Varsayılan durumla aynı alpha değerini kullan */
+        background-color: rgba(0, 18, 68, 0.75); /* Varsayılan durumla aynı alpha değerini kullan */
         #logo {
             .logo-image {
                 filter: brightness(0) invert(1);
@@ -86,9 +100,8 @@ body[data-page-type="header-dark"] {
         }
         #main-nav {
             .top-menu-element {
-                color: var(--color-main-white)
+                color: var(--color-main-white);
             }
         }
     }
 }
-

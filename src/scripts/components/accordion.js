@@ -1,6 +1,8 @@
+
 const accordion = () => {
 	document.addEventListener("DOMContentLoaded", () => {
 		const accordions = document.querySelectorAll(".accordion");
+
 
 		accordions.forEach((accordion) => {
 			const items = accordion.querySelectorAll(".accItem");
@@ -37,6 +39,7 @@ const accordion = () => {
 				});
 			});
 		});
+		
 	});
 };
 
