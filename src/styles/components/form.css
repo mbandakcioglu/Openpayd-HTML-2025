@@ -4,8 +4,11 @@ form {
 	}
 	.error {
 		align-self: flex-start;
+		align-self: center;
 		background-color: var(--color-white);
-		border-radius: 50px;
+		/* border-radius: 50px; */
+		border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
 		display: inline-block;
 		font-size: 14px;
 		padding: 0 10px 0;

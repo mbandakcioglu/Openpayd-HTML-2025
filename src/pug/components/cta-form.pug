@@ -59,7 +59,7 @@ mixin ctaInput(f)
 
 		input(type="hidden", name="retURL", value="https://www.openpayd.com/thank-you")
 
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="first_name") FIRST NAME *
 			//- input#first_name.form-control(name="first_name", type="text", minlength="2")
 			+ctaInput({
@@ -70,7 +70,7 @@ mixin ctaInput(f)
 			})
 
 		
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="last_name") LAST NAME *
 			//- input#last_name.form-control(name="last_name", type="text")
 			+ctaInput({
@@ -79,7 +79,7 @@ mixin ctaInput(f)
 				required: true
 			})
 
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="company") COMPANY *
 			//- input#company.form-control(name="company", type="text")
 			+ctaInput({
@@ -88,7 +88,7 @@ mixin ctaInput(f)
 				required: true
 			})
 		
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="phone") Phone Number *
 			//- div.flex
 			//- 	select#phoneCountryCode.form-select(name="phoneCountryCode") 
@@ -103,7 +103,7 @@ mixin ctaInput(f)
 				required: true
 			})
 
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="title") JOB TITLE *
 			//- input#title.form-control(name="title", type="text")
 			+ctaInput({
@@ -112,7 +112,7 @@ mixin ctaInput(f)
 				required: true
 			})
 			
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			label.form-label(for="00N4I00000Et8nv", class="font-bold mb-[8px] text-sm") Country *
 			select#00N4I00000Et8nv.form-select(
 				name="00N4I00000Et8nv", 
@@ -373,7 +373,7 @@ mixin ctaInput(f)
 				option(value='Zambia') Zambia
 				option(value='Zimbabwe') Zimbabwe
 			span.error.hidden(class="text-red-500")
-		.form-group(class="flex flex-col justify-start col-span-2 space-y-2")
+		.form-group(class="flex flex-col justify-end col-span-2")
 			//- label.form-label(for="email") BUSINESS EMAIL ADDRESS *
 			//- input#email.form-control(name="email", type="text")
 			+ctaInput({
@@ -382,7 +382,7 @@ mixin ctaInput(f)
 				required: true
 			})
 
-		.form-group(class="flex flex-col justify-start space-y-2")
+		.form-group(class="flex flex-col justify-end")
 			//- label.form-label(for="url") WEBSITE *
 			//- input#url.form-control(name="url", type="text")
 			+ctaInput({
@@ -391,7 +391,7 @@ mixin ctaInput(f)
 				required: true
 			})
 
-		.form-group(class="flex flex-col justify-start space-y-2") 
+		.form-group(class="flex flex-col justify-end") 
 			label.form-label(for="00N4I00000FBxHN", class="font-bold mb-[8px] text-sm") What Is Your Monthly Transaction Volume? *
 			select#00N4I00000FBxHN.form-select(
 				name="00N4I00000FBxHN", 
@@ -407,14 +407,14 @@ mixin ctaInput(f)
 				option(value="&pound;20,000,001+") &pound;20,000,001+
 			span.error.hidden(class="text-red-500")
 		
-		.form-group(class="flex flex-col justify-start space-y-2") 
+		.form-group(class="flex flex-col justify-end") 
 			+ctaInput({
 				id: "company_size", 
 				label: "Company Size *",
 				required: true
 			})
 		
-		.form-group(class="col-span-3 space-y-2")
+		.form-group(class="col-span-3")
 			.form-label(class="font-bold mb-[8px] text-sm") WHAT SOLUTIONS ARE YOU LOOKING FOR *
 			div(class="md:flex md:flex-wrap md:gap-[16px]")
 				+customCheckbox({"labelText": "Accept Payments", "id": "00NP1000009Dtsj", "name": "00NP1000009Dtsj", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
@@ -430,10 +430,10 @@ mixin ctaInput(f)
 				+customCheckbox({"labelText": "Multi-currency Accounts", "id": "00NP1000009DuVU", "name": "00NP1000009DuVU", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Foreign Exhange", "id": "00NP1000009E0iw", "name": "00NP1000009E0iw", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 
-			span.wsaylf-error-message.error.hidden(class="text-red-500")
+			span.wsaylf-error-message.error.hidden.m-auto(class="text-red-500 rounded-2xl")
 
 
-		.form-group(class="col-span-3 flex flex-col justify-start space-y-2")
+		.form-group(class="col-span-3 flex flex-col justify-end")
 			label.form-label(for="message", class="font-bold mb-[8px] text-sm") How Can We Help?
 			textarea#message.form-control(
 				name="00N4I00000Est5j", 
@@ -443,8 +443,8 @@ mixin ctaInput(f)
 				data-required="true"
 			)
 			.flex.justify-between
-				.flex.message-error-message.error.f-14(class="text-red-500") 
-				#counter.text-end(class="text-sm mt-2.5")
+				.flex.message-error-message.error.f-14(class="text-red-500 m-auto") 
+				#counter.text-end(class="text-xs")
 					span#current_count 0
 					span#maximum_count / 300
 		.form-group(class="col-span-3")
@@ -457,7 +457,7 @@ mixin ctaInput(f)
 					"required": true,
 					"containerClassName":"w-full"
 				})
-			span#promo-error-msg.error.hidden(class="text-red-500")
+			span#promo-error-msg.error.hidden(class="text-red-500  rounded-2xl")
 			//- "containerClassName":"w-full radio"
 
 		
