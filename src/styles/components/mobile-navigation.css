@@ -6,12 +6,13 @@
     transform: rotate(-45deg) translate(3px, -3px);
 }
 
-body[data-page-type="header-dark"] {
+body[data-page-type="header-dark"], body[data-page-type="header-dark-mobile"] {
     #hamburger span{background: #fff;}
 }
 
 body.mobile-navigation-active header#site-header{background-color:#fff}
 body[data-page-type="header-dark"].mobile-navigation-active header#site-header{background-color:var(--color-openpayd-dark-blue)}
+body[data-page-type="header-dark-mobile"].mobile-navigation-active header#site-header{background-color:var(--color-openpayd-dark-blue)}
 
 
 #mobile-navigation{overflow: hidden;transition: all 0.5s ease-in;height: 0;opacity: 0;}
