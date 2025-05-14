@@ -27,12 +27,12 @@ block content
 				.flex.flex-col(class="gap-[30px] md:flex-row", data-aos="fade-right", data-aos-duration="1000")
 					+buttonNonBorder({
 						url:"#", 
-						text:"FIND OUR MORE", 
-						classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
+						text:"CONTACT", 
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 					+ButtonAuraBorder({
 						url:"#", 
-						text:"CONTACT OUR TEAM", 
+						text:"FIND OUR MORE", 
 						classes:"text-white", 
 						rel:"nofollow", 
 						target:"_blank" 
@@ -105,10 +105,17 @@ block content
 					+TabImages("/Ultimate-reliability-platform.png","Streamline operations")
 					+TabContent("OpenPayd is trusted to process over $100 billion every year with industry-leading uptime. Work with a provider you can rely on.")
 				
-				.cursor-pointer.text-transparent.font-bold(class="bg-clip-text bg-gradient-to-r from-openpayd-pink via-openpayd-purple to-openpayd-purple   md:float-left clear-left md:order-none order-1 md:w-[50%] mb-[64px] text-2xl", data-target="tab-0") Your vision, our technology
-				.cursor-pointer(class=" hover:bg-clip-text hover:bg-gradient-to-r     md:float-left clear-left md:order-none order-3 md:w-[50%] mb-[64px] text-2xl", data-target="tab-1") Regulatory coverage on a global scale
-				.cursor-pointer(class="md:float-left clear-left md:order-none order-5 md:w-[50%] mb-[64px] text-2xl", data-target="tab-2") Streamline your back office operations
-				.cursor-pointer(class="md:float-left clear-left md:order-none order-7 md:w-[50%] mb-[64px] text-2xl", data-target="tab-3") Ultimate reliability platform
+				.cursor-pointer(class="md:float-left clear-left md:order-none order-1 md:w-[50%] mb-[64px] text-2xl", data-target="tab-0") 
+					span(class="inline-block text-transparent font-bold bg-clip-text bg-gradient-to-r from-openpayd-pink via-openpayd-purple to-openpayd-blue") Your vision, our technology
+				
+				.cursor-pointer(class=" md:float-left clear-left md:order-none order-3 md:w-[50%] mb-[64px] text-2xl", data-target="tab-1") 
+					span(class="inline-block") Regulatory coverage on a global scale
+				
+				.cursor-pointer(class="md:float-left clear-left md:order-none order-5 md:w-[50%] mb-[64px] text-2xl", data-target="tab-2") 
+					span(class="inline-block") Streamline your back office operations
+				
+				.cursor-pointer(class="md:float-left clear-left md:order-none order-7 md:w-[50%] mb-[64px] text-2xl", data-target="tab-3") 
+					span(class="inline-block") Ultimate reliability platform
 
 	section.w-full.bg-white(class="py-16 md:hidden block", data-aos="fade-up")
 		.container.mx-auto.px-6(class="max-w-[" + siteWidth + "] pr-12 md:pr-0")

@@ -23,8 +23,18 @@ export default function homePageTab(second) {
                     if (targetTab) targetTab.classList.remove('hidden');
     
                     // Menüde aktif olanı değiştir
-                    menuItems.forEach(i => i.classList.remove('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-pink-500', 'to-blue-500', 'font-bold'));
-                    item.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-pink-500', 'to-blue-500', 'font-bold');
+                    menuItems.forEach(i => {
+                        const spanInI = i.querySelector('span'); // div içindeki span'ı bul
+                        if (spanInI) {
+                            spanInI.classList.remove('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-openpayd-pink', 'via-openpayd-purple', 'to-openpayd-blue', 'font-bold');
+                        }
+                    });
+
+                    const spanInItem = item.querySelector('span'); // Tıklanan div içindeki span'ı bul
+                    if (spanInItem) {
+                        spanInItem.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-openpayd-pink', 'via-openpayd-purple', 'to-openpayd-blue', 'font-bold');
+                    }
+                    // item.classList.add('text-transparent', 'bg-clip-text', 'bg-gradient-to-r', 'from-pink-500', 'to-blue-500', 'font-bold');
     
                     // Aktif tab'ın sırasını güncelle
                     if (currentCounter) {
