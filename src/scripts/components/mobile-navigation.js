@@ -26,6 +26,7 @@ class MobileNavigation {
         });
 
         document.body.classList.add('overflow-y-hidden');
+        document.body.classList.add('mobile-navigation-active');
 
         this.panel.addEventListener('transitionend', function handler() {
             this.panel.classList.add('enable');
@@ -40,6 +41,7 @@ class MobileNavigation {
         });
 
         document.body.classList.remove('overflow-y-hidden');
+        document.body.classList.remove('mobile-navigation-active');
 
         this.panel.addEventListener('transitionend', function handler() {
             this.panel.classList.remove('enable');
