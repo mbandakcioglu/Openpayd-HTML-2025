@@ -30,6 +30,7 @@
 
 body {
     background-color: var(--color-main-white);
+	color: var(--color-openpayd-dark-blue);
     font-family: var(--font-rig-sans);
 	font-size: 18px;
 }

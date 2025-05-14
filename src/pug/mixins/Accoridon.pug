@@ -11,9 +11,9 @@ mixin Accordion(data)
 	.accordion(data-first-open="yes")
 		each item, index in data
 			- const idx = index + 1
-			.accItem(class="not-last:border-b border-gray-200 after:content-[''] after:block px-12 md:px-[15px] py-6 md:py-[52px]" + (item.open ? ' is-open' : ''))
+			.accItem(class="not-last:border-b border-gray-200 after:content-[''] after:block md:px-12 py-6 md:py-[52px]" + (item.open ? ' is-open' : ''))
 				span.index(class="block md:float-left font-black h-full text-openpayd-shades-dark-blue-light text-[21px] mb-6 md:text-[42px] text-left md:text-center md:w-[166px] w-[83px]")= idx < 10 ? `0${idx}` : idx
-				.accHead(class="flex justify-between items-start md:items-center cursor-pointer md:ml-[166px] mb-[50px] text-base font-semibold text-openpayd-text" data-index=idx)
+				.accHead(class="flex justify-between items-start md:items-center cursor-pointer md:ml-[166px] md:mb-[50px] text-base font-semibold text-openpayd-text" data-index=idx)
 					span.q(class="mr-auto md:text-2xl text-lg w-fit")= item.q
 					span(class="size-14")
 						span.plus(class="flex justify-center items-center md:size-[50px] ml-6 size-[25px] rounded-full text-openpayd-purple transition-transform duration-200 text-xl")

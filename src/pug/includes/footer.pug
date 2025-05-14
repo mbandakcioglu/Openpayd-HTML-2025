@@ -1,6 +1,6 @@
 // footer.pug
 -
-	var footerHeadClasses = "block mb-[38px] text-lg text-openpayd-dark-blue"
+	var footerHeadClasses = "block md:mb-[38px] mb-2 mt-10 md:mt-0 text-lg text-openpayd-dark-blue"
 	var footerUlClasses = "leading-[38px] space-y-2 text-lg text-openpayd-dark-blue "
 
 
@@ -25,7 +25,7 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 					+ButtonAuraBorder({url:"#", text:"LOCATIONS", classes:"font-black", rel:"nofollow", target:"_blank" })
 					+buttonNonBorder({
 						url:"#", 
-						text:"DIVE IN", 
+						text:"CONTACT", 
 						classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 
@@ -76,6 +76,7 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 					li: a(href="#") Whitepapers & Resources
 					li: a(href="#") Fintech Rewired
 					li: a(href="#") Legal
+
 			.col-span-2.col-start-9.row-start-2.order-2
 				div(class="flex items-center gap-4 ml-4 xl:justify-end")
 					a(href="https://www.linkedin.com/company/openpayd/", target="_blank", rel="nofollow", aria-label="LinkedIn")

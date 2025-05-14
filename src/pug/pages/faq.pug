@@ -13,18 +13,19 @@ block variables
 block content
 	include ../components/faq.pug
 
-	+breadcrumb(["Company", "Career"])
+	+breadcrumb(["Company", "FAQ"])
 
 
 	+onlyTextHero("Answered by our experts")
 
 
-	section(class="rounded-t-full overflow-hidden")
-		img(class="h-auto w-full", src="/src/images/general-thin-cover.png", alt="Partner with us")
+	section(class="md:rounded-t-full  rounded-t-[65px] overflow-hidden")
+		img(class="h-auto w-full hidden md:block", src="/src/images/general-thin-cover.png", alt= pageTitle)
+		img(class="h-auto w-full md:hidden", src="/src/images/general-bold-cover.png", alt= pageTitle)
 
 
-	section(class="py-20 px-6 md:px-0")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px]")
+	section(class="py-20")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] text-[34px] px-6 md:px-0")
 			div(class="text-center")
 				h2(class="text-[42px] font-black") Questions Asked Frequently
 
@@ -129,6 +130,6 @@ block content
 					p
 						+buttonNonBorder({
 						url:"#", 
-						text:"DIVE IN", 
+						text:"CONTACT", 
 						classes: "bg-openpayd-pink hover:text-white"
 						})

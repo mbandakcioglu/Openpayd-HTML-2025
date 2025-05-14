@@ -8,8 +8,8 @@ mixin Faq(faq, border=true, title=true)
 					h2(class="font-black md:text-[54px] text-[32px] md:leading-[69px]") FAQ
 					p Answered by our Experts
 			if border
-				div.gradient-border-2(class="col-span-12 md:grid md:grid-cols-12 md:grid-rows-1 gap-4 md:py-[86px] md:px-[74px]")
-					div(class="col-span-10 col-start-2")
-						+Accordion(faq)
+				div.gradient-border-2(class="md:w-5/6 md:mx-auto gap-4 md:py-[86px] md:px-[74px] p-8")
+					
+					+Accordion(faq)
 			else 
 				+Accordion(faq)

@@ -30,7 +30,7 @@ block content
 
 
 
-			p(class="text-lg md:text-4xl ") 
+			p(class="text-lg md:text-4xl md:leading-14 w-5/6") 
 				strong How we are changing the world? 
 				| At OpenPayd, we are building embedded finance and Banking-as-a-Service infrastructure that powers business growth.
 				br
@@ -129,38 +129,51 @@ block content
 						text: "With experience comes the opportunity to develop highly-specialised career skills and knowledge."
 					},
 				]
-			div(class="md:grid md:grid-cols-3 text-center md:space-x-[190px] space-y-[64px]")
-				each benefit in benefits
-					div 
+			div(class="md:grid md:grid-cols-3 text-center space-y-[64px] md:gap-x-48")
+				each benefit, index in benefits
+					div(data-aos="fade-up", data-aos-delay= index * 100) 
 						figure(class="inline-block")
 							img(src="/src/images" + benefit.img, alt= benefit.title)
 						h4(class="font-bold text-2xl")= benefit.title
 						p= benefit.text 
 
-	section(class="bg-openpayd-light-pink py-16 px-6 md:px-0")
-		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px]") 
-			h2(class="text-center text-[36px] mb-8 md:mb-16 md:text-[72px] leading-[1.2] font-black" data-aos="fade-up")  Latest Open Roles
-		.container.w-full.mx-auto(class="md:grid md:grid-cols-3 md:grid-rows-1 max-w-[" + siteWidth + "] space-y-[54px] gap-[78px]") 
+	section(class="bg-openpayd-light-pink py-32 px-6 md:px-0")
+		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] md:space-y-[112px]") 
+			h2(class="text-center text-[36px] mb-8 md:mb-16 md:text-[72px] leading-[1.2] font-black", data-aos="fade-up")  Latest Open Roles
+		//- .container.w-full.mx-auto(class="md:grid md:grid-cols-3 md:grid-rows-1  auto-rows-fr max-w-[" + siteWidth + "] space-y-[54px] gap-[78px]") 
+		.container.w-full.mx-auto(class="md:flex items-stretch max-w-[" + siteWidth + "] space-y-[54px] gap-[54px] m:gap-[78px]", data-aos="fade-up") 
 
-			div.gradient-border-2(class="p-6 space-y-3") 
-				h5(class="text-2xl leading-9 font-bold") AML Compliance Executive (Transaction Monitoring)
-				.location(class="text-lg leading-7") Hybrid - Full-time, Sofia
-				.deparmenat(class="text-base") Compliance & Risk
+			-
 
-				+blueColorButton("#", "SEE MORE")
+				var jobs = [{
+					t: "AML Compliance Executive (Transaction Monitoring)",
+					l: "Hybrid - Full-time, Sofia",
+					d: "Compliance & Risk",
+					url: "#"
+					},
+					{
+						t: "Senior Software Engineer (Java)",
+						l: "Remote — Full-timeRemote - Turkey",
+						d: "Technology",
+						url: "#"
+					},	
+					{
+						t: "AML Compliance Executive (Transaction Monitoring)",
+						l: "Hybrid - Full-time, Sofia",
+						d: "Operations",
+						url: "#"
+					},
+				]
+			each job, index  in jobs
 
-			div.gradient-border-2(class="p-6 space-y-3") 
-				h5(class="text-2xl leading-9 font-bold") Senior Software Engineer (Java)
-				.location(class="text-lg leading-7") Remote — Full-timeRemote - Turkey
-				.deparmenat(class="text-base") Technology
+				div.gradient-border-2(class="flex flex-col justify-start p-6 space-y-3 flex-1 md:mb-0", data-aos="fade-up", data-aos-delay= index * 100) 
+					h5(class="text-2xl leading-9 font-bold")= job.t
+					.location(class="text-lg leading-7")= job.l
+					.deparmenat(class="text-base")= job.d
 
-				+blueColorButton("#", "SEE MORE")
-			div.gradient-border-2(class="p-6 space-y-3") 
-				h5(class="text-2xl leading-9 font-bold") AML Compliance Executive (Transaction Monitoring)
-				.location(class="text-lg leading-7") Hybrid - Full-time, Sofia
-				.deparmenat(class="text-base") Operations
+					div(class="flex mt-auto justify-end")
+						+blueColorButton(job.url, "SEE MORE")
 
-				+blueColorButton("#", "SEE MORE")
 
 	section(class="bg-openpayd-dark-blue overflow-hidden py-[156px]")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] space-y-[54px] px-6 md:px-0")

@@ -19,9 +19,12 @@ const _sm = media.sm,
 
 function sliders() {
 	const TESTIMONIALSOPTIONS = {
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination,Mousewheel],
 			effect: "fade",
 			spaceBetween: 30,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			pagination: {
 				el: ".testimonials-swiper-pagination",
 				clickable: true,
@@ -30,10 +33,14 @@ function sliders() {
 		testimonials = new Swiper("#testimonials", TESTIMONIALSOPTIONS);
 
 	const PRODUCTSLIDEROPTIONS = {
+			modules: [Scrollbar, Mousewheel],
 			slidesPerView: "auto",
 			spaceBetween: 20,
 			// slidesPerView: 1,
 			// loop: true,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			breakpoints: {
 				_sm: {
 
@@ -73,10 +80,13 @@ function sliders() {
 		team = new Swiper("#team-slider", TEAMOPTIONS);
 
 	const LOCATIONSOPTIONS = {
-			// modules: [Scrollbar, Mousewheel],
+			modules: [Scrollbar, Mousewheel],
 			slidesPerView: 1,
 			spaceBetween: 51,
 			loop: false,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			// mousewheel: {
 			// 	releaseOnEdges: true,
 			// },
@@ -94,9 +104,13 @@ function sliders() {
 		locations = new Swiper("#locations-slider", LOCATIONSOPTIONS);
 
 	const POWERGROWSLIDEROPTIONS = {
-			modules: [Navigation, Pagination],
+
+			modules: [Navigation, Pagination, Mousewheel],
 			slidesPerView: 1,
 			spaceBetween: 24,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			pagination: {
 				el: ".power-grow-pagination",
 				type: "fraction",

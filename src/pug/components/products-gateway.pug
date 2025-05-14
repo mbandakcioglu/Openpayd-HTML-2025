@@ -47,8 +47,8 @@ section(class="bg-openpayd-gray")
 					}
 				]
 			each item, index in prodGateways
-				div(class="gradient-border-2 md:py-[38px] md:pe-[24px]", data-aos="fade-up", data-aos-delay= index * 100)
-					div(class="grid grid-col md:pl-[112px] p-6 space-y-[24px]") 
+				div(class="gradient-border-2 md:py-[38px] md:pe-[24px] p-6", data-aos="fade-up", data-aos-delay= index * 100)
+					div(class="grid grid-col md:pl-[112px] space-y-[24px]") 
 						img(class="md:absolute float-left md:-ml-[88px] size-[64px]", src="/src/images" + item.img, alt= item.title)
 						strong(class="block text-2xl font-bold")= item.title
 						span(class="block")= item.sum

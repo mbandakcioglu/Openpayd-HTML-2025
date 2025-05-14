@@ -66,9 +66,9 @@ block content
 						img.max-h-full.max-w-full(src=logo.src, alt=logo.alt)
 		
 
-	section(class="md:pt-[197px] pt-24 px-6 md:px-0") 
+	section(class="px-6 md:px-0") 
 		.container.mx-auto(class="max-w-[" + siteWidth + "] grid md:grid-cols-6 gap-4")
-			div(class="md:col-span-5 md:text-[42px] md:mt-[124px] text-lg", data-aos="fade-up") #[strong Powering the growth of the digital economy.] Rail-agnostic infrastructure seamlessly combines traditional finance and digital assets under one API. Build and scale in the digital age.
+			div(class="md:col-span-5 md:text-[42px] md:mt-[124px] mt-8 text-lg", data-aos="fade-up") #[strong Powering the growth of the digital economy.] Rail-agnostic infrastructure seamlessly combines traditional finance and digital assets under one API. Build and scale in the digital age.
 
 
 	section.w-full.bg-white(class="py-16 md:pt-24 hidden md:block", data-aos="fade-up")
@@ -105,10 +105,10 @@ block content
 					+TabImages("/Ultimate-reliability-platform.png","Streamline operations")
 					+TabContent("OpenPayd is trusted to process over $100 billion every year with industry-leading uptime. Work with a provider you can rely on.")
 				
-				.cursor-pointer.text-transparent.bg-clip-text.bg-gradient-to-r.from-pink-500.to-blue-500.font-bold(class="md:float-left clear-left md:order-none order-1 md:w-[50%] mb-[64px] text-2xl", data-target="tab-0") Your vision, our technology
-				.cursor-pointer(class="hover:text-pink-500 md:float-left clear-left md:order-none order-3 md:w-[50%] mb-[64px] text-2xl", data-target="tab-1") Regulatory coverage on a global scale
-				.cursor-pointer(class="hover:text-pink-500 md:float-left clear-left md:order-none order-5 md:w-[50%] mb-[64px] text-2xl", data-target="tab-2") Streamline your back office operations
-				.cursor-pointer(class="hover:text-pink-500 md:float-left clear-left md:order-none order-7 md:w-[50%] mb-[64px] text-2xl", data-target="tab-3") Ultimate reliability platform
+				.cursor-pointer.text-transparent.font-bold(class="bg-clip-text bg-gradient-to-r from-openpayd-pink via-openpayd-purple to-openpayd-purple   md:float-left clear-left md:order-none order-1 md:w-[50%] mb-[64px] text-2xl", data-target="tab-0") Your vision, our technology
+				.cursor-pointer(class=" hover:bg-clip-text hover:bg-gradient-to-r     md:float-left clear-left md:order-none order-3 md:w-[50%] mb-[64px] text-2xl", data-target="tab-1") Regulatory coverage on a global scale
+				.cursor-pointer(class="md:float-left clear-left md:order-none order-5 md:w-[50%] mb-[64px] text-2xl", data-target="tab-2") Streamline your back office operations
+				.cursor-pointer(class="md:float-left clear-left md:order-none order-7 md:w-[50%] mb-[64px] text-2xl", data-target="tab-3") Ultimate reliability platform
 
 	section.w-full.bg-white(class="py-16 md:hidden block", data-aos="fade-up")
 		.container.mx-auto.px-6(class="max-w-[" + siteWidth + "] pr-12 md:pr-0")
@@ -155,7 +155,7 @@ block content
 		
 		.container.relative.z-1.mx-auto.mx-auto.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12 px-6 md:px-0", ) 
 			
-			.gradient-box.gradient-border-1.overflow-hidden(class="md:px-[26px] px-3 md:py-[28px] py-3 aspect-video rounded-[20px] md:rounded-[30px] before:rounded-[10px] md:before:rounded-[30px] before:p-[4px] col-span-12 md:mb-[108px] mb-[54px]", data-aos="fade-up", data-aos-duration="1500")
+			//- .gradient-box.gradient-border-1.overflow-hidden(class="md:px-[26px] px-3 md:py-[28px] py-3 aspect-video rounded-[20px] md:rounded-[30px] before:rounded-[10px] md:before:rounded-[30px] before:p-[4px] col-span-12 md:mb-[108px] mb-[54px]", data-aos="fade-up", data-aos-duration="1500")
 				img.w-full.h-full.object-cover.overflow-hidden(class="rounded-[15px] block md:hidden", src="/src/images/The-universal-financial-infrastructure.png", alt="")
 				
 				.overflow-hidden.relative(class="rounded-[15px] w-ful h-full hidden md:block")
@@ -172,7 +172,7 @@ block content
 		.container.relative.z-1.mx-auto.mx-auto.flex.flex-col.items-start.gap-4(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12 space-y-[44px] px-6 md:px-0" ) 
 				
 			h2(class="text-white md:text-[86px] md:text-4xl text-5xl font-black col-span-12 md:mt-[108px]", data-aos="fade-up") Products
-			div(class="md:col-span-4 text-white")
+			div(class="md:col-span-5 text-white")
 				h3(class="font-bold md:text-4xl text-4xl mb-[42px]", data-aos="fade-up") Payments
 				.summary(class="font-bold text-openpayd-blue text-2xl mb-[12px]", data-aos="fade-up") Harness our global payments network
 				p(data-aos="fade-up") Domestic. International. Real-time. Our ever-expanding network keeps your payments fast and user-friendly, wherever you operate.
@@ -183,7 +183,7 @@ block content
 				.summary(class="font-bold text-openpayd-blue text-2xl mb-[12px]", data-aos="fade-up") Rail-agnostic money movement
 				p(data-aos="fade-up") 24/7 cross-border money movements and exchange through local and international fiat rails and all main blockchain rails.
 
-			div(class="md:col-span-6 md:col-end-13 mt-14 md:mt-auto md:-ml-6 w-full")
+			div(class="md:col-span-6 md:col-end-13 mt-14 md:-ml-6 w-full")
 					
 				-
 					var productSliderContent = [
@@ -205,14 +205,14 @@ block content
 
 					]
 				+productSlider(productSliderContent)
+				
+				div(class="w-full md:mt-16 mt-11")
+					+buttonNonBorder({
+						url:"#", 
+						text:"CONTACT", 
+						classes: "mt-0! bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px] w-full md:w-auto"
+					})
 			
-			div(class="md:col-span-12 px-6 md:px-0 w-full")
-				+buttonNonBorder({
-					url:"#", 
-					text:"DIVE IN", 
-					classes: "mt-0! bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px] w-full md:w-auto"
-				})
-		
 
 
 			
@@ -234,7 +234,7 @@ block content
 					+buttonNonBorder({
 						url:"#", 
 						text:"SANDBOX", 
-						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px]"
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px] md:w-auto w-full"
 					})
 				img(class="size-[64px] mt-[46px] mb-4", src="/src/images/OP-Icon-Compliance-Aura.svg", alt="Sandbox", data-aos="fade-up")
 				h3.text-2xl.font-bold(data-aos="fade-up") Documentation
@@ -244,7 +244,7 @@ block content
 					+buttonNonBorder({
 						url:"#", 
 						text:"DOCUMENTATION", 
-						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px]"
+						classes: "bg-openpayd-blue hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white mt-[46px] md:w-auto w-full"
 					})
 			div.flex.align.items-end(class="col-end-13 col-span-7 mt-[50px] md:mt-0")
 				div(class="bg-openpayd-dark-blue rounded-[20px] p-6 overflow-auto shadow-lg max-w-full text-white font-mono text-sm leading-relaxed", data-aos="fade-up")
@@ -292,11 +292,11 @@ block content
 	section(class="md:py-[162px] py-[84px]") 
 		.container.relative.z-1.mx-auto.px-6.mx-auto.px-6.gap-4(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12")
 			div(class="col-span-5", data-aos="fade-up")
-				h2.text-openpayd-dark-blue(class="md:text-[86px] text-4xl font-black col-span-12 mb-[48px] md:leading-[120px]", data-aos="fade-up") By leading experts in tech
+				h2.text-openpayd-dark-blue(class="md:text-[86px] text-5xl font-black col-span-12 mb-[48px] md:leading-[120px] leading-16", data-aos="fade-up") By leading experts in tech
 				p(data-aos="fade-up") At OpenPayd, we are a diverse team of over 150 experts from all over the world. But every OpenPayder has joined for the same reason: to build a better payments experience for our clients and their customers.
-				div(class="flex gap-3 mt-[64px]", data-aos="fade-up")
-					+ButtonAuraBorder({url:"#", text:"ABOUT US", classes:"font-black", rel:"nofollow" })
-					+ButtonAuraBorder({url:"#", text:"OUR BLOG", classes:"font-black", rel:"nofollow", target:"_blank" })
+				div(class="flex gap-3 mt-[64px] flex-col md:flex-row", data-aos="fade-up")
+					+ButtonAuraBorder({url:"#", text:"ABOUT US", classes:"font-black w-full md:w-auto", rel:"nofollow" })
+					+ButtonAuraBorder({url:"#", text:"OUR BLOG", classes:"font-black w-full md:w-auto", rel:"nofollow", target:"_blank" })
 			div
 			div(class="col-span-6 mt-[50px] md:mt-0", data-aos="fade-up")
 				+outreAuraBorder("/By-leading-experts-in-tech.jpg", "By leading experts in tech", "mb-[48px]")
@@ -336,7 +336,7 @@ block content
 			)
 				div(class="col-span-3 col-start-2 space-y-8 mb-8")
 					h2(class="font-black text-4xl text-black md:leading-[63px]") Move and manage money globally
-					p(class="mt-[46px] text-2xl") Contact our team today to talk through your company's needs.
+					p(class="mt-[46px] text-lg") Contact our team today to talk through your company's needs.
 				div(class="col-span-6 md:grid-cols-6 col-start-6")
 					include ../components/cta-form.pug
 		

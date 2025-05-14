@@ -5,7 +5,7 @@ mixin customCheckbox(c)
 			span
 			span.text!= c.labelText
 	div(class=`${c.containerClassName || ''} space-y-4`)
-		label(for=c.id class="flex items-start gap-2 text-sm font-normal cursor-pointer")
+		label(for=c.id class="flex items-start gap-2 text-sm font-normal cursor-pointer text-openpayd-dark-blue")
 			input(
 				type="checkbox",
 				id=c.id,
@@ -40,7 +40,7 @@ mixin customCheckbox(c)
 	var selectElementClasses = "appearance-none"
 
 mixin ctaInput(f)
-	label.form-label(for= f.id, class="font-bold mb-[8px] text-sm")= f.label
+	label.form-label(for= f.id, class="font-bold mb-[8px] text-sm text-openpayd-dark-blue")= f.label
 	input.form-control(
 		class= formElementClasses, 
 		name= f.id, id= f.id, 
@@ -51,7 +51,7 @@ mixin ctaInput(f)
 
 .form
 	//- form#cta-form(action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8")
-	form#cta-form(class="md:grid md:grid-cols-3 gap-[20px] space-y-4")
+	form#cta-form(class="md:grid md:grid-cols-3 gap-[20px] space-y-4 text-openpayd-dark-blue")
 
 
 		//- <input type=hidden name='captcha_settings' value='{"keyname":"openpayd","fallback":"true","orgId":"00D58000000aEt5","ts":""}'>
@@ -413,7 +413,7 @@ mixin ctaInput(f)
 				+customCheckbox({"labelText": "Accept Payments", "id": "00NP1000009Dtsj", "name": "00NP1000009Dtsj", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Send Payments", "id": "00NP1000009DrMI", "name": "00NP1000009DrMI", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Open Banking", "id": "00NP1000009Dtvx", "name": "00NP1000009Dtvx", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
-				+customCheckbox({"labelText": "Card Payments", "id": "00NP1000009Dvcp ", "name": "00NP1000009Dvcp", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
+				//- +customCheckbox({"labelText": "Card Payments", "id": "00NP1000009Dvcp ", "name": "00NP1000009Dvcp", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 					//- .flex(style="gap: 18px;")
 				+customCheckbox({"labelText": "Virtual IBANs", "id": "00N4I00000EtHlt ", "name": "00N4I00000EtHlt", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
 				+customCheckbox({"labelText": "Banking-as-a-Service ", "id": "00NP1000009Dz5J", "name": "00NP1000009Dz5J", "type": "checkbox", "inputClassName": "solution-checkbox", required: true})
@@ -457,5 +457,5 @@ mixin ctaInput(f)
 		.form-group(class="col-span-3")
 			.g-recaptcha(data-sitekey="6LcGrY4bAAAAAGneyvG04LbBCrZoPBOGiKHiAcDe")
 			.form-buttons
-				button.submit(type="submit", class="button aura-hover rounded-full font-semibold uppercase transition-all duration-700 py-4 px-9 text-base text-center inline-block hover:transition-all  bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white") DIVE IN
+				button.submit(type="submit", class="button aura-hover rounded-full font-semibold uppercase transition-all duration-700 py-4 px-9 text-base text-center inline-block hover:transition-all  bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white") CONTACT
 

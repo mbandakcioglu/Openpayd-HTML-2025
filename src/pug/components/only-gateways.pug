@@ -1,38 +1,38 @@
 
 section.cta.only-gateways#cta(class="md:py-[162px] py-[81px]")
-    .container(class="max-w-[" + siteWidth + "] xl:mx-auto xl:grid xl:grid-cols-11 xl:grid-rows-2 gap-x-[50px] space-y-6")
+    .container(class="max-w-[" + siteWidth + "] xl:mx-auto xl:grid xl:grid-cols-11 xl:grid-rows-2 gap-x-[50px] space-y-6 px-6 md:px-0")
 
 
         div(class="xl:col-span-9 xl:col-start-2 mb-16 md:mb-[24px] text-center space-y-6")
             h3.headline(class="text-[54px] font-black") How can we help you?
             p.summary(class="text-2xl font-medium") If you need more information, here's how OpenPayd can help:
         
-        div(class="xl:col-span-3 xl:col-start-2 xl:row-start-2 text-center flex flex-col justify-start items-center")
+        div(class="xl:col-span-3 xl:col-start-2 xl:row-start-2 text-center flex flex-col justify-start items-center md:mb-0")
             img.sandbox-icon(class="inline-block size-[72px]", src='/src/images/OP-Icon-API-Aura.svg', alt='See our platform in action')
             h4.gateway-headline(class="text-2xl font-bold mt-[24px]") See our platform in action
             p(class="text-lg my-[24px]") Your new payment infrastructure
             +ButtonAuraBorder({
                 url:"https://secure.openpayd.com/account/login?returnUrl=%2F", 
                 text:"SEE MORE", 
-                classes:"text-black justify-self-end", 
+                classes:"text-black justify-self-end mt-auto", 
                 rel:"nofollow", 
                 target:"_blank" 
             })
-        div(class="xl:col-span-3 xl:col-start-5 xl:row-start-2 text-center flex flex-col justify-start items-center")
+        div(class="xl:col-span-3 xl:col-start-5 xl:row-start-2 text-center flex flex-col justify-start items-center md:mb-0")
             img.sandbox-icon(class="inline-block size-[72px]", src='/src/images/OP Icon Employees Aura.svg', alt='See our platform in action')
             h4.gateway-headline(class="text-2xl font-bold mt-[24px]") Partner with us
             p(class="text-lg my-[24px]") Become an OpenPayd introducer or banking partner
             +ButtonAuraBorder({
                 url:"/partnership", 
                 text:"SEE MORE", 
-                classes:"text-black justify-self-end",  
+                classes:"text-black justify-self-end mt-auto",  
             })
-        div(class="xl:col-span-3 xl:col-start-8 xl:row-start-2 text-center flex flex-col justify-start items-center")
+        div(class="xl:col-span-3 xl:col-start-8 xl:row-start-2 text-center flex flex-col justify-start items-center md:mb-0")
             img.sandbox-icon(class="inline-block size-[72px]", src='/src/images/OP-Icon-Customers-Aura.svg', alt='See our platform in action')
             h4.gateway-headline(class="text-2xl font-bold mt-[24px]") Recruitment portal
             p(class="text-lg my-[24px]") How to secure a role at OpenPayd
             +ButtonAuraBorder({
                 url:"/careers/", 
                 text:"SEE MORE", 
-                classes:"text-black justify-self-end"
+                classes:"text-black justify-self-end mt-auto"
             })
