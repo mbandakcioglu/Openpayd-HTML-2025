@@ -13,7 +13,7 @@ const MagicBox = () => {
                 const radiusX = 100; // X yarıçapı
                 const radiusY = 150; // Y yarıçapı
                 const speed = 0.002; // Hız
-                const centerX = container.clientWidth - 100; // sağdan 100px içeride
+                const centerX = container.clientWidth - 300; // sağdan 100px içeride
                 const centerY = 150; // sayfanın üstüne yakın konum
                 // const isMobile = window.innerWidth < 768;
                 // const centerY = isMobile ? 100 : 150;

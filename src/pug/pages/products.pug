@@ -123,7 +123,7 @@ block content
 	
 
 	section.trio-box.w-full
-		.container.mx-auto(class="max-w-[" + siteWidth + "] md:py-[151px] my-[75px] md:grid md:grid-cols-12 space-y-[64px] px-6 md:px-0")
+		.container.mx-auto(class="max-w-[" + siteWidth + "] md:pt-[132px] md:pb-10 md:grid md:grid-cols-12 space-y-[64px] px-6 md:px-0")
 
 			h2(class="font-black md:text-[54px] text-[32px] md:leading-[69px] leading-12 md:col-span-10 md:col-start-2 text-center mb-6") Your new account infrastructure
 
@@ -146,7 +146,7 @@ block content
 						text: "Combine with our multi-currency account infrastructure and pay-out functionality to super-charge your global presence."
 					},
 				]
-			div(class="md:col-span-10 md:col-start-2 md:grid md: md:grid-cols-9 md:gap-5 space-y-9")
+			div(class="md:col-span-10 md:col-start-2 md:grid md:grid-cols-9 md:gap-5 space-y-9")
 				each item, index in trioContent
 					div(class="col-span-3 text-center space-y-[24px]", data-aos="fade-up", data-aos-delay= index * 300) 
 						img(class="inline-block size-[72px]", src="/src/images" + item.img, alt= item.title)
