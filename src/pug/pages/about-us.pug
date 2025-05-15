@@ -11,10 +11,10 @@ block variables
 block content
 	include ../mixins/locations-slider.pug
 
-	+breadcrumb(["Company", "Career"])
+	+breadcrumb(["Company", "About Us"])
 
 
-	+onlyTextHero("Join OpenPayds")
+	+onlyTextHero("About Us")
 
 	section(class="bg-openpayd-dark-blue bg-[url(/src/images/OP_Aura_graphic_RGB_1.png)] bg-no-repeat bg-position-[100%_-356px] pt-0 md:pb-[108px] pb-[54px] shadow-[inset_0px_50px_0px_0px_rgba(255,_255,_255,_1)] md:shadow-[inset_0px_205px_0px_0px_rgba(255,_255,_255,_1)]")
 		.container.w-full.mx-auto(class="max-w-[" + siteWidth + "] md:grid md:grid-cols-12  px-6 md:px-0")
@@ -62,14 +62,14 @@ block content
 			div(class="col-span-5")
 
 				p(class="text-lg md:text-[34px]")
-					span(class="font-bold text-lg md:text-4xl") The universal financial infrastructure powering the digital economy.
+					span(class="font-bold text-lg md:text-4xl") The universal financial infrastructure powering the digital economy. 
 					| At OpenPayd, our vision is a world in which money can be moved across the globe instantly and securely, regardless of the currency and location. With our rails-agnostic infrastructure and global licensing network, that future is not far away. By combining traditional finance with digital assets under one API, we’re processing over $100 billion for enterprise level businesses every year.
 					br
 					br
 					| OpenPayd provides accounts, FX, international and domestic payments, card acquiring, Open Banking services and more. Our universal infrastructure empowers businesses to build new products, streamline their operations and scale effectively, with a dedicated partner assisting them on every step of their journey.
 
 	section(class="py-16 px-6 md:px-0")
-		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
 			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
 				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
 					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") We are experts
@@ -79,7 +79,7 @@ block content
 
 
 	section(class="py-16 px-6 md:px-0")
-		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
 			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
 				div(class="pb-14 md:pb-0 content-center" data-aos="fade-up")
 					+outreAuraBorder("/We-are-transparent.png", "We are transparent", "")
@@ -88,7 +88,7 @@ block content
 					p(class="text-balance" data-aos="fade-up") Our solutions are flexible and transparent. We have pay-as- you-grow fee structures in place and favourable contract terms to get you up and running. We work with you in partnership to help you realise your growth ambitions.
 
 	section(class="py-16 px-6 md:px-0")
-		div(class="container mx-auto max-w-[1392px] text-openpayd-dark-blue")
+		div(class="container mx-auto max-w-[" + siteWidth + "] text-openpayd-dark-blue")
 			div(class="flex flex-col md:grid grid-cols-2 gap-x-26")
 				div(class="content-center order-2 md:order-none space-y-8 md:space-y-16")
 					h2(class="text-[36px] md:text-[72px] leading-[1.2] font-black" data-aos="fade-up") We are passionate

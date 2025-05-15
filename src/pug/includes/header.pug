@@ -5,7 +5,7 @@ include ../components/breadcrumb.pug
 
 
 - var megaMenuShadow = "#000000"
-- var siteWidth = "1392px"
+- var siteWidth = "1300px"
 
 mixin megaMenuSubElement(c)
 	li
@@ -33,7 +33,7 @@ mixin megaMenuTopElement(t)
 
 //- header#site-header.fixed.w-full.top-0.left-0.right-0.z-1
 header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/header")
-	div(class="container mx-auto px-6 py-[18px] block md:hidden")
+	div(class="container mx-auto px-6 py-[18px] block lg:hidden")
 		div(class="flex items-center justify-between")
 			a(class="inline-block", href="/", id="logo") 
 				img.logo-image(class="h-[44px] logo-image", src='/src/images/OP-Logo.svg', alt='OpenPayd')
@@ -41,7 +41,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 				span(class="w-[16px] h-[2px] bg-openpayd-dark-blue rounded-full transition-all duration-300 origin-center")
 				span(class="w-[16px] h-[2px] bg-openpayd-dark-blue rounded-full transition-all duration-300 origin-center")
 
-	.container.w-full.mx-auto.flex.items-center.justify-end.hidden(class="max-w-[" + siteWidth + "] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out md:flex")
+	.container.w-full.mx-auto.flex.items-center.justify-end.hidden(class="max-w-[" + siteWidth + "] text-[18px] py-[32px] px-[5px] group-[.scrolled]/header:py-[18px] transition-[padding] duration-300 ease-in-out lg:flex")
 
 		//  Logo 
 		#logo.flex.items-center.space-x-2.mr-auto
@@ -49,18 +49,18 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 				img.logo-image(class="w-[170px] h-[58px]", src='/src/images/OP-Logo.svg', alt='OpenPayd')
 			
 		nav#main-nav.text-slate-900(class="text-[18px]")
-			ul.grid.grid-cols-5.items-center.space-x-6
+			ul.grid.grid-cols-5.items-center(class="space-x-3")
 				//- Product
 				li.relative.top-menu-opener(class="group/menuitem")
 					
 					+megaMenuTopElement({url: "#", text: "Product"})
 					.mega-menu.absolute.bg-white.z-1.hidden(
-       					class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[640px] rounded-[20px] left-[-253px] top-(calc(100% +16px)))" 
+       					class="group-hover/menuitem:block shadow-[8px_8px_56px_0_" + megaMenuShadow + "] p-[48px] w-[800px] rounded-[20px] left-[-100px] top-(calc(100% +16px)))" 
 					)
 						ul
 							li 
 								+megaMenuHeader({title: "PAYMENTS", text: "Send and receive globally"})
-								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+								ul.grid.grid-cols-3(class="gap-x-[32px] gap-y-[20px]")
 									+megaMenuSubElement({
 										url:"/products", 
 										icon:"OP-Icon-Pay-In-Review-Aura.svg",
@@ -80,7 +80,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 								+megaMenuHeader({
 									title: "ACCOUNTS", 
 									text: "Bank with virtual IBANs"})
-								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+								ul.grid.grid-cols-3(class="gap-x-[32px] gap-y-[20px]")
 									+megaMenuSubElement({
 										url:"/products", 
 										icon:"OP-Icon-Master-Accounts-Aura.svg",
@@ -111,7 +111,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 								+megaMenuHeader({
 									title: "FX & TREASURY", 
 									text: "Orchestrate your business money flows"}) 
-								ul.grid.grid-cols-2(class="gap-x-[32px] gap-y-[20px]")
+								ul.grid.grid-cols-3(class="gap-x-[32px] gap-y-[20px]")
 									+megaMenuSubElement({
 										url:"/products", 
 										icon:"OP-Icon-FX-Aura.svg",
@@ -121,7 +121,12 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 										url:"/products", 
 										icon:"OP-Icon-Corporate-Customers-Aura.svg",
 										title:"Corporate Accounts", 
-										text:"Manage all your business spending"}) 
+										text:"Manage all your business spending"})
+									+megaMenuSubElement({
+										url:"/products", 
+										icon:"OP-Icon-Lending-Aura.svg",
+										title:"Stablecoins", 
+										text:"Move and manage stablecoins"}) 
 				//- Solutions
 				li.relative.top-menu-opener(class="group/menuitem")
 					
@@ -273,7 +278,7 @@ header#site-header.fixed.w-full.top-0.left-0.right-0.z-10.peer(class="group/head
 			+ButtonAuraBorder({url:"#", text:"LOG IN", classes:"text-black", rel:"nofollow", target:"_blank" })
 			+buttonNonBorder({url:"#", text:"CONTACT", classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"})
 
-div(id="mobile-navigation", class="w-full h-screen pt-[74px] fixed z-[1] top-0 left-0 text-openpayd-dark-blue block md:hidden")
+div(id="mobile-navigation", class="w-full h-screen pt-[74px] fixed z-[1] top-0 left-0 text-openpayd-dark-blue block lg:hidden")
 	div(class="mx-auto px-6 pt-[46px] pb-6")
 		div(class="bg-white rounded-xl py-[15px]")
 			nav()
@@ -334,6 +339,10 @@ div(id="mobile-navigation", class="w-full h-screen pt-[74px] fixed z-[1] top-0 l
 									a(href="products", class="flex items-center py-3 space-x-4")
 										img(class="", src="/src/images/OP-Icon-Corporate-Customers-Aura.svg")
 										span(class="font-extrabold text-[15px] leading-none") Corporate Accounts
+								li
+									a(href="products", class="flex items-center py-3 space-x-4")
+										img(class="", src="/src/images/OP-Icon-Lending-Aura.svg")
+										span(class="font-extrabold text-[15px] leading-none") Stablecoins
 
 					li(class="menu-item-has-children")
 						a(class="flex justify-between items-center px-6 py-[15px]")

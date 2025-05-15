@@ -27,7 +27,7 @@ header#site-header {
                     border-top: 0;
                     height: 0;
                     left: 50%;
-                    margin-left: -16px;
+                    margin-left: -32px;
                     top: calc(100% - 16px);
                     width: 0;
                 }
