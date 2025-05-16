@@ -162,7 +162,7 @@ const validators = {
 
 // Main Form Handler
 const CtaForm = () => {
-    console.log("CtaForm fonksiyonu çağrıldı!"); // Test için
+    // console.log("CtaForm fonksiyonu çağrıldı!"); // Test için
 
     const form = document.getElementById('cta-form');
     if (!form) return;

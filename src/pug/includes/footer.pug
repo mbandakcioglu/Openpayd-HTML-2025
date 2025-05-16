@@ -15,12 +15,12 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 	div(class="container mx-auto px-6 max-w-[" + siteWidth + "]")
 
 		// Products
-		div(class="xl:grid xl:grid-cols-10 flex flex-col gap-4")
-			div(class="col-span-5 order-1")
+		div(class="xl:grid xl:grid-cols-12 flex flex-col gap-4")
+			div(class="col-span-6 order-1")
 				a(href="/" class="inline-block")
 					img(src="/src/images/OP-Logo.svg" alt="OpenPayd Logo" class="h-[40px]")
 			
-			.col-span-5.col-start-6(class="xl:mb-[63px] order-3")
+			.col-span-6.col-start-7(class="xl:mb-[63px] order-3")
 				div(class="flex xl:justify-end gap-4")
 					+ButtonAuraBorder({url:"#", text:"LOCATIONS", classes:"font-black", rel:"nofollow", target:"_blank" })
 					+buttonNonBorder({
@@ -29,7 +29,7 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 						classes: "bg-openpayd-pink hover:bg-linear-[90deg,#E348FF_0%,#B514F7_30%,#625BFB_70%,#00CCFF_100%] hover:text-white"
 					})
 
-			.col-span-8.row-start-2.order-4.hidden
+			.col-span-10.row-start-2.order-4.hidden
 				div Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsam, aliquid illo corrupti, doloremque unde quidem ea molestiae sit consectetur accusamus saepe ipsum aut nulla dicta porro ratione eveniet rerum.
 
 			.col-span-2.row-start-2.order-4(class="leading-[38px]")
@@ -68,6 +68,12 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 
 			// Resources
 			.col-span-2.col-start-7.row-start-2.order-7
+				span(class= footerHeadClasses) Developers
+				ul(class= footerUlClasses)
+					li: a(href="#") OpenPyad API
+					li: a(href="#") API Docs
+					li: a(href="#") Sandbox
+			.col-span-2.col-start-9.row-start-2.order-8
 				span(class= footerHeadClasses) Resources
 				ul(class= footerUlClasses)
 					li: a(href="#") Announcements
@@ -77,7 +83,7 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 					li: a(href="#") Fintech Rewired
 					li: a(href="#") Legal
 
-			.col-span-2.col-start-9.row-start-2.order-2
+			.col-span-2.col-start-11.row-start-2.order-2
 				div(class="flex items-center gap-4 ml-4 xl:justify-end")
 					a(href="https://www.linkedin.com/company/openpayd/", target="_blank", rel="nofollow", aria-label="LinkedIn")
 						img(src="/src/images/icon-linkedin.svg", alt="LinkedIn", class="h-5 w-5")
@@ -87,5 +93,5 @@ footer(class="bg-shades-violet-light pt-12 pb-8")
 						img(src="/src/images/icon-x.svg", alt="X", class="h-5 w-5")
 					a(href="https://www.instagram.com/lifeatopenpayd/" aria-label="Instagram", target="_blank", rel="nofollow")
 						img(src="/src/images/icon-ig.svg", alt="Instagram", class="h-5 w-5")
-			div(class="col-span-10 mt-[63px] order-8 row-start-3 text-[10px]")
+			div(class="col-span-12 mt-[63px] order-8 row-start-3 text-[10px]")
 				| © OpenPayd Ltd 2025. All rights reserved.

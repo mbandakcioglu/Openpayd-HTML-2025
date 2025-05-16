@@ -9,11 +9,11 @@ const preventEmptyHashLinkClicks = () => {
 	});
 
 	// Optional
-	if (emptyHashLinks.length > 0) {
-		console.log(
-			`Applied click prevention to ${emptyHashLinks.length} links with href="#"`
-		);
-	}
+	// if (emptyHashLinks.length > 0) {
+	// 	console.log(
+	// 		`Applied click prevention to ${emptyHashLinks.length} links with href="#"`
+	// 	);
+	// }
 };
 
 export default preventEmptyHashLinkClicks;

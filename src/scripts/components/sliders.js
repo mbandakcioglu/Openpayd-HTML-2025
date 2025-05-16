@@ -130,7 +130,7 @@ function sliders() {
 		},
 		powerGrowSlider = new Swiper("#power-grow-slider", POWERGROWSLIDEROPTIONS);
 
-	console.log("sliders active");
+	// console.log("sliders active");
 }
 
 export default sliders;

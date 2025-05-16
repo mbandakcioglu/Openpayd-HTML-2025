@@ -13,7 +13,6 @@ import preventEmptyHashLinkClicks from "./utils/preventEmptyHashLinks";
 
 
 
-// test();
 aosAnimations();
 preventEmptyHashLinkClicks(); // <-- Call the function
 pageScrolled();
